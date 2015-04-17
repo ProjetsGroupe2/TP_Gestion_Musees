@@ -5,10 +5,14 @@
 #include "Affichage.h"
 #include "Gestion.h"
 #include "Sauvegarde.h"
+#include "OuvertureFichier.h"
 
 void main()
 
 {
+	ouvertureFichier();
+	system("pause>nul");
+
 	affichage();
 	system("pause>nul");
 
