@@ -76,15 +76,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-<<<<<<< HEAD
-<<<<<<< HEAD
     <ClCompile Include="GestionDonnees.c" />
-=======
-=======
->>>>>>> 60f9f78d612f2ab882d5376210ff64589cd95509
     <ClCompile Include="Affichage.c" />
     <ClCompile Include="GestionDonnes.c" />
->>>>>>> 60f9f78d612f2ab882d5376210ff64589cd95509
     <ClCompile Include="Main.c" />
   </ItemGroup>
   <ItemGroup>

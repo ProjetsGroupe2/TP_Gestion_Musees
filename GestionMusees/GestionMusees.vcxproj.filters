@@ -44,15 +44,9 @@
     <ClInclude Include="Musee.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-<<<<<<< HEAD
-<<<<<<< HEAD
     <ClInclude Include="GestionDonnees.h">
-=======
     <ClInclude Include="Affichage.h">
->>>>>>> 60f9f78d612f2ab882d5376210ff64589cd95509
-=======
     <ClInclude Include="Affichage.h">
->>>>>>> 60f9f78d612f2ab882d5376210ff64589cd95509
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
   </ItemGroup>
