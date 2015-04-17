@@ -21,6 +21,9 @@
     <ClCompile Include="GestionDonnees.c">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
+    <ClCompile Include="Affichage.c">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Region.h">
@@ -35,7 +38,11 @@
     <ClInclude Include="Musee.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
+<<<<<<< HEAD
     <ClInclude Include="GestionDonnees.h">
+=======
+    <ClInclude Include="Affichage.h">
+>>>>>>> 60f9f78d612f2ab882d5376210ff64589cd95509
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
   </ItemGroup>
