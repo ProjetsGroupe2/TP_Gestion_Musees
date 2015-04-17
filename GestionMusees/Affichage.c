@@ -42,7 +42,7 @@ void affichageMenu(int* choix)
 	printf("                  3 .     Sauvegarder                          \n");
 	printf("                  0 .     Quitter                          \n\n");
 	printf("			  Entrer le num%lcro du menu que vous avez choisie : ", 130);
-		affichageMenu();
+
 	
 	scanf("%d", choix);
 }
