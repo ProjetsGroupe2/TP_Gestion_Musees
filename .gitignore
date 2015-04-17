@@ -37,3 +37,4 @@
 *.sln
 *.v12.suo
 Debug/
+*.GestionMusees.vcxproj
