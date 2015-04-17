@@ -1,2 +1,3 @@
 void Color(int couleurDuTexte, int couleurDeFond);
-void Affichage();
+void affichage();
+void affichageMenu();

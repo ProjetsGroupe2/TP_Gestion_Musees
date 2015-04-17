@@ -8,7 +8,7 @@ void Color(int couleurDuTexte, int couleurDeFond) // fonction d'affichage de cou
 	SetConsoleTextAttribute(H, couleurDeFond * 16 + couleurDuTexte);
 }
 
-void Affichage()
+void affichage()
 {
 	Color(0, 0); //Noir, Noir
 	printf("\n\n                 ");
@@ -31,4 +31,41 @@ void Affichage()
 	Color(1, 12); //Noir, Bleu
 	printf("                                           \n");
 	Color(15, 0); //Noir, Noir
+}
+
+void affichageMenu()
+{
+	int choix = 0;
+	
+		system("cls");
+		printf(" 1er - Menu Principal \n");
+		printf(" 2eme - Gerer des Musées \n");
+		printf(" 3eme - Rechercher des Musées \n");
+		printf(" 4eme - Sauvegarder \n");
+		scanf("%d", &choix);
+
+		
+		switch (choix)
+		{
+		
+		case 1:
+			printf("Rouge");
+			break;
+		case 2:
+			printf("Vert");
+			break;
+		case 3:
+			printf("Bleu");
+			break;
+		case 4:
+			printf("Blanc");
+			break;
+
+		default:
+			printf("Quitter");
+			break;
+		}
+	
+	system("pause>nul");
+	return 0;
 }
