@@ -6,14 +6,15 @@
 #include "Gestion.h"
 #include "Sauvegarde.h"
 #include "OuvertureFichier.h"
+#include "Region.h"
 
 void main()
 
 {
-	
+	Region* tabRegions = NULL;
 
-	ouvertureFichier();
-	system("pause>nul");
+
+	ouvertureFichier(tabRegions);
 
 	affichage();
 	system("pause>nul");
