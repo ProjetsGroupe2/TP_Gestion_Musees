@@ -38,3 +38,6 @@
 *.v12.suo
 Debug/
 *.GestionMusees.vcxproj
+
+# Fichiers du projet
+*.csv
