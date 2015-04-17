@@ -16,9 +16,11 @@ void main()
 	affichage();
 	system("pause>nul");
 
+	iconeAffichage();
+
 	affichageMenu();
 	system("pause>nul");
-
+	
 	creationFichier();
 	system("pause>nul");
 }
