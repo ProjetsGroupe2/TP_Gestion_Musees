@@ -1,4 +1,9 @@
-#include <stdio.h>
-#include <stdlib.h>
+int creationFichier()
+{
+	system("cls");
+	printf("== SAUVEGARDE ==");
 
-int creationFichier();
+
+
+	return 0;
+}
