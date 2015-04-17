@@ -10,9 +10,10 @@ void main()
 
 {
 	affichage();
+	printf("\n\n      ( Appuyez sur une touche pour pouvoir passer au menu principal. )");
 	system("pause>nul");
 
-	iconeAffichage();
+	affichage();
 
 	affichageMenu();
 	system("pause>nul");
