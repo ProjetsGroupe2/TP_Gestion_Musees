@@ -76,7 +76,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="GestionDonnees.c" />
     <ClCompile Include="Affichage.c" />
     <ClCompile Include="GestionDonnes.c" />
     <ClCompile Include="Main.c" />
@@ -84,7 +83,7 @@
   <ItemGroup>
     <ClInclude Include="Affichage.h" />
     <ClInclude Include="Departement.h" />
-    <ClInclude Include="GestionDonnees.h" />
+    <ClInclude Include="GestionDonnes.h" />
     <ClInclude Include="Musee.h" />
     <ClInclude Include="Region.h" />
     <ClInclude Include="Ville.h" />

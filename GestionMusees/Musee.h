@@ -1,5 +1,3 @@
-#ifndef MUSEE
-#define MUSEE
 typedef struct Musee Musee;
 
 struct Musee
@@ -13,5 +11,3 @@ struct Musee
 	char periodeouverture[255];
 
 };
-
-#endif

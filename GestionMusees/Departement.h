@@ -1,6 +1,3 @@
-#ifndef DEPARTEMENT
-#define DEPARTEMENT
-
 typedef struct Departement Departement;
 
 struct Departement
@@ -8,4 +5,3 @@ struct Departement
 	int id;
 	char nom[255];
 };
-#endif

@@ -12,42 +12,42 @@ void Affichage()
 {
 	{
 		Color(0, 0); //Noir, Noir
-		printf("             ");
+		printf("\n\n                 ");
 	}
 	{
 		Color(1, 1); //Bleu
-		printf("                                       \n");
+		printf("                                           \n");
 	}
 	{
 		Color(0, 0); //Noir, Noir
-		printf("             ");
+		printf("                 ");
 	}
 	{
 		Color(1, 1); //Bleu
-		printf("                                       \n");
+		printf("                                           \n");
 	}
 	{
 		Color(0, 0); //Noir, Noir
-		printf("             ");
+		printf("                 ");
 	}
 	{
-		Color(1, 15); //Bleu
-		printf("        Bibliotheques de France        \n");
-	}
-	{
-		Color(0, 0); //Noir, Noir
-		printf("             ");
-	}
-	{
-		Color(1, 1); //Bleu
-		printf("                                       \n");
+		Color(0, 15); //Bleu
+		printf("          Bibliotheques de France          \n");
 	}
 	{
 		Color(0, 0); //Noir, Noir
-		printf("             ");
+		printf("                 ");
 	}
 	{
-		Color(1, 1); //Bleu
-		printf("                                       \n");
+		Color(1, 12); //Bleu
+		printf("                                           \n");
+	}
+	{
+		Color(0, 0); //Noir, Noir
+		printf("                 ");
+	}
+	{
+		Color(1, 12); //Bleu
+		printf("                                           \n");
 	}
 }
