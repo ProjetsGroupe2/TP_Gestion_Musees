@@ -2,7 +2,6 @@
 #include <stdlib.h>
 <<<<<<< HEAD
 <<<<<<< HEAD
-
 #include "Departement.h"
 #include "GestionDonnees.h"
 #include "Musee.h"

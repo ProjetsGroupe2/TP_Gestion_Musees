@@ -27,6 +27,9 @@
     <ClCompile Include="Affichage.c">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
+    <ClCompile Include="Affichage.c">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Region.h">
