@@ -74,12 +74,12 @@ void affichageMenu()
 		printf("G%lcrer les Mus%lces", 130, 130);
 		system("cls");
 		affichage();
-		affichageMenu();
 		printf("                             COPYRIGHT © FRANCE                          \n\n");
+		printf(" TU N'AS PLUS QU'A METTRE TON CODE");
 		break;
 
 	case 5:
-		printf("Vous allez choisie de quitter l'application");
+		printf("Vous avez choisie de quitter l'application");
 		return 0;
 	}
 }
