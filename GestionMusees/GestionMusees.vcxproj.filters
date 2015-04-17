@@ -30,6 +30,9 @@
     <ClCompile Include="Sauvegarde.c">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
+    <ClCompile Include="OuvertureFichier.c">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GestionDonnes.h">
@@ -54,6 +57,9 @@
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
     <ClInclude Include="Sauvegarde.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="OuvertureFichier.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
   </ItemGroup>
