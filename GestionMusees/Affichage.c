@@ -38,10 +38,11 @@ void affichageMenu()
 {
 	int choix = 0;
 
-	printf(" 1er - Menu Principal \n");
-	printf(" 2eme - Gerer des Musées \n");
-	printf(" 3eme - Rechercher des Musées \n");
-	printf(" 4eme - Sauvegarder \n");
+	printf("                             COPYRIGHT © FRANCE                          \n\n");
+	printf("\n                  1.     Menu Principal                          \n");
+	printf("                  2.     Gerer des Musées                          \n");
+	printf("                  3.     Rechercher des Musées                          \n");
+	printf("                  4.     Sauvegarder                          \n");
 	scanf("%d", &choix);
 
 	switch (choix)
@@ -89,8 +90,6 @@ void iconeAffichage()
 	Color(1, 12); //Noir, Bleu
 	printf("                                           \n\n");
 	Color(15, 0); //Noir, Noir
-
-
-	system("pause>nul");
-	return 0;
 }
+
+
