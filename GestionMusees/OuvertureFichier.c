@@ -1,8 +1,6 @@
-#ifndef FILE
-#define FILE
-
 #include <stdio.h>
 #include <stdlib.h>
+
 
 void ouvertureFichier()
 {
@@ -19,5 +17,3 @@ void ouvertureFichier()
 	}
 
 }
-
-#endif

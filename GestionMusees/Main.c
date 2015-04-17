@@ -10,6 +10,8 @@
 void main()
 
 {
+	
+
 	ouvertureFichier();
 	system("pause>nul");
 
