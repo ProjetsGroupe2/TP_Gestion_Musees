@@ -1,11 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
-
+#include <windows.h>
 #include "GestionDonnes.h"
+#include "Affichage.h"
 
 void main()
 {
-	
-
-	system("pause");
+	Affichage();
+	system("pause>nul");
+	return 0;
 }

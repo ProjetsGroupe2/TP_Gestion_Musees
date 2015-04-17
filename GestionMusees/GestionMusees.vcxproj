@@ -76,10 +76,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Affichage.c" />
     <ClCompile Include="GestionDonnes.c" />
     <ClCompile Include="Main.c" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Affichage.h" />
     <ClInclude Include="Departement.h" />
     <ClInclude Include="GestionDonnes.h" />
     <ClInclude Include="Musee.h" />
