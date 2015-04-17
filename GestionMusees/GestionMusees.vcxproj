@@ -11,7 +11,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{03394BE5-C99F-4CF1-A47B-60C8D995DF03}</ProjectGuid>
+    <ProjectGuid>{ED163666-196A-43E9-AFF4-3C2B766D97C3}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>GestionMusees</RootNamespace>
   </PropertyGroup>
