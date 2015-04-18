@@ -21,7 +21,7 @@ void ouvertureFichier(Region* tabRegions)
 		nbRegions = NombreDeRegions(fichier);
 		tabRegions = malloc(sizeof(Region)* nbRegions);
 
-		// Parcour les lignes en vérifiant chaque caractères de ";" jusqu'à "\n" 
+		// Parcour les lignes en vérifiant chaque caractère de ";" jusqu'à "\n" 
 		do
 		{
 			lettre = fgetc(fichier);
