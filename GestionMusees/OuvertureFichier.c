@@ -44,10 +44,11 @@ int NombreDeRegions(FILE* fichier)
 	char nomRegion[200] = "";
 	char previousRegion[200] = "";
 	int nbChar = 0;
+	
 
 	rewind(fichier); // Retourne au début du fichier
 
-
+	// Passer la premiere ligne
 	do
 	{
 		lettre = fgetc(fichier);
@@ -55,28 +56,32 @@ int NombreDeRegions(FILE* fichier)
 
 	do
 	{
-		lettre = fgetc(fichier);
+		lettre = fgetc(fichier); // Cherche dans le fichier 
 		if (lettre == ';')
 		{
-			nomRegion[nbChar] = '\0'; // \0 pour dire que c'est la fin de la chaine de caractere
+			nomRegion[nbChar] = '\0'; // \0 fin de la chaine de caractere
 			if (strcmp(nomRegion, previousRegion) != 0) // strcmp pour comparer 2 string 
 			{
-				strcpy(previousRegion, nomRegion);
+				strcpy(previousRegion, nomRegion); // Copie une char dans une autre (destination, source)
 				nbRegions++;
 			}
 			do
 			{
 				lettre = fgetc(fichier);
 			} while (lettre != '\n' && lettre != EOF);
+
 			nbChar = 0;
 		}
 		else
 		{
-			nomRegion[nbChar] = lettre;
+			nomRegion[nbChar] = lettre; 
+			nbChar++; 
 		}
-		nbChar++;
+		
+		
 
 	} while (lettre != EOF);
 
 	return nbRegions;
 }
+
