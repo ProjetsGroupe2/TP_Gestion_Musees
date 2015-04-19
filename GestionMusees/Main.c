@@ -7,14 +7,17 @@
 #include "Sauvegarde.h"
 #include "OuvertureFichier.h"
 #include "Region.h"
+#include "Departement.h"
 
 void main()
 
 {
 	Region* tabRegions = NULL;
+	Departement* tabDepartement = NULL;
 	int choix = -1;
 
-	ouvertureFichier(tabRegions);
+	ouvertureFichier(tabRegions, tabDepartement);
+	
 
 	do
 	{

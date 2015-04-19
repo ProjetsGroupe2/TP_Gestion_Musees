@@ -1,12 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "Region.h"
+#include "Departement.h"
 
 
-void ouvertureFichier(Region* tabRegions)
+void ouvertureFichier(Region* tabRegions, Departement* tabDepartement)
 {
 	char lettre = ' ';
 	int nbRegions = 0;
+	int nbDep = 0;
 
 	FILE* fichier = NULL;
 	fichier = fopen("biblio.csv", "r+"); // Ouvre le fichier 
@@ -20,6 +22,10 @@ void ouvertureFichier(Region* tabRegions)
 	{
 		nbRegions = NombreDeRegions(fichier);
 		tabRegions = malloc(sizeof(Region)* nbRegions);
+
+		nbDep = NombreDeDepartement(fichier);
+		tabDepartement = malloc(sizeof(Departement)* nbDep);
+
 
 		// Parcour les lignes en vérifiant chaque caractère de ";" jusqu'à "\n" 
 		do
@@ -36,6 +42,7 @@ void ouvertureFichier(Region* tabRegions)
 	}
 	fclose(fichier);
 }
+
 
 int NombreDeRegions(FILE* fichier)
 {
@@ -77,11 +84,53 @@ int NombreDeRegions(FILE* fichier)
 			nomRegion[nbChar] = lettre; 
 			nbChar++; 
 		}
-		
-		
-
 	} while (lettre != EOF);
 
 	return nbRegions;
 }
 
+int NombreDeDepartement(FILE* fichier)
+{
+	char lettre = ' ';
+	int nbDep = 0;
+	char nomDep[200] = " ";
+	char previousDep[200] = " ";
+	int nbChar = 0;
+
+	rewind(fichier); 
+
+	do
+	{
+		lettre = fgetc(fichier);
+	} while (lettre != '\n');
+
+	
+
+	do
+	{
+
+		lettre = fgetc(fichier);
+		if (lettre == ';')
+		{
+			nomDep[nbChar] = '\0'; 
+			if (strcmp(nomDep, previousDep) != 0) 
+			{
+				strcpy(previousDep, nomDep); 
+				nbDep++;
+			}
+			do
+			{
+				lettre = fgetc(fichier);
+			} while (lettre != '\n' && lettre != EOF);
+
+			nbChar = 0;
+		}
+		else
+		{
+			nomDep[nbChar] = lettre;
+			nbChar++;	
+		}
+
+	} while (lettre != EOF);
+	return nbDep;
+}
