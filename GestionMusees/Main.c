@@ -1,11 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <windows.h>
-#include "GestionDonnes.h"
+
 #include "Affichage.h"
-#include "Gestion.h"
+#include "Affichage2.h"
 #include "Sauvegarde.h"
 #include "OuvertureFichier.h"
+
 #include "Region.h"
 #include "Departement.h"
 
@@ -26,15 +27,16 @@ void main()
 		switch (choix)
 		{
 		case 1:
-			// MenuGererMusees(&choix);
+			system("cls");
+			MenuGererMusees();
 			break;
 		case 2:
-			// RechercherMusee(&choix);
+			system("cls");
+			MenuRechercherMusee();
 			break;
 		case 3:
+			system("cls");
 			creationFichier();
-			break;
-		default:
 			break;
 		}
 	} while (choix != 0);
