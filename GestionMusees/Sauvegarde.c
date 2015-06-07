@@ -41,8 +41,9 @@ int creationFichier()
 		}
 
 		fclose(fichier);
-
+		system("pause>nul");
 		return 1;
+		
 	}
 
 }
