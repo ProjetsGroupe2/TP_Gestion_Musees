@@ -71,7 +71,7 @@ void MenuRechercherMusee()
 		}
 	} while (choix != 0 );
 
-	/*menu de recherche de musés par rapport à la Région, le Département ou la ville (voir horaires d'ouverture mais je pense que ça va être compiqué) 
+	/*menu de recherche de musées par rapport à la Région, le Département ou la ville (voir horaires d'ouverture mais je pense que ça va être compiqué) 
 	donc faire le menu avec un choix pour chaque possibilités 
 	puis 3 autres menus avec chaqun un titre et un scanf pour rentrer une chaine de caractère
 	Une fois que ce sera fait je m'occuperais de la fonction de recherche :)
@@ -86,10 +86,10 @@ void MenuRechercherMusee()
 // Fonction dans le fichier affichage2.c et .h pour éviter les conflits sur github /!\ A REMETTERE DANS AFFICHAGE.C et .H /!\ 
 //void  MenuGererMusees()
 //{
-//	/*menu de gestion des musées : Ajouter, modifier ou supprimer un musé
-//	Il faut donc pour ça un menu avec le titre "gestion de musés" avec un choix pour les sous parties
-//	Pour la fonction ajouter il y a chaque champs à renseigner : Nom du musé, adresse du musé, ville du musé, Département du musé et la région du musé
-//	Pour la modif : un scanf pour saisir l'identifiant du musé à modifier + un affichage pour modifier chaque champs à modifier -> Nom , adresse, ville, Département et la région...
+//	/*menu de gestion des musées : Ajouter, modifier ou supprimer un musée
+//	Il faut donc pour ça un menu avec le titre "gestion de musées" avec un choix pour les sous parties
+//	Pour la fonction ajouter il y a chaque champs à renseigner : Nom du musée, adresse du musée, ville du musée, Département du musée et la région du musée
+//	Pour la modif : un scanf pour saisir l'identifiant du musée à modifier + un affichage pour modifier chaque champs à modifier -> Nom , adresse, ville, Département et la région...
 //	et pour la suppression un titre plus l'affichage d'une liste des musés et un scanf pour 
 //
 //*/
