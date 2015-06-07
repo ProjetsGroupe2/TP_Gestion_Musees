@@ -7,5 +7,6 @@ struct Departement
 {
 	int id;
 	char nom[255];
+	int idRegion;
 };
 #endif
