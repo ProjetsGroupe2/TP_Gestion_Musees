@@ -1,3 +1,5 @@
+#include "Region.h"
+
 #ifndef DEPARTEMENT
 #define DEPARTEMENT
 

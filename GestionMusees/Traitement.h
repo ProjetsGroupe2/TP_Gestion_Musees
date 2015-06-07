@@ -1,0 +1,1 @@
+int CompareRegions(Regions * tabregion, char* region, int nbRegion);

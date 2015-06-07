@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include "Region.h"
 #include "Departement.h"
+#include "Traitement.h"
 
 
 void ouvertureFichier(Region* tabRegions, Departement* tabDepartement)
@@ -52,8 +53,8 @@ int NombreDeRegions(FILE* fichier)
 	char previousRegion[200] = "";
 	int nbChar = 0;
 	
-
-	rewind(fichier); // Retourne au début du fichier
+	// Retourne au début du fichier
+	rewind(fichier); 
 
 	// Passer la premiere ligne
 	do
