@@ -23,7 +23,9 @@ void main()
 	char nomregion = " ";
 	int choix = -1;
 
-	ouvertureFichier(tabRegions, tabDepartement, tabVille, nbRegion, nbDepartement, nbVille);
+	/* /!\ à décommenter avant de commiter /!\ */
+
+	ouvertureFichier(tabRegions, tabDepartement, tabVille, nbRegion, nbDepartement, nbVille); 
 
 	for (int i = 0; i < nbRegion; i++)
 	{

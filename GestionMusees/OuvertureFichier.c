@@ -115,7 +115,11 @@ void ouvertureFichier(Region* tabRegions, Departement* tabDepartement, Ville * t
 							strcpy(oldMusee, data);
 							nbMusee++;
 						}
-						strcpy
+						strcpy(data, nomMusee);
+						tabMusee = realloc(tabMusee, sizeof(Musee)* nbMusee);
+						tabMusee[nbMusee].id = nbMusee;
+						strcpy(tabMusee[nbMusee].nom, nomMusee);
+						/*tabMusee[nbMusee].*/
 
 						break;
 

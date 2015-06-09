@@ -32,6 +32,7 @@ int creationFichier()
 		fputs(line, fichier);
 
 		for (int i = 0; i < 2; i++)
+		{
 			strcpy(line, (tabMusees + i)->nom);
 			strcat(line, ";");
 
