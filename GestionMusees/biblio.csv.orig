@@ -1,8 +1,4 @@
 <<<<<<< HEAD
-NOMREG;NOMDEP;FERME;ANNREOUV;NOM DU MUSEE;ADR;CP;VILLE;SITWEB;FERMETURE ANNUELLE;PERIODE OUVERTURE
-Musee 1;
-Musee 2;
-=======
 NOMREG;NOMDEP;VILLE;NOM DU MUSEE;ADR;CP;ANNREOUV;FERME;SITWEB;FERMETURE ANNUELLE;PERIODE OUVERTURE
 ALSACE;BAS-RHIN;BARR;Musée de la Folie Marco;30, Rue du Dr Sultzer;67140;;NON;www.barr.fr;;10-12,14-18
 ALSACE;BAS-RHIN;BETSCHDORF;Musée de la Poterie;2, rue de Kuhlendorf;67660;;NON;www.betschdorf.fr/tourisme/visiter_betschdrof/musee_poterie.php;11/11,01/12-01/04;sept-18
@@ -1247,4 +1243,3 @@ RHÔNE-ALPES;SAVOIE;CHAMBERY;Musée des Charmettes;890, Chemin des Charmettes;7300
 RHÔNE-ALPES;SAVOIE;CHAMBERY CEDEX;Muséum d'histoire naturelle;208, Avenue de Lyon B.P. 844;73007;;OUI;;;
 RHÔNE-ALPES;SAVOIE;MOÛTIERS;Musée de l'Académie de La Val d'Isère;23, Place Saint-Pierre;73600;;NON;Site de l'Académie - http://academie.sup.fr;11/11,01/12-01/04;
 ST PIERRE ET MIQUELON;SAINT-PIERRE ET MIQUELON;SAINT-PIERRE ET MIQUELON;Musée Municipal;Rue du 11 novembre B.P. 4300;97500;;NON;www.arche-musee-et-archive.net;24/12,25/12;13-18
->>>>>>> e475e132e9558954a32539af207f138df7cf1853
