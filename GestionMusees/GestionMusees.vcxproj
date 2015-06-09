@@ -77,21 +77,21 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Affichage.c" />
-    <ClCompile Include="Gestion.c" />
-    <ClCompile Include="GestionDonnes.c" />
+    <ClCompile Include="Affichage2.c" />
     <ClCompile Include="Main.c" />
     <ClCompile Include="OuvertureFichier.c" />
     <ClCompile Include="Sauvegarde.c" />
+    <ClCompile Include="Traitement.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Affichage.h" />
+    <ClInclude Include="Affichage2.h" />
     <ClInclude Include="Departement.h" />
-    <ClInclude Include="Gestion.h" />
-    <ClInclude Include="GestionDonnes.h" />
     <ClInclude Include="Musee.h" />
     <ClInclude Include="OuvertureFichier.h" />
     <ClInclude Include="Region.h" />
     <ClInclude Include="Sauvegarde.h" />
+    <ClInclude Include="Traitement.h" />
     <ClInclude Include="Ville.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
