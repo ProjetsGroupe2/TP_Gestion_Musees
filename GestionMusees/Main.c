@@ -9,22 +9,25 @@
 
 #include "Region.h"
 #include "Departement.h"
+#include "Ville.h"
 
 void main()
 
 {
 	Region* tabRegions = NULL;
 	Departement* tabDepartement = NULL;
+	Ville* tabVille = NULL;
 	int nbRegion = 0;
 	int nbDepartement = 0;
+	int nbVille = 0;
 	char nomregion = " ";
 	int choix = -1;
 
-	ouvertureFichier(&tabRegions, &tabDepartement, nbRegion, nbDepartement);
+	ouvertureFichier(tabRegions, tabDepartement, tabVille, nbRegion, nbDepartement, nbVille);
 
 	for (int i = 0; i < nbRegion; i++)
 	{
-		nomregion = &tabRegions[nbRegion];
+		printf("%s\n", tabRegions[i]);
 	}
 
 	

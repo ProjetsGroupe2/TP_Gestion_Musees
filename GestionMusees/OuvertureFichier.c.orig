@@ -1,30 +1,25 @@
 #include <stdio.h>
 #include <stdlib.h>
-
 #include "Region.h"
 #include "Departement.h"
 #include "Traitement.h"
-#include "Ville.h"
-#include "Musee.h"
 
-void ouvertureFichier(Region* tabRegions, Departement* tabDepartement, Ville * tabVille, Musee * tabMusee,  int nbRegion, int nbDep, int nbVille, int nbMusee)
+
+void ouvertureFichier(Region* tabRegions, Departement* tabDepartement)
 {
 	char lettre = ' ';
 	int nbChar = 0;
 	int countColonne = 1;
 	char data[255] = " ";
 //---------------------------------
+	int nbRegions = 0;
 	char nomRegion[255] = " ";
 	char oldRegion[255] = " ";
 //---------------------------------
+	int nbDep = 0;
 	char nomDep[255] = " ";
 	char oldDep[255] = " ";
 //---------------------------------
-	char nomVille[255] = " ";
-	char oldVille[255] = " ";
-//---------------------------------
-	char nomMusee[255] = " ";
-	char oldMusee[255] = " ";
 
 	FILE* fichier = NULL;
 	fichier = fopen("biblio.csv", "r+"); // Ouvre le fichier 
@@ -37,9 +32,8 @@ void ouvertureFichier(Region* tabRegions, Departement* tabDepartement, Ville * t
 	else
 	{
 		
-		tabRegions = NULL/*calloc(1, sizeof(Region))*/;
-		tabDepartement = NULL /*calloc(1, sizeof(Departement))*/;
-		tabVille = NULL/*calloc(1, sizeof(Ville))*/;
+		tabRegions = calloc(1, sizeof(Region));
+		tabDepartement = calloc(1, sizeof(Departement));
 
 		// Retourne au début du fichier
 		rewind(fichier);
@@ -59,65 +53,46 @@ void ouvertureFichier(Region* tabRegions, Departement* tabDepartement, Ville * t
 					
 					switch (countColonne)
 					{
-						//  Region------------------------------------------------------------------------
+						//  Region
 					case 1 :
 						data[nbChar] = '\0';
 						if (strcmp(data, oldRegion) != 0) // strcmp pour comparer 2 string 
 							{
 							strcpy(oldRegion, data); // Copie une char dans une autre (destination, source)
-								nbRegion++;
+								nbRegions++;
 							}
-						strcpy(nomRegion, data);
-						tabRegions = realloc(tabRegions, sizeof(Region)* nbRegion);
-						tabRegions[nbRegion].id = nbRegion;
-						strcpy(tabRegions[nbRegion].nom, nomRegion);
-						nbChar = 0;
-					break;
+						    strcpy(nomRegion, data);
+							tabRegions[nbRegions].id = nbRegions;
+							strcpy(tabRegions[nbRegions].nom, nomRegion);
+							nbChar = 0;
+							strcpy(data, " ");
+						break;
 
-						// Département--------------------------------------------------------------------
+						// Département
 					case 2:
-						data[nbChar] = '\0';
+						nomDep[nbChar] = '\0';
 						if (strcmp(data, oldDep) != 0)
 							{
 							strcpy(oldDep, data);
 								nbDep++;
 							}
 						strcpy(nomDep, data);
-						tabDepartement = realloc(tabDepartement, sizeof(Departement)* nbDep);
-						tabDepartement[nbDep].id = nbDep;
-						strcpy(tabDepartement[nbDep].nom, nomDep);
-						tabDepartement[nbDep].idRegion = nbRegion;
-						nbChar = 0;
-					break;
-
-						// Ville--------------------------------------------------------------------------
-					case 3:		
-						data[nbChar] = '\0';
-						if (strcmp(data, oldVille)!= 0)
-							{
-							strcpy(oldVille, data);
-								nbVille++;
-							}
-						strcpy(data, nomVille);
-						tabVille = realloc(tabVille, sizeof(Ville)* nbVille);
-						tabVille[nbVille].id = nbVille;
-						strcpy(tabVille[nbVille].nom, nomVille);
-						tabVille[nbVille].idDepartement = nbDep;
-						nbChar = 0;
-
-					break;
-
-						// Nom du musée-------------------------------------------------------------------
-					case 4:
-						data[nbMusee] = '\0';
-						if (strcmp(data, oldMusee)!= 0) 
-						{
-							strcpy(oldMusee, data);
-							nbMusee++;
-						}
-						strcpy
-
+							tabDepartement[nbDep].id = nbDep;
+							strcpy(tabDepartement[nbDep].nom, nomDep);
+							tabDepartement[nbDep].idRegion = nbRegions;
+							nbChar = 0;
+							strcpy(data, " ");
 						break;
+
+					default:
+						break;
+					//	// Ville
+					//case 3:
+					//	break;
+
+					//	// Nom du musée
+					//case 4:
+					//	break;
 
 					//	// Adresse 
 					//case 5:
