@@ -50,23 +50,29 @@ void affichageMenu(int* choix)
 
 void MenuRechercherMusee()
 {
+	affichage();
 	int choix = -1;
 
-	printf("choix 1\n");
-	printf("choix 2\n");
-	printf("choix 0 Quitter\n");
-
-	do
 	{
+		printf("                             COPYRIGHT © FRANCE                          \n\n");
+		printf("                  1 .     Rechercher par R%lcgion                          \n", 130); //Ajouter "%lc" a la place du "é" puis ajouter en fin de phrase "130" pour un accent donc si deux accents mettre comme cela "130, 130".
+		printf("                  2 .     Rechercher par D%lcpartement                          \n", 130);
+		printf("                  3 .     Rechercher par Ville                           \n");
+		printf("                  0 .     Quitter                          \n\n");
+		printf("			  Entrer le num%lcro du menu que vous avez choisie : ", 130);
+
 		scanf("%d", &choix);
 
 		switch (choix)
 		{
 		case 1:
-			printf("choix 1\n");
+			printf("Fonction Region\n");
 			break;
 		case 2 : 
-			printf("choix 2\n");
+			printf("Fonction Departement\n");
+			break;
+		case 3:
+			printf("Fonction Ville\n");
 			break;
 		}
 	} while (choix != 0 );
