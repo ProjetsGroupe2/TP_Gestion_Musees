@@ -33,13 +33,25 @@ void ouvertureFichier(Region* tabRegions, Departement* tabDepartement, Ville * t
 //Var Adresse -------------------------------
 	char strAdresse[255] = " ";
 
-//Var Code postal -------------------------------
+//Var Code postal ---------------------------
 	char strCp[255] = " ";
 
-//Var Annee -------------------------------
+//Var Annee ---------------------------------
 	char strAnnee[255] = " ";
 
-	
+//Var Fermé? --------------------------------
+	char strFerme[255] = " ";
+
+//Var Site Web ------------------------------
+	char strWeb[255] = " ";
+
+//Var Fermture Annuelle ---------------------
+	char strFermeAnn[255] = " ";
+
+//Var Horaires d'Ouverture---------------------
+	char strOuvert[255] = " ";
+
+
 
 	FILE* fichier = NULL;
 	fichier = fopen("biblio.csv", "r+"); // Ouvre le fichier 
@@ -164,21 +176,37 @@ void ouvertureFichier(Region* tabRegions, Departement* tabDepartement, Ville * t
 						nbChar = 0;
 					break;
 
-					//	// Fermé?
-					//case 8:
-					//	break;
+						// Fermé? --------------------------------------------------------------------------
+					case 8:
+						data[nbChar] = '\0';
+						strcpy(data, strFerme);
+						strcpy(tabMusee[nbMusee].ferme, strFerme);
+						nbChar = 0;
+					break;
 
-					//	// Site Web
-					//case 9:
-					//	break;
+						// Site Web ------------------------------------------------------------------------
+					case 9:
+						data[nbChar] = '\0';
+						strcpy(data, strWeb);
+						strcpy(tabMusee[nbMusee].siteweb, strWeb);
+						nbChar = 0;
+					break;
 
-					//	// Fermeture annuelle 
-					//case 10:
-					//	break;
+						// Fermeture annuelle 
+					case 10:
+						data[nbChar] = '\0';
+						strcpy(data, strFermeAnn);
+						strcpy(tabMusee[nbMusee].fermetureannuelle, strFermeAnn);
+						nbChar = 0;
+					break;
 
-					//	// Horaires d'ouverture
-					//case 11:
-					//	break;
+						// Horaires d'ouverture
+					case 11:
+						data[nbChar] = '\0';
+						strcpy(data, strOuvert);
+						strcpy(tabMusee[nbMusee].periodeouverture, strOuvert);
+						nbChar = 0;
+					break;
 
 					}
 					countColonne++;
