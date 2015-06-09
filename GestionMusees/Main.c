@@ -25,7 +25,7 @@ void main()
 
 	/* /!\ à décommenter avant de commiter /!\ */
 
-	ouvertureFichier(tabRegions, tabDepartement, tabVille, nbRegion, nbDepartement, nbVille); 
+	//ouvertureFichier(tabRegions, tabDepartement, tabVille, nbRegion, nbDepartement, nbVille); 
 
 	for (int i = 0; i < nbRegion; i++)
 	{

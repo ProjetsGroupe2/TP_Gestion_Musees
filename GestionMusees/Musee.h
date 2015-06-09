@@ -10,6 +10,9 @@ struct Musee
 {
 	int id;
 	char nom[255];
+	int idVille;
+	char adresse[255];
+	char cp[10];
 	int ferme;
 	int anneereouv;
 	char siteweb[255];

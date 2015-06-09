@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <windows.h>
+#include "Affichage.h"
 
 
 void Color(int couleurDuTexte, int couleurDeFond) // fonction d'affichage de couleurs
@@ -84,10 +85,7 @@ void MenuRechercherMusee()
 void RechercheRegion()
 {
 	affichage();
-	do
-	{
-
-	} while (true);
+	
 
 	{
 		printf("                             COPYRIGHT © FRANCE                          \n\n");

@@ -13,18 +13,33 @@ void ouvertureFichier(Region* tabRegions, Departement* tabDepartement, Ville * t
 	int nbChar = 0;
 	int countColonne = 1;
 	char data[255] = " ";
-//---------------------------------
+
+//Var Region --------------------------------
 	char nomRegion[255] = " ";
 	char oldRegion[255] = " ";
-//---------------------------------
+
+//Var Departement ---------------------------
 	char nomDep[255] = " ";
 	char oldDep[255] = " ";
-//---------------------------------
+
+//Var Ville ---------------------------------
 	char nomVille[255] = " ";
 	char oldVille[255] = " ";
-//---------------------------------
+
+//Var Musee ---------------------------------
 	char nomMusee[255] = " ";
 	char oldMusee[255] = " ";
+
+//Var Adresse -------------------------------
+	char strAdresse[255] = " ";
+
+//Var Code postal -------------------------------
+	char strCp[255] = " ";
+
+//Var Annee -------------------------------
+	char strAnnee[255] = " ";
+
+	
 
 	FILE* fichier = NULL;
 	fichier = fopen("biblio.csv", "r+"); // Ouvre le fichier 
@@ -40,6 +55,8 @@ void ouvertureFichier(Region* tabRegions, Departement* tabDepartement, Ville * t
 		tabRegions = NULL/*calloc(1, sizeof(Region))*/;
 		tabDepartement = NULL /*calloc(1, sizeof(Departement))*/;
 		tabVille = NULL/*calloc(1, sizeof(Ville))*/;
+		tabMusee = NULL/*calloc(1, sizeof(Ville))*/;
+
 
 		// Retourne au début du fichier
 		rewind(fichier);
@@ -59,7 +76,7 @@ void ouvertureFichier(Region* tabRegions, Departement* tabDepartement, Ville * t
 					
 					switch (countColonne)
 					{
-						//  Region------------------------------------------------------------------------
+						//  Region ------------------------------------------------------------------------
 					case 1 :
 						data[nbChar] = '\0';
 						if (strcmp(data, oldRegion) != 0) // strcmp pour comparer 2 string 
@@ -74,7 +91,7 @@ void ouvertureFichier(Region* tabRegions, Departement* tabDepartement, Ville * t
 						nbChar = 0;
 					break;
 
-						// Département--------------------------------------------------------------------
+						// Département --------------------------------------------------------------------
 					case 2:
 						data[nbChar] = '\0';
 						if (strcmp(data, oldDep) != 0)
@@ -90,7 +107,7 @@ void ouvertureFichier(Region* tabRegions, Departement* tabDepartement, Ville * t
 						nbChar = 0;
 					break;
 
-						// Ville--------------------------------------------------------------------------
+						// Ville --------------------------------------------------------------------------
 					case 3:		
 						data[nbChar] = '\0';
 						if (strcmp(data, oldVille)!= 0)
@@ -107,7 +124,7 @@ void ouvertureFichier(Region* tabRegions, Departement* tabDepartement, Ville * t
 
 					break;
 
-						// Nom du musée-------------------------------------------------------------------
+						// Nom du musée -------------------------------------------------------------------
 					case 4:
 						data[nbMusee] = '\0';
 						if (strcmp(data, oldMusee)!= 0) 
@@ -119,21 +136,33 @@ void ouvertureFichier(Region* tabRegions, Departement* tabDepartement, Ville * t
 						tabMusee = realloc(tabMusee, sizeof(Musee)* nbMusee);
 						tabMusee[nbMusee].id = nbMusee;
 						strcpy(tabMusee[nbMusee].nom, nomMusee);
-						/*tabMusee[nbMusee].*/
+						tabMusee[nbMusee].idVille = nbVille;
+						nbChar = 0;
+					break;
 
-						break;
+						// Adresse -------------------------------------------------------------------------
+					case 5:
+						data[nbChar] = '\0';
+						strcpy(data, strAdresse);
+						strcpy(tabMusee[nbMusee].adresse, strAdresse);
+						nbChar = 0;
+					break;
 
-					//	// Adresse 
-					//case 5:
-					//	break;
+						// Code postal ---------------------------------------------------------------------
+					case 6:
+						data[nbChar] = '\0';
+						strcpy(data, strCp);
+						strcpy(tabMusee[nbMusee].cp, strCp);
+						nbChar = 0;
+					break;
 
-					//	// Code postal
-					//case 6:
-					//	break;
-
-					//	// Année ouverture
-					//case 7:
-					//	break;
+						// Année ouverture -----------------------------------------------------------------
+					case 7:
+						data[nbChar] = '\0';
+						strcpy(data, strAnnee);
+						strcpy(tabMusee[nbMusee].anneereouv, strAnnee);
+						nbChar = 0;
+					break;
 
 					//	// Fermé?
 					//case 8:
