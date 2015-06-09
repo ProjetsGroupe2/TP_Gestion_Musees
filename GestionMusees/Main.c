@@ -10,6 +10,7 @@
 #include "Region.h"
 #include "Departement.h"
 #include "Ville.h"
+#include "Musee.h"
 
 void main()
 
@@ -17,15 +18,17 @@ void main()
 	Region* tabRegions = NULL;
 	Departement* tabDepartement = NULL;
 	Ville* tabVille = NULL;
+	Musee* tabMusee = NULL;
 	int nbRegion = 0;
 	int nbDepartement = 0;
 	int nbVille = 0;
+	int nbMusee = 0;
 	char nomregion = " ";
 	int choix = -1;
 
 	/* /!\ à décommenter avant de commiter /!\ */
 
-	//ouvertureFichier(tabRegions, tabDepartement, tabVille, nbRegion, nbDepartement, nbVille); 
+	ouvertureFichier(tabRegions, tabDepartement, tabVille, tabMusee, nbRegion, nbDepartement, nbVille, nbMusee);
 
 	for (int i = 0; i < nbRegion; i++)
 	{
@@ -48,7 +51,8 @@ void main()
 			break;
 		case 3:
 			system("cls");
-			creationFichier();
+			/* /!\ Commenté par Martin dans le Main et dans Sauvegerde pour cause de déboggage d'ouverture fichier /!\ */
+			//creationFichier();
 			break;
 		}
 	} while (choix != 0);
