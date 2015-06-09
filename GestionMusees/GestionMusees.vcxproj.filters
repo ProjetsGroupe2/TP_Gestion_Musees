@@ -18,13 +18,7 @@
     <ClCompile Include="Main.c">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="GestionDonnes.c">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
     <ClCompile Include="Affichage.c">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
-    <ClCompile Include="Gestion.c">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
     <ClCompile Include="Sauvegarde.c">
@@ -33,11 +27,14 @@
     <ClCompile Include="OuvertureFichier.c">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
+    <ClCompile Include="Traitement.c">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Affichage2.c">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="GestionDonnes.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
     <ClInclude Include="Region.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
@@ -53,13 +50,16 @@
     <ClInclude Include="Affichage.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="Gestion.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
     <ClInclude Include="Sauvegarde.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
     <ClInclude Include="OuvertureFichier.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Traitement.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Affichage2.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
   </ItemGroup>

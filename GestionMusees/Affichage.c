@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <windows.h>
 
+
 void Color(int couleurDuTexte, int couleurDeFond) // fonction d'affichage de couleurs
 {
 	HANDLE H = GetStdHandle(STD_OUTPUT_HANDLE);
@@ -47,5 +48,49 @@ void affichageMenu(int* choix)
 	scanf("%d", choix);
 }
 
+void MenuRechercherMusee()
+{
+	int choix = -1;
+
+	printf("choix 1\n");
+	printf("choix 2\n");
+	printf("choix 0 Quitter\n");
+
+	do
+	{
+		scanf("%d", &choix);
+
+		switch (choix)
+		{
+		case 1:
+			printf("choix 1\n");
+			break;
+		case 2 : 
+			printf("choix 2\n");
+			break;
+		}
+	} while (choix != 0 );
+
+	/*menu de recherche de musées par rapport à la Région, le Département ou la ville (voir horaires d'ouverture mais je pense que ça va être compiqué) 
+	donc faire le menu avec un choix pour chaque possibilités 
+	puis 3 autres menus avec chaqun un titre et un scanf pour rentrer une chaine de caractère
+	Une fois que ce sera fait je m'occuperais de la fonction de recherche :)
+*/
+}
+// /!\ NE BUTTER PAS SUR LES FONCTIONS QUI SONT A FAIRE LAISSEZ SIMPLEMENT DES COMMENTAIRES A LA PLACE SAUF SI VOUS PENSEZ POUVOIR LES FAIRE /!\
 
 
+//-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+// Fonction dans le fichier affichage2.c et .h pour éviter les conflits sur github /!\ A REMETTERE DANS AFFICHAGE.C et .H /!\ 
+//void  MenuGererMusees()
+//{
+//	/*menu de gestion des musées : Ajouter, modifier ou supprimer un musée
+//	Il faut donc pour ça un menu avec le titre "gestion de musées" avec un choix pour les sous parties
+//	Pour la fonction ajouter il y a chaque champs à renseigner : Nom du musée, adresse du musée, ville du musée, Département du musée et la région du musée
+//	Pour la modif : un scanf pour saisir l'identifiant du musée à modifier + un affichage pour modifier chaque champs à modifier -> Nom , adresse, ville, Département et la région...
+//	et pour la suppression un titre plus l'affichage d'une liste des musés et un scanf pour 
+//
+//*/
+//}
