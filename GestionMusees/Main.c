@@ -14,9 +14,18 @@ void main()
 {
 	Region* tabRegions = NULL;
 	Departement* tabDepartement = NULL;
+	int nbRegion = 0;
+	int nbDepartement = 0;
+	char nomregion = " ";
 	int choix = -1;
 
-	ouvertureFichier(tabRegions, tabDepartement);
+	ouvertureFichier(&tabRegions, &tabDepartement, nbRegion, nbDepartement);
+
+	for (int i = 0; i < nbRegion; i++)
+	{
+		nomregion = &tabRegions[nbRegion];
+	}
+
 	
 
 	do

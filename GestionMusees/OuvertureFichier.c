@@ -1,14 +1,16 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include "Region.h"
 #include "Departement.h"
 
 
-void ouvertureFichier(Region* tabRegions, Departement* tabDepartement)
+void ouvertureFichier(Region* tabRegions, Departement* tabDepartement,int nbRegions, int nbDep)
 {
 	char lettre = ' ';
-	int nbRegions = 0;
-	int nbDep = 0;
+	/*int nbRegions = 0;
+	int nbDep = 0;*/
+
 
 	FILE* fichier = NULL;
 	fichier = fopen("biblio.csv", "r+"); // Ouvre le fichier 
@@ -25,6 +27,7 @@ void ouvertureFichier(Region* tabRegions, Departement* tabDepartement)
 
 		nbDep = NombreDeDepartement(fichier);
 		tabDepartement = malloc(sizeof(Departement)* nbDep);
+		
 
 
 		// Parcour les lignes en vérifiant chaque caractère de ";" jusqu'à "\n" 
@@ -33,7 +36,7 @@ void ouvertureFichier(Region* tabRegions, Departement* tabDepartement)
 			lettre = fgetc(fichier);
 			if (lettre == ';' || lettre == '\n')
 			{
-
+			
 			}
 
 		} while (lettre != EOF); // Tant que le carractère est différent de la fin du fichier
@@ -46,47 +49,70 @@ void ouvertureFichier(Region* tabRegions, Departement* tabDepartement)
 
 int NombreDeRegions(FILE* fichier)
 {
-	char lettre = ' ';
-	int nbRegions = 0;
-	char nomRegion[200] = "";
-	char previousRegion[200] = "";
-	int nbChar = 0;
+	/*char str[255];
+	char chaine = " ";
+	char *ptr_chaine = &chaine;
+	int numLigne = 1;
+
+
+	if (fgets(str, 100, fichier) != NULL)
+	{
+		printf("resultat %s", str);
+		numLigne++;
+		ptr_chaine = strtok(str, ";");
+	}
+}*/
+
+
+
 	
+	char lettre = ' ';
+	int nbregions = 0;
+	char nomregion[200] = " ";
+	char previousregion[200] = " ";
+	int nbchar = 0;
+	int nbrlignes = 0;
+	char ligne[] = " ";
 
-	rewind(fichier); // Retourne au début du fichier
+	rewind(fichier); // retourne au début du fichier
 
-	// Passer la premiere ligne
+	// passer la premiere ligne
 	do
 	{
 		lettre = fgetc(fichier);
 	} while (lettre != '\n');
+	
+
 
 	do
 	{
-		lettre = fgetc(fichier); // Cherche dans le fichier 
+ 		lettre = fgetc(fichier); // cherche dans le fichier 
 		if (lettre == ';')
 		{
-			nomRegion[nbChar] = '\0'; // \0 fin de la chaine de caractere
-			if (strcmp(nomRegion, previousRegion) != 0) // strcmp pour comparer 2 string 
+			nomregion[nbchar] = '\0'; // \0 fin de la chaine de caractere
+			if (strcmp(nomregion, previousregion) != 0) // strcmp pour comparer 2 string 
 			{
-				strcpy(previousRegion, nomRegion); // Copie une char dans une autre (destination, source)
-				nbRegions++;
+				strcpy(previousregion, nomregion); // copie une char dans une autre (destination, source)
+				
+				
+				nbregions++;
 			}
 			do
 			{
 				lettre = fgetc(fichier);
 			} while (lettre != '\n' && lettre != EOF);
 
-			nbChar = 0;
+			nbchar = 0;
+
 		}
 		else
 		{
-			nomRegion[nbChar] = lettre; 
-			nbChar++; 
+			nomregion[nbchar] = lettre; 
+			nbchar++; 
 		}
 	} while (lettre != EOF);
 
-	return nbRegions;
+	return nbregions;
 }
 
 int NombreDeDepartement(FILE* fichier)
