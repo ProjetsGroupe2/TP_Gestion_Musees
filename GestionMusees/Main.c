@@ -31,9 +31,7 @@ void main()
 	{
 		printf("%s\n", tabRegions[i]);
 	}
-
 	
-
 	do
 	{
 		affichage();

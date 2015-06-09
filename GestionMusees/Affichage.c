@@ -66,23 +66,64 @@ void MenuRechercherMusee()
 		switch (choix)
 		{
 		case 1:
-			printf("Fonction Region\n");
+			system("cls");
+			RechercheRegion();
 			break;
-		case 2 : 
-			printf("Fonction Departement\n");
+		case 2:
+			system("cls");
+			RechercheDepartement();
 			break;
 		case 3:
-			printf("Fonction Ville\n");
+			system("cls");
+			RechercheVille();
 			break;
 		}
-	} while (choix != 0 );
+	} while (choix != 0);
+}
+
+void RechercheRegion()
+{
+	affichage();
+	do
+	{
+
+	} while (true);
+
+	{
+		printf("                             COPYRIGHT © FRANCE                          \n\n");
+		printf("                  1 .     Rechercher les mus%lces par r%lcgion :                          \n", 130); //Ajouter "%lc" a la place du "é" puis ajouter en fin de phrase "130" pour un accent donc si deux accents mettre comme cela "130, 130".
+	}
+}
+
+void RechercheDepartement()
+{
+	affichage();
+
+	{
+		printf("                             COPYRIGHT © FRANCE                          \n\n");
+		printf("                  2 .     Rechercher les mus%lces par d%partement                          \n", 130); //Ajouter "%lc" a la place du "é" puis ajouter en fin de phrase "130" pour un accent donc si deux accents mettre comme cela "130, 130".
+		printf("			  Entrer le num%lcro du menu que vous avez choisie : ", 130);
+	}
+}
+
+
+void RechercheVille()
+{
+	affichage();
+
+	{
+		printf("                             COPYRIGHT © FRANCE                          \n\n");
+		printf("                  3 .     Rechercher les mus%lces par ville                          \n", 130); //Ajouter "%lc" a la place du "é" puis ajouter en fin de phrase "130" pour un accent donc si deux accents mettre comme cela "130, 130".
+		printf("			  Entrer le num%lcro du menu que vous avez choisie : ", 130);
+	}
+}
 
 	/*menu de recherche de musées par rapport à la Région, le Département ou la ville (voir horaires d'ouverture mais je pense que ça va être compiqué) 
 	donc faire le menu avec un choix pour chaque possibilités 
 	puis 3 autres menus avec chaqun un titre et un scanf pour rentrer une chaine de caractère
 	Une fois que ce sera fait je m'occuperais de la fonction de recherche :)
 */
-}
+
 // /!\ NE BUTTER PAS SUR LES FONCTIONS QUI SONT A FAIRE LAISSEZ SIMPLEMENT DES COMMENTAIRES A LA PLACE SAUF SI VOUS PENSEZ POUVOIR LES FAIRE /!\
 
 
