@@ -69,15 +69,12 @@ void MenuRechercherMusee()
 		switch (choix)
 		{
 		case 1:
-			system("cls");
 			RechercheRegion();
 			break;
 		case 2:
-			system("cls");
 			RechercheDepartement();
 			break;
 		case 3:
-			system("cls");
 			RechercheVille();
 			break;
 		}
