@@ -192,7 +192,7 @@ void ouvertureFichier(Region* tabRegions, Departement* tabDepartement, Ville * t
 						nbChar = 0;
 					break;
 
-						// Fermeture annuelle 
+						// Fermeture annuelle --------------------------------------------------------------
 					case 10:
 						data[nbChar] = '\0';
 						strcpy(strFermeAnn, data);
@@ -204,7 +204,7 @@ void ouvertureFichier(Region* tabRegions, Departement* tabDepartement, Ville * t
 					countColonne++;
 			}
 
-			// Horaires d'ouverture -> case 11
+			// Horaires d'ouverture -> case 11 -------------------------------------------------------------
 			else if (lettre != '\n')
 			{
 				data[nbChar] = lettre;
@@ -219,7 +219,7 @@ void ouvertureFichier(Region* tabRegions, Departement* tabDepartement, Ville * t
 				
 			}
 
-		} while (lettre != EOF ); // Tant que le carractère est différent de la fin du fichier (EOF)
+		} while (lettre != EOF ); // Tant que le carractère est différent de la fin du fichier (EOF) -------
 
 
 	}
