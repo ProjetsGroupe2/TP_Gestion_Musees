@@ -120,7 +120,7 @@ void RechercheRegion()
 	do
 
 	{
-		printf("                  1 .     Indiquez le num%lcro de la r%lcgion choisie pour \n                          afficher les mus%lces : \n\n",130,130, 130); //Ajouter "%lc" a la place du "é" puis ajouter en fin de phrase "130" pour un accent donc si deux accents mettre comme cela "130, 130".
+		printf("                  1 .     Indiquez le num%lcro de la r%lcgion choisie : \n",130,130, 130); //Ajouter "%lc" a la place du "é" puis ajouter en fin de phrase "130" pour un accent donc si deux accents mettre comme cela "130, 130".
 		printf("                  0 .     Retour menu pr%lcc%lcdent \n\n\n",130 ,130);
 		printf("			  Entrer le num%lcro du menu que vous avez choisie : ", 130);
 

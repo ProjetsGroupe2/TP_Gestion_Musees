@@ -7,7 +7,7 @@
 #include "Ville.h"
 #include "Musee.h"
 
-void ouvertureFichier(Region* tabRegions, Departement* tabDepartement, Ville* tabVille, Musee* tabMusee,  int* nbRegion, int* nbDep, int* nbVille, int* nbMusee)
+//void ouvertureFichier(Region* tabRegions, Departement* tabDepartement, Ville* tabVille, Musee* tabMusee,  int* nbRegion, int* nbDep, int* nbVille, int* nbMusee)
 {
 	char lettre = ' ';
 	int nbChar = 0;
