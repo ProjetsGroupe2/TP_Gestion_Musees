@@ -7,7 +7,7 @@
 #include "Ville.h"
 #include "Musee.h"
 
-void ouvertureFichier(Region* tabRegions, Departement* tabDepartement, Ville* tabVille, Musee* tabMusee, int *nbRegion, int *nbDep, int *nbVille, int *nbMusee)
+void ouvertureFichier(Region* tabRegion, Departement* tabDepartement, Ville* tabVille, Musee* tabMusee, int *nbRegion, int *nbDep, int *nbVille, int *nbMusee)
 {
 	char lettre = ' ';
 	int nbChar = 0;
@@ -68,7 +68,7 @@ void ouvertureFichier(Region* tabRegions, Departement* tabDepartement, Ville* ta
 	else
 	{
 		
-		tabRegions = calloc(1, sizeof(Region));
+		tabRegion = calloc(1, sizeof(Region));
 		tabDepartement =  calloc(1, sizeof(Departement));
 		tabVille = calloc(1, sizeof(Ville));
 		tabMusee = calloc(1, sizeof(Musee));
@@ -101,11 +101,11 @@ void ouvertureFichier(Region* tabRegions, Departement* tabDepartement, Ville* ta
 								{
 								strcpy(oldRegion, data); // Copie une char dans une autre (destination, source)
 									numRegion++;
-									tabRegions = realloc(tabRegions, (numRegion + 1) * sizeof(Region));
+									tabRegion = realloc(tabRegion, (numRegion + 1) * sizeof(Region));
 								}
 							strcpy(nomRegion, data);
-							tabRegions[numRegion].id = numRegion;
-							strcpy(tabRegions[numRegion].nom, nomRegion);
+							tabRegion[numRegion].id = numRegion;
+							strcpy(tabRegion[numRegion].nom, nomRegion);
 							nbChar = 0;
 
 						break;

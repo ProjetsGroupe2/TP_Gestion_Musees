@@ -15,10 +15,12 @@
 void main()
 
 {
-	Region* tabRegions = NULL;
+	Region* tabRegion = NULL;
 	Departement* tabDepartement = NULL;
 	Ville* tabVille = NULL;
 	Musee* tabMusee = NULL;
+
+
 	int nbRegion = 0;
 	int nbDepartement = 0;
 	int nbVille = 0;
@@ -28,11 +30,16 @@ void main()
 
 	/* /!\ à décommenter avant de commiter /!\ */
 
-	ouvertureFichier(tabRegions, tabDepartement, tabVille, tabMusee, &nbRegion, &nbDepartement, &nbVille, &nbMusee);
+	ouvertureFichier(tabRegion, tabDepartement, tabVille, tabMusee, &nbRegion, &nbDepartement, &nbVille, &nbMusee);
 
+	/*tabRegion = calloc(nbRegion, sizeof(Region));
+    tabDepartement = calloc(nbDepartement, sizeof(Departement));
+	tabVille = calloc(nbVille, sizeof(Ville));
+	tabMusee = calloc(nbMusee, sizeof(Musee));
+*/
 	for (int i = 0; i < nbRegion; i++)
 	{
-		printf("%d %s\n", tabRegions[i].id, tabRegions[i].nom);
+		printf("%d %s\n", tabRegion[i].id, tabRegion[i].nom);
 	}
 	system("pause");
 	do
