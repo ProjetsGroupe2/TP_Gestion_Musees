@@ -40,6 +40,7 @@ void petitaffichage()
 
 void affichage()
 {
+	system("cls");
 	Color(0, 0); //Noir, Noir
 	printf("\n\n                 ");
 	Color(1, 1); //Bleu, Bleu
@@ -65,9 +66,12 @@ void affichage()
 
 void affichageMenu(int* choix)
 {
+<<<<<<< HEAD
+=======
 	system("cls");
 	petitaffichage();
 	affichage();
+>>>>>>> 8769ea2c4a0a5d7215107bf2b90c3b34953c3528
 	printf("                             COPYRIGHT © FRANCE                          \n\n");
 	printf("                  1 .     G%lcrer les Mus%lces                          \n", 130, 130); //Ajouter "%lc" a la place du "é" puis ajouter en fin de phrase "130" pour un accent donc si deux accents mettre comme cela "130, 130".
 	printf("                  2 .     Rechercher les Mus%lces                          \n", 130);
@@ -99,12 +103,15 @@ void MenuRechercherMusee()
 		switch (choix)
 		{
 		case 1:
+			system("cls");
 			RechercheRegion();
 			break;
 		case 2:
+			system("cls");
 			RechercheDepartement();
 			break;
 		case 3:
+			system("cls");
 			RechercheVille();
 			break;
 		}
@@ -136,7 +143,6 @@ void RechercheRegion()
 		case 0:
 			MenuRechercherMusee();
 			break;
-
 		}
 	} while (choix != 0);
 

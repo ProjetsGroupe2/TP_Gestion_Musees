@@ -28,11 +28,11 @@ void main()
 
 	/* /!\ à décommenter avant de commiter /!\ */
 
-	ouvertureFichier(tabRegions, tabDepartement, tabVille, tabMusee, nbRegion, nbDepartement, nbVille, nbMusee);
+	//ouvertureFichier(tabRegions, tabDepartement, tabVille, tabMusee, nbRegion, nbDepartement, nbVille, nbMusee);
 
 	for (int i = 0; i < nbRegion; i++)
 	{
-		printf("%s\n", tabRegions[i]);
+		printf("%d   %s\n", tabRegions[i].id, tabRegions[i].nom);
 	}
 	
 	do
@@ -42,19 +42,19 @@ void main()
 		switch (choix)
 		{
 		case 1:
+<<<<<<< HEAD
 			MenuGererMusees();
+=======
+			system("cls");
+			//MenuGererMusees();
+>>>>>>> c3a391dc525ece0d8619a9a0d2cbcec69210d3de
 			break;
 		case 2:
 			MenuRechercherMusee();
 			break;
 		case 3:
-<<<<<<< HEAD
-			creationFichier();
-=======
-			system("cls");
 			/* /!\ Commenté par Martin dans le Main et dans Sauvegerde pour cause de déboggage d'ouverture fichier /!\ */
 			//creationFichier();
->>>>>>> f09c478ca38aca0c1648ecc56c4808cb8012f5d8
 			break;
 		}
 	} while (choix != 0);
