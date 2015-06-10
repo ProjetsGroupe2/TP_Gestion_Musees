@@ -12,7 +12,6 @@ void Color(int couleurDuTexte, int couleurDeFond) // fonction d'affichage de cou
 
 void affichage()
 {
-	system("cls");
 	Color(0, 0); //Noir, Noir
 	printf("\n\n                 ");
 	Color(1, 1); //Bleu, Bleu
@@ -38,6 +37,8 @@ void affichage()
 
 void affichageMenu(int* choix)
 {
+	system("cls");
+	affichage();
 	printf("                             COPYRIGHT © FRANCE                          \n\n");
 	printf("                  1 .     G%lcrer les Mus%lces                          \n", 130, 130); //Ajouter "%lc" a la place du "é" puis ajouter en fin de phrase "130" pour un accent donc si deux accents mettre comme cela "130, 130".
 	printf("                  2 .     Rechercher les Mus%lces                          \n", 130);
@@ -69,16 +70,16 @@ void MenuRechercherMusee()
 		switch (choix)
 		{
 		case 1:
-			system("cls");
 			RechercheRegion();
 			break;
 		case 2:
-			system("cls");
 			RechercheDepartement();
 			break;
 		case 3:
-			system("cls");
 			RechercheVille();
+			break;
+		case 0:
+			affichageMenu(choix);
 			break;
 		}
 	} while (choix != 0);
@@ -107,6 +108,7 @@ void RechercheRegion()
 		case 0:
 			MenuRechercherMusee();
 			break;
+
 		}
 	} while (choix != 0);
 }
