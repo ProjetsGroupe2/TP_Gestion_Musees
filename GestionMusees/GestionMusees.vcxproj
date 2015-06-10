@@ -78,6 +78,7 @@
   <ItemGroup>
     <ClCompile Include="Affichage.c" />
     <ClCompile Include="Affichage2.c" />
+    <ClCompile Include="comptageOuvertureFichier.c" />
     <ClCompile Include="Main.c" />
     <ClCompile Include="OuvertureFichier.c" />
     <ClCompile Include="Sauvegarde.c" />
@@ -86,6 +87,7 @@
   <ItemGroup>
     <ClInclude Include="Affichage.h" />
     <ClInclude Include="Affichage2.h" />
+    <ClInclude Include="comptageOuvertureFichier.h" />
     <ClInclude Include="Departement.h" />
     <ClInclude Include="Musee.h" />
     <ClInclude Include="OuvertureFichier.h" />

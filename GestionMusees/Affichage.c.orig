@@ -12,7 +12,8 @@ void Color(int couleurDuTexte, int couleurDeFond) // fonction d'affichage de cou
 
 void petitaffichage()
 {
-	
+	Color(0, 0); //Noir, Noir
+	printf("                                                               ");
 	Color(1, 1); //Bleu, Bleu
 	printf("                 ");
 	Color(0, 0); //Noir, Noir
@@ -22,7 +23,11 @@ void petitaffichage()
 	Color(0, 0); //Noir, Noir
 	printf("                                                               ");
 	Color(0, 15); //Blanc, Blanc
-	printf("      FRANCE     ");
+	printf("                 ");
+	Color(0, 0); //Noir, Noir
+	printf("                                                               ");
+	Color(0, 15); //Blanc, Blanc
+	printf("                 ");
 	Color(0, 0); //Noir, Noir
 	printf("                                                               ");
 	Color(12, 12); //Rouge, Rouge
@@ -30,14 +35,12 @@ void petitaffichage()
 	Color(0, 0); //Noir, Noir
 	printf("                                                               ");
 	Color(12, 12); //Rouge, Rouge
-	printf("                 \n\n\n");
-	Color(15, 0); //Noir, Noir
-	printf("    COPYRIGHT ©    \n\n\n"); 
-	Color(15, 0); //Noir, Noir
+	printf("                 ");
 }
 
 void affichage()
 {
+	system("cls");
 	Color(0, 0); //Noir, Noir
 	printf("\n\n                 ");
 	Color(1, 1); //Bleu, Bleu
@@ -63,8 +66,12 @@ void affichage()
 
 void affichageMenu(int* choix)
 {
+<<<<<<< HEAD
+=======
 	system("cls");
+	petitaffichage();
 	affichage();
+>>>>>>> 8769ea2c4a0a5d7215107bf2b90c3b34953c3528
 	printf("                             COPYRIGHT © FRANCE                          \n\n");
 	printf("                  1 .     G%lcrer les Mus%lces                          \n", 130, 130); //Ajouter "%lc" a la place du "é" puis ajouter en fin de phrase "130" pour un accent donc si deux accents mettre comme cela "130, 130".
 	printf("                  2 .     Rechercher les Mus%lces                          \n", 130);
@@ -79,11 +86,12 @@ void affichageMenu(int* choix)
 void MenuRechercherMusee()
 {
 	system("cls");
-	petitaffichage();
+	affichage();
 	int choix = -1;
 	do
 
 	{
+		printf("                             COPYRIGHT © FRANCE                          \n\n");
 		printf("                  1 .     Rechercher par R%lcgion                          \n", 130); //Ajouter "%lc" a la place du "é" puis ajouter en fin de phrase "130" pour un accent donc si deux accents mettre comme cela "130, 130".
 		printf("                  2 .     Rechercher par D%lcpartement                          \n", 130);
 		printf("                  3 .     Rechercher par Ville                           \n");
@@ -95,12 +103,15 @@ void MenuRechercherMusee()
 		switch (choix)
 		{
 		case 1:
+			system("cls");
 			RechercheRegion();
 			break;
 		case 2:
+			system("cls");
 			RechercheDepartement();
 			break;
 		case 3:
+			system("cls");
 			RechercheVille();
 			break;
 		}
@@ -112,13 +123,14 @@ void MenuRechercherMusee()
 void RechercheRegion()
 {
 	system("cls");
-	petitaffichage();
+	affichage();
 	int choix = -1;
 	do
 
 	{
-		printf("                  1 .     Indiquez le num%lcro de la r%lcgion choisie \n",130,130, 130); //Ajouter "%lc" a la place du "é" puis ajouter en fin de phrase "130" pour un accent donc si deux accents mettre comme cela "130, 130".
-		printf("                  0 .     Retour menu pr%lcc%lcdent \n\n\n",130 ,130);
+		printf("                             COPYRIGHT © FRANCE \n\n\n");
+		printf("  1 .     Indiquez le num%lcro de la r%lcgion choisie pour afficher les mus%lces : \n",130,130, 130); //Ajouter "%lc" a la place du "é" puis ajouter en fin de phrase "130" pour un accent donc si deux accents mettre comme cela "130, 130".
+		printf("  0 .     Retour menu pr%lcc%lcdent \n\n",130 ,130);
 		printf("			  Entrer le num%lcro du menu que vous avez choisie : ", 130);
 
 		scanf("%d", &choix);
@@ -131,7 +143,6 @@ void RechercheRegion()
 		case 0:
 			MenuRechercherMusee();
 			break;
-
 		}
 	} while (choix != 0);
 
@@ -144,12 +155,13 @@ void RechercheRegion()
 void RechercheDepartement()
 {
 	system("cls");
-	petitaffichage();
+	affichage();
 	int choix = -1;
 	do
 	{
-		printf("                  1 .     Indiquez le num%lcro du d%lcpartement choisie \n",130 , 130); //Ajouter "%lc" a la place du "é" puis ajouter en fin de phrase "130" pour un accent donc si deux accents mettre comme cela "130, 130".
-		printf("                  0 .     Retour menu pr%lcc%lcdent \n\n", 130, 130);
+		printf("                             COPYRIGHT © FRANCE \n\n\n");
+		printf("  1 .     Indiquez le num%lcro du d%lcpartement choisie pour afficher les mus%lces : \n",130 , 130, 130); //Ajouter "%lc" a la place du "é" puis ajouter en fin de phrase "130" pour un accent donc si deux accents mettre comme cela "130, 130".
+		printf("  0 .     Retour menu pr%lcc%lcdent \n\n", 130, 130);
 		printf("			  Entrer le num%lcro du menu que vous avez choisie : ", 130);
 
 		scanf("%d", &choix);
@@ -173,13 +185,14 @@ void RechercheDepartement()
 void RechercheVille()
 {
 	system("cls");
-	petitaffichage();
+	affichage();
 	int choix = -1;
 	do
 
 	{
-		printf("                  1 .     Indiquez le num%lcro de la ville choisie \n", 130); //Ajouter "%lc" a la place du "é" puis ajouter en fin de phrase "130" pour un accent donc si deux accents mettre comme cela "130, 130".
-		printf("                  0 .     Retour menu pr%lcc%lcdent \n\n", 130, 130);
+		printf("                             COPYRIGHT © FRANCE\n\n\n");
+		printf("  1 .     Indiquez le num%lcro de la ville choisie pour afficher les mus%lces : \n",130 , 130); //Ajouter "%lc" a la place du "é" puis ajouter en fin de phrase "130" pour un accent donc si deux accents mettre comme cela "130, 130".
+		printf("  0 .     Retour menu pr%lcc%lcdent \n\n", 130, 130);
 		printf("			  Entrer le num%lcro du menu que vous avez choisie : ", 130);
 
 		scanf("%d", &choix);
