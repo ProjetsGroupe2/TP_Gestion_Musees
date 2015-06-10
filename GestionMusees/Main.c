@@ -32,7 +32,7 @@ void main()
 
 	for (int i = 0; i < nbRegion; i++)
 	{
-		printf("%s\n", tabRegions[i]);
+		printf("%d   %s\n", tabRegions[i].id, tabRegions[i].nom);
 	}
 	
 	do
@@ -42,12 +42,15 @@ void main()
 		switch (choix)
 		{
 		case 1:
-			MenuGererMusees();
+			system("cls");
+			//MenuGererMusees();
 			break;
 		case 2:
+			system("cls");
 			MenuRechercherMusee();
 			break;
 		case 3:
+			system("cls");
 			/* /!\ Commenté par Martin dans le Main et dans Sauvegerde pour cause de déboggage d'ouverture fichier /!\ */
 			//creationFichier();
 			break;
