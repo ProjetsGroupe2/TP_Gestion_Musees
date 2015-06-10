@@ -7,7 +7,7 @@
 #include "Ville.h"
 #include "Musee.h"
 
-void ouvertureFichier(Region* tabRegions, Departement* tabDepartement, Ville* tabVille, Musee* tabMusee,  int* nbRegion, int* nbDep, int* nbVille, int* nbMusee)
+void ouvertureFichier(Region* tabRegions, Departement* tabDepartement, Ville* tabVille, Musee* tabMusee, int *nbRegion, int *nbDep, int *nbVille, int *nbMusee)
 {
 	char lettre = ' ';
 	int nbChar = 0;
@@ -15,18 +15,22 @@ void ouvertureFichier(Region* tabRegions, Departement* tabDepartement, Ville* ta
 	char data[255] = " ";
 
 //Var Region -------------------------------
+	int numRegion = 0;
 	char nomRegion[255] = " ";
 	char oldRegion[255] = " ";
 
 //Var Departement --------------------------
+	int numDep = 0;
 	char nomDep[255] = " ";
 	char oldDep[255] = " ";
 
 //Var Ville --------------------------------
+	int numVille = 0;
 	char nomVille[255] = " ";
 	char oldVille[255] = " ";
 
 //Var Musee --------------------------------
+	int numMusee = 0;
 	char nomMusee[255] = " ";
 	char oldMusee[255] = " ";
 
@@ -96,12 +100,12 @@ void ouvertureFichier(Region* tabRegions, Departement* tabDepartement, Ville* ta
 							if (strcmp(data, oldRegion) != 0) // strcmp pour comparer 2 string 
 								{
 								strcpy(oldRegion, data); // Copie une char dans une autre (destination, source)
-									nbRegion++;
-									tabRegions = realloc(tabRegions, (nbRegion + 1) * sizeof(Region));
+									numRegion++;
+									tabRegions = realloc(tabRegions, (numRegion + 1) * sizeof(Region));
 								}
 							strcpy(nomRegion, data);
-							tabRegions[nbRegion].id = nbRegion;
-							strcpy(tabRegions[nbRegion].nom, nomRegion);
+							tabRegions[numRegion].id = numRegion;
+							strcpy(tabRegions[numRegion].nom, nomRegion);
 							nbChar = 0;
 
 						break;
@@ -112,13 +116,13 @@ void ouvertureFichier(Region* tabRegions, Departement* tabDepartement, Ville* ta
 							if (strcmp(data, oldDep) != 0)
 								{
 								strcpy(oldDep, data);
-									nbDep++;
-									tabDepartement = realloc(tabDepartement, (nbDep + 1) * sizeof(Departement));
+									numDep++;
+									tabDepartement = realloc(tabDepartement, (numDep + 1) * sizeof(Departement));
 								}
 							strcpy(nomDep, data);
-							tabDepartement[nbDep].id = nbDep;
-							strcpy(tabDepartement[nbDep].nom, nomDep);
-							tabDepartement[nbDep].idRegion = nbRegion;
+							tabDepartement[numDep].id = numDep;
+							strcpy(tabDepartement[numDep].nom, nomDep);
+							tabDepartement[numDep].idRegion = numRegion;
 							nbChar = 0;
 						break;
 
@@ -128,13 +132,13 @@ void ouvertureFichier(Region* tabRegions, Departement* tabDepartement, Ville* ta
 							if (strcmp(data, oldVille)!= 0)
 								{
 								strcpy(oldVille, data);
-									nbVille++;
-									tabVille = realloc(tabVille, (nbVille + 1) * sizeof(Ville));
+									numVille++;
+									tabVille = realloc(tabVille, (numVille + 1) * sizeof(Ville));
 								}
 							strcpy(nomVille, data);
-							tabVille[nbVille].id = nbVille;
-							strcpy(tabVille[nbVille].nom, nomVille);
-							tabVille[nbVille].idDepartement = nbDep;
+							tabVille[numVille].id = numVille;
+							strcpy(tabVille[numVille].nom, nomVille);
+							tabVille[numVille].idDepartement = numDep;
 							nbChar = 0;
 
 						break;
@@ -145,13 +149,13 @@ void ouvertureFichier(Region* tabRegions, Departement* tabDepartement, Ville* ta
 							if (strcmp(data, oldMusee)!= 0) 
 							{
 								strcpy(oldMusee, data);
-								nbMusee++;
-								tabMusee = realloc(tabMusee, (nbMusee + 1)* sizeof(Musee));
+								numMusee++;
+								tabMusee = realloc(tabMusee, (numMusee + 1)* sizeof(Musee));
 							}
 							strcpy(nomMusee, data);
-							tabMusee[nbMusee].id = nbMusee;
-							strcpy(tabMusee[nbMusee].nom, nomMusee);
-							tabMusee[nbMusee].idVille = nbVille;
+							tabMusee[numMusee].id = nomMusee;
+							strcpy(tabMusee[numMusee].nom, nomMusee);
+							tabMusee[numMusee].idVille = numVille;
 							nbChar = 0;
 						break;
 
@@ -159,7 +163,7 @@ void ouvertureFichier(Region* tabRegions, Departement* tabDepartement, Ville* ta
 						case 5:
 							data[nbChar] = '\0';
 							strcpy(strAdresse, data);
-							strcpy(tabMusee[nbMusee].adresse, strAdresse);
+							strcpy(tabMusee[numMusee].adresse, strAdresse);
 							nbChar = 0;
 						break;
 
@@ -167,7 +171,7 @@ void ouvertureFichier(Region* tabRegions, Departement* tabDepartement, Ville* ta
 						case 6:
 							data[nbChar] = '\0';
 							strcpy(strCp, data);
-							strcpy(tabMusee[nbMusee].cp, strCp);
+							strcpy(tabMusee[numMusee].cp, strCp);
 							nbChar = 0;
 						break;
 
@@ -175,7 +179,7 @@ void ouvertureFichier(Region* tabRegions, Departement* tabDepartement, Ville* ta
 						case 7:
 							data[nbChar] = '\0';
 							strcpy(strAnnee, data);
-							strcpy(tabMusee[nbMusee].anneereouv, strAnnee);
+							strcpy(tabMusee[numMusee].anneereouv, strAnnee);
 							nbChar = 0;
 						break;
 
@@ -183,7 +187,7 @@ void ouvertureFichier(Region* tabRegions, Departement* tabDepartement, Ville* ta
 						case 8:
 							data[nbChar] = '\0';
 							strcpy(strFerme, data);
-							strcpy(tabMusee[nbMusee].ferme, strFerme);
+							strcpy(tabMusee[numMusee].ferme, strFerme);
 							nbChar = 0;
 						break;
 
@@ -191,7 +195,7 @@ void ouvertureFichier(Region* tabRegions, Departement* tabDepartement, Ville* ta
 						case 9:
 							data[nbChar] = '\0';
 							strcpy(strWeb, data);
-							strcpy(tabMusee[nbMusee].siteweb, strWeb);
+							strcpy(tabMusee[numMusee].siteweb, strWeb);
 							nbChar = 0;
 						
 						break;
@@ -202,13 +206,13 @@ void ouvertureFichier(Region* tabRegions, Departement* tabDepartement, Ville* ta
 							{
 								data[nbChar] = '\0';
 								strcpy(strFermeAnn, data);
-								strcpy(tabMusee[nbMusee].fermetureannuelle, strFermeAnn);
+								strcpy(tabMusee[numMusee].fermetureannuelle, strFermeAnn);
 								nbChar = 0;
 							}
 							else
 							{
 								data[nbChar] = '\0';
-								strcpy(tabMusee[nbMusee].fermetureannuelle, data);
+								strcpy(tabMusee[numMusee].fermetureannuelle, data);
 							}
 						break;
 
@@ -226,7 +230,7 @@ void ouvertureFichier(Region* tabRegions, Departement* tabDepartement, Ville* ta
 				{
 					data[nbChar] = '\0';
 					strcpy(strOuvert, data);
-					strcpy(tabMusee[nbMusee].periodeouverture, strOuvert);
+					strcpy(tabMusee[numMusee].periodeouverture, strOuvert);
 					nbChar = 0;
 				
 				}
@@ -237,4 +241,8 @@ void ouvertureFichier(Region* tabRegions, Departement* tabDepartement, Ville* ta
 		} while ((lettre = fgetc(fichier)) != EOF); // Tant que le carractère est différent de la fin du fichier (EOF) -------
 	}
 	fclose(fichier);
+	*nbRegion = numRegion;
+	*nbDep = numDep;
+	*nbVille = numVille;
+	*nbMusee = numMusee;
 }
