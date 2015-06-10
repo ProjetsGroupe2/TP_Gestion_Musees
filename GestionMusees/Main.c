@@ -39,15 +39,12 @@ void main()
 		switch (choix)
 		{
 		case 1:
-			system("cls");
 			MenuGererMusees();
 			break;
 		case 2:
-			system("cls");
 			MenuRechercherMusee();
 			break;
 		case 3:
-			system("cls");
 			creationFichier();
 			break;
 		}
