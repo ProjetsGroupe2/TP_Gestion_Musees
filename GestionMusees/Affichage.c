@@ -10,6 +10,34 @@ void Color(int couleurDuTexte, int couleurDeFond) // fonction d'affichage de cou
 	SetConsoleTextAttribute(H, couleurDeFond * 16 + couleurDuTexte);
 }
 
+void petitaffichage()
+{
+	Color(0, 0); //Noir, Noir
+	printf("                                                               ");
+	Color(1, 1); //Bleu, Bleu
+	printf("                 ");
+	Color(0, 0); //Noir, Noir
+	printf("                                                               ");
+	Color(1, 1); //Bleu, Bleu
+	printf("                 ");
+	Color(0, 0); //Noir, Noir
+	printf("                                                               ");
+	Color(0, 15); //Blanc, Blanc
+	printf("                 ");
+	Color(0, 0); //Noir, Noir
+	printf("                                                               ");
+	Color(0, 15); //Blanc, Blanc
+	printf("                 ");
+	Color(0, 0); //Noir, Noir
+	printf("                                                               ");
+	Color(12, 12); //Rouge, Rouge
+	printf("                 ");
+	Color(0, 0); //Noir, Noir
+	printf("                                                               ");
+	Color(12, 12); //Rouge, Rouge
+	printf("                 ");
+}
+
 void affichage()
 {
 	Color(0, 0); //Noir, Noir
@@ -38,6 +66,7 @@ void affichage()
 void affichageMenu(int* choix)
 {
 	system("cls");
+	petitaffichage();
 	affichage();
 	printf("                             COPYRIGHT © FRANCE                          \n\n");
 	printf("                  1 .     G%lcrer les Mus%lces                          \n", 130, 130); //Ajouter "%lc" a la place du "é" puis ajouter en fin de phrase "130" pour un accent donc si deux accents mettre comme cela "130, 130".
@@ -78,11 +107,10 @@ void MenuRechercherMusee()
 		case 3:
 			RechercheVille();
 			break;
-		case 0:
-			affichageMenu(choix);
-			break;
 		}
 	} while (choix != 0);
+	system("cls");
+	affichage();
 }
 
 void RechercheRegion()
@@ -111,6 +139,8 @@ void RechercheRegion()
 
 		}
 	} while (choix != 0);
+
+
 }
 
 	// ajouter fonction recherche des musees pour le region choisie
