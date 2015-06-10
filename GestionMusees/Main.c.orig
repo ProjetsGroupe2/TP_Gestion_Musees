@@ -42,17 +42,19 @@ void main()
 		switch (choix)
 		{
 		case 1:
-			system("cls");
 			MenuGererMusees();
 			break;
 		case 2:
-			system("cls");
 			MenuRechercherMusee();
 			break;
 		case 3:
+<<<<<<< HEAD
+			creationFichier();
+=======
 			system("cls");
 			/* /!\ Commenté par Martin dans le Main et dans Sauvegerde pour cause de déboggage d'ouverture fichier /!\ */
 			//creationFichier();
+>>>>>>> f09c478ca38aca0c1648ecc56c4808cb8012f5d8
 			break;
 		}
 	} while (choix != 0);
