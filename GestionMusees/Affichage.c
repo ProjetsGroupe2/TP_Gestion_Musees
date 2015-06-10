@@ -12,8 +12,7 @@ void Color(int couleurDuTexte, int couleurDeFond) // fonction d'affichage de cou
 
 void petitaffichage()
 {
-	Color(0, 0); //Noir, Noir
-	printf("                                                               ");
+	
 	Color(1, 1); //Bleu, Bleu
 	printf("                 ");
 	Color(0, 0); //Noir, Noir
@@ -31,11 +30,9 @@ void petitaffichage()
 	Color(0, 0); //Noir, Noir
 	printf("                                                               ");
 	Color(12, 12); //Rouge, Rouge
-	printf("                 \n");
-	Color(0, 0); //Noir, Noir
-	printf("                                                               ");
+	printf("                 \n\n\n");
 	Color(15, 0); //Noir, Noir
-	printf("    COPYRIGHT ©    \n\n"); 
+	printf("    COPYRIGHT ©    \n\n\n"); 
 	Color(15, 0); //Noir, Noir
 }
 
@@ -120,7 +117,7 @@ void RechercheRegion()
 	do
 
 	{
-		printf("                  1 .     Indiquez le num%lcro de la r%lcgion choisie : \n",130,130, 130); //Ajouter "%lc" a la place du "é" puis ajouter en fin de phrase "130" pour un accent donc si deux accents mettre comme cela "130, 130".
+		printf("                  1 .     Indiquez le num%lcro de la r%lcgion choisie \n",130,130, 130); //Ajouter "%lc" a la place du "é" puis ajouter en fin de phrase "130" pour un accent donc si deux accents mettre comme cela "130, 130".
 		printf("                  0 .     Retour menu pr%lcc%lcdent \n\n\n",130 ,130);
 		printf("			  Entrer le num%lcro du menu que vous avez choisie : ", 130);
 
@@ -151,7 +148,7 @@ void RechercheDepartement()
 	int choix = -1;
 	do
 	{
-		printf("                  1 .     Indiquez le num%lcro du d%lcpartement choisie pour afficher les mus%lces : \n",130 , 130, 130); //Ajouter "%lc" a la place du "é" puis ajouter en fin de phrase "130" pour un accent donc si deux accents mettre comme cela "130, 130".
+		printf("                  1 .     Indiquez le num%lcro du d%lcpartement choisie \n",130 , 130); //Ajouter "%lc" a la place du "é" puis ajouter en fin de phrase "130" pour un accent donc si deux accents mettre comme cela "130, 130".
 		printf("                  0 .     Retour menu pr%lcc%lcdent \n\n", 130, 130);
 		printf("			  Entrer le num%lcro du menu que vous avez choisie : ", 130);
 
@@ -181,7 +178,7 @@ void RechercheVille()
 	do
 
 	{
-		printf("                  1 .     Indiquez le num%lcro de la ville choisie pour afficher les mus%lces : \n",130 , 130); //Ajouter "%lc" a la place du "é" puis ajouter en fin de phrase "130" pour un accent donc si deux accents mettre comme cela "130, 130".
+		printf("                  1 .     Indiquez le num%lcro de la ville choisie \n", 130); //Ajouter "%lc" a la place du "é" puis ajouter en fin de phrase "130" pour un accent donc si deux accents mettre comme cela "130, 130".
 		printf("                  0 .     Retour menu pr%lcc%lcdent \n\n", 130, 130);
 		printf("			  Entrer le num%lcro du menu que vous avez choisie : ", 130);
 
