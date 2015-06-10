@@ -6,11 +6,12 @@ void  MenuGererMusees()
 {
 	int choix;
 
-	printf("----Gestion de Mus%lce----\n\n", 130);
-	printf("1. Ajouter\n");
-	printf("2. Modifier\n");
-	printf("3. Supprimer\n");
-
+	printf("        ----Gestion de Mus%lce----\n\n", 130);
+	printf("              1. Ajouter          \n");
+	printf("              2. Modifier         \n");
+	printf("              3. Supprimer        \n");
+	printf("              4. Quitter          \n");
+	printf("			  Entrer le num%lcro du menu que vous avez choisie : ", 130);
 	do
 	{
 		scanf("%d", &choix);
@@ -48,7 +49,8 @@ void AjouterMusee()
 	Affichage();
 	int nom;
 	{
-		printf("Saisir le nom :\n");
+		printf("                             COPYRIGHT © FRANCE                          \n\n");
+		printf("				Saisir le nom :											   \n");
 		scanf("%d", &nom);
 
 	}
@@ -56,28 +58,32 @@ void AjouterMusee()
 	Affichage();
 	int adresse;
 	{
-		printf("Saisir l'adresse :\n");
+		printf("                             COPYRIGHT © FRANCE                          \n\n");
+		printf("				Saisir l'adresse :										   \n");
 		scanf("%d", &adresse);
 	}
 
 	Affichage();
 	int ville;
 	{
-		printf("Saisir la ville :\n");
+		printf("                             COPYRIGHT © FRANCE                          \n\n");
+		printf("				Saisir la ville :										   \n");
 		scanf("%d", &ville);
 	}
 
 	Affichage();
 	int departement;
 	{
-		printf("Saisir le d%lpartement :\n", 130);
+		printf("                             COPYRIGHT © FRANCE                          \n\n");
+		printf("				Saisir le d%lpartement :								   \n", 130);
 		scanf("%d", &departement);
 	}
 
 	Affichage();
 	int region;
 	{
-		printf("Saisir la r%lcgion :\n", 130);
+		printf("                             COPYRIGHT © FRANCE                          \n\n");
+		printf("				Saisir la r%lcgion :									   \n", 130);
 		scanf("%d", &region);
 	}
 }
@@ -87,17 +93,62 @@ void ModifierMusee()
 	Affichage();
 	int saisie;
 	{
-		printf("Saisir l'identifiant du mus%lcee :\n", 130);
+		printf("                             COPYRIGHT © FRANCE                          \n\n");
+		printf("				Saisir l'identifiant du mus%lcee :					       \n", 130);
 		scanf("%d", &saisie);
 	}
+	
+	Affichage();
+	int modifnom;
+	{
+		printf("                             COPYRIGHT © FRANCE                          \n\n");
+		printf("				Saisir le nouveau nom :									   \n");
+		scanf("%d", &modifnom);
+
+	}
+
+	Affichage();
+	int modifadresse;
+	{
+		printf("                             COPYRIGHT © FRANCE                          \n\n");
+		printf("				Saisir la nouvelle adresse :							   \n");
+		scanf("%d", &modifadresse);
+	}
+
+	Affichage();
+	int modifville;
+	{
+		printf("                             COPYRIGHT © FRANCE                          \n\n");
+		printf("				Saisir la nouvelle ville :								   \n");
+		scanf("%d", &modifville);
+	}
+
+	Affichage();
+	int modifdep;
+	{
+		printf("                             COPYRIGHT © FRANCE                          \n\n");
+		printf("				Saisir le nouveau d%lpartement :					       \n", 130);
+		scanf("%d", &modifdep);
+	}
+
+	Affichage();
+	int modifregion;
+	{
+		printf("                             COPYRIGHT © FRANCE                          \n\n");
+		printf("				Saisir la nouvelle r%lcgion :							   \n", 130);
+		scanf("%d", &modifregion);
+	}
 }
+
+
 
 void SupprimerMusee()
 {
 	Affichage();
 	int suppr;
 	{
-		printf("Saisir l'identifiant du mus%lce :\n", 130);
+		printf("                             COPYRIGHT © FRANCE                          \n\n");
+		printf("				Saisir l'identifiant du mus%lce :						   \n", 130);
 		scanf("%d", &suppr);
 	}
 }
