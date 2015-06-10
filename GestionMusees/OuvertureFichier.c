@@ -7,7 +7,7 @@
 #include "Ville.h"
 #include "Musee.h"
 
-void ouvertureFichier(Region* tabRegions, Departement* tabDepartement, Ville * tabVille, Musee * tabMusee,  int nbRegion, int nbDep, int nbVille, int nbMusee)
+void ouvertureFichier(Region* tabRegions, Departement* tabDepartement, Ville* tabVille, Musee* tabMusee,  int* nbRegion, int* nbDep, int* nbVille, int* nbMusee)
 {
 	char lettre = ' ';
 	int nbChar = 0;
@@ -76,7 +76,7 @@ void ouvertureFichier(Region* tabRegions, Departement* tabDepartement, Ville * t
 		// Passer la premiere ligne
 		do
 		{
-			lettre = fgetc(fichier);
+			lettre = getc(fichier);
 		} while (lettre != '\n');
 
 		// Parcour les lignes en vérifiant chaque caractère de ";" jusqu'à la fin de ligne '\n' 
@@ -97,7 +97,7 @@ void ouvertureFichier(Region* tabRegions, Departement* tabDepartement, Ville * t
 								{
 								strcpy(oldRegion, data); // Copie une char dans une autre (destination, source)
 									nbRegion++;
-									tabRegions = realloc(tabRegions, sizeof(Region)* nbRegion);
+									tabRegions = realloc(tabRegions, (nbRegion + 1) * sizeof(Region));
 								}
 							strcpy(nomRegion, data);
 							tabRegions[nbRegion].id = nbRegion;
@@ -113,7 +113,7 @@ void ouvertureFichier(Region* tabRegions, Departement* tabDepartement, Ville * t
 								{
 								strcpy(oldDep, data);
 									nbDep++;
-									tabDepartement = realloc(tabDepartement, sizeof(Departement)* nbDep);
+									tabDepartement = realloc(tabDepartement, (nbDep + 1) * sizeof(Departement));
 								}
 							strcpy(nomDep, data);
 							tabDepartement[nbDep].id = nbDep;
@@ -129,7 +129,7 @@ void ouvertureFichier(Region* tabRegions, Departement* tabDepartement, Ville * t
 								{
 								strcpy(oldVille, data);
 									nbVille++;
-									tabVille = realloc(tabVille, sizeof(Ville)* nbVille);
+									tabVille = realloc(tabVille, (nbVille + 1) * sizeof(Ville));
 								}
 							strcpy(nomVille, data);
 							tabVille[nbVille].id = nbVille;
@@ -146,7 +146,7 @@ void ouvertureFichier(Region* tabRegions, Departement* tabDepartement, Ville * t
 							{
 								strcpy(oldMusee, data);
 								nbMusee++;
-								tabMusee = realloc(tabMusee, sizeof(Musee)* nbMusee);
+								tabMusee = realloc(tabMusee, (nbMusee + 1)* sizeof(Musee));
 							}
 							strcpy(nomMusee, data);
 							tabMusee[nbMusee].id = nbMusee;
@@ -234,9 +234,7 @@ void ouvertureFichier(Region* tabRegions, Departement* tabDepartement, Ville * t
 
 			countColonne = 1;
 
-		} while (lettre != EOF ); // Tant que le carractère est différent de la fin du fichier (EOF) -------
-
-
+		} while ((lettre = fgetc(fichier)) != EOF); // Tant que le carractère est différent de la fin du fichier (EOF) -------
 	}
 	fclose(fichier);
 }
