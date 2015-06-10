@@ -84,8 +84,6 @@ void ouvertureFichier(Region* tabRegions, Departement* tabDepartement)
 							strcpy(data, " ");
 						break;
 
-					default:
-						break;
 					//	// Ville
 					//case 3:
 					//	break;
@@ -121,7 +119,9 @@ void ouvertureFichier(Region* tabRegions, Departement* tabDepartement)
 					//	// Horaires d'ouverture
 					//case 11:
 					//	break;
-
+					default : 
+						strcpy(data, " ");
+						break;
 					}
 					countColonne++;
 			}
