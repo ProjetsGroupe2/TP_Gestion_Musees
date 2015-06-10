@@ -28,7 +28,7 @@ void main()
 
 	/* /!\ à décommenter avant de commiter /!\ */
 
-	//ouvertureFichier(tabRegions, tabDepartement, tabVille, tabMusee, nbRegion, nbDepartement, nbVille, nbMusee);
+	ouvertureFichier(tabRegions, tabDepartement, tabVille, tabMusee, &nbRegion, &nbDepartement, &nbVille, &nbMusee);
 
 	for (int i = 0; i < nbRegion; i++)
 	{
@@ -42,12 +42,15 @@ void main()
 		switch (choix)
 		{
 		case 1:
+			system("cls");
 			//MenuGererMusees();
 			break;
 		case 2:
+			system("cls");
 			MenuRechercherMusee();
 			break;
 		case 3:
+			system("cls");
 			/* /!\ Commenté par Martin dans le Main et dans Sauvegerde pour cause de déboggage d'ouverture fichier /!\ */
 			//creationFichier();
 			break;
