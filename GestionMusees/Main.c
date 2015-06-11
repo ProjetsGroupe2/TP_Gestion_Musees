@@ -32,42 +32,42 @@ void main()
 
 	comptageOuvertureFichier(&nbRegion, &nbDepartement, &nbVille, &nbMusee);
 
-	/*tabRegion = calloc(nbRegion, sizeof(Region));
+	tabRegion = calloc(nbRegion, sizeof(Region));
 	tabDepartement = calloc(nbDepartement, sizeof(Departement));
 	tabVille = calloc(nbVille, sizeof(Ville));
 	tabMusee = calloc(nbMusee, sizeof(Musee));
-*/
+
 	/* /!\ à décommenter avant de commiter /!\ */
 
-	ouvertureFichier(tabRegion, tabDepartement, tabVille, tabMusee/*, &nbRegion, &nbDepartement, &nbVille, &nbMusee*/);
+	ouvertureFichier(tabRegion, tabDepartement, tabVille, tabMusee, &nbRegion, &nbDepartement, &nbVille, &nbMusee);
 
 	
 
 	for (int i = 0; i < nbRegion; i++)
 	{
-	printf("%d%s\n", tabRegion[i].id, tabRegion[i].nom);
+	printf("%d%c\n", tabRegion[i].id, tabRegion[i].nom);
 	}
 	system("pause");
-	do
-	{
-		affichage();
-		affichageMenu(&choix);
-		switch (choix)
-		{
-		case 1:
-			system("cls");
-			MenuGererMusees();
-			break;
-		case 2:
-			system("cls");
-			MenuRechercherMusee();
-			break;
-		case 3:
-			system("cls");
-			/* /!\ Commenté par Martin dans le Main et dans Sauvegerde pour cause de déboggage d'ouverture fichier /!\ */
-			//creationFichier();
-			break;
-		}
-	} while (choix != 0);
+//	do
+//	{
+//		affichage();
+//		affichageMenu(&choix);
+//		switch (choix)
+//		{
+//		case 1:
+//			system("cls");
+//			MenuGererMusees();
+//			break;
+//		case 2:
+//			system("cls");
+//			MenuRechercherMusee();
+//			break;
+//		case 3:
+//			system("cls");
+//			/* /!\ Commenté par Martin dans le Main et dans Sauvegerde pour cause de déboggage d'ouverture fichier /!\ */
+//			//creationFichier();
+//			break;
+//		}
+//	} while (choix != 0);
 }
 
