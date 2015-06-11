@@ -12,26 +12,22 @@ void ouvertureFichier(Region* tabRegions, Departement* tabDepartement, Ville* ta
 	char lettre = ' ';
 	int nbChar = 0;
 	int countColonne = 1;
-	char data[255] = " ";
+	char *data = calloc(nbChar, sizeof(char));
 
 	//Var Region -------------------------------
 	int nbRegion = 0;
-	char nomRegion[255] = " ";
 	char oldRegion[255] = " ";
 
 	//Var Departement --------------------------
 	int nbDep = 0;
-	char nomDep[255] = " ";
 	char oldDep[255] = " ";
 
 	//Var Ville --------------------------------
 	int nbVille = 0;
-	char nomVille[255] = " ";
 	char oldVille[255] = " ";
 
 	//Var Musee --------------------------------
 	int nbMusee = 0;
-	char nomMusee[255] = " ";
 	char oldMusee[255] = " ";
 
 	//Var Adresse ------------------
@@ -86,8 +82,6 @@ void ouvertureFichier(Region* tabRegions, Departement* tabDepartement, Ville* ta
 		// Parcour les lignes en vérifiant chaque caractère de ";" jusqu'à la fin de ligne '\n' 
 		do
 		{
-			do
-			{
 				lettre = fgetc(fichier);
 				if (lettre == ';')
 				{
@@ -95,119 +89,98 @@ void ouvertureFichier(Region* tabRegions, Departement* tabDepartement, Ville* ta
 					switch (countColonne)
 					{
 						//  Region ------------------------------------------------------------------------
-					case 1:
+					case 0:
 						data[nbChar] = '\0';
 						if (strcmp(data, oldRegion) != 0) // strcmp pour comparer 2 string 
 						{
 							strcpy(oldRegion, data); // Copie une char dans une autre (destination, source)
 							nbRegion++;
-							tabRegions = realloc(tabRegions, (nbRegion + 1) * sizeof(Region));
 						}
-						strcpy(nomRegion, data);
 						tabRegions[nbRegion].id = nbRegion;
-						strcpy(tabRegions[nbRegion].nom, nomRegion);
+						strcpy(tabRegions[nbRegion].nom, data);
 						nbChar = 0;
 
 						break;
 
 						// Département --------------------------------------------------------------------
-					case 2:
+					case 1:
 						data[nbChar] = '\0';
 						if (strcmp(data, oldDep) != 0)
 						{
 							strcpy(oldDep, data);
 							nbDep++;
-							tabDepartement = realloc(tabDepartement, (nbDep + 1) * sizeof(Departement));
 						}
-						strcpy(nomDep, data);
 						tabDepartement[nbDep].id = nbDep;
-						strcpy(tabDepartement[nbDep].nom, nomDep);
+						strcpy(tabDepartement[nbDep].nom, data);
 						tabDepartement[nbDep].idRegion = nbRegion;
 						nbChar = 0;
 						break;
 
 						// Ville --------------------------------------------------------------------------
-					case 3:
+					case 2:
 						data[nbChar] = '\0';
 						if (strcmp(data, oldVille) != 0)
 						{
 							strcpy(oldVille, data);
 							nbVille++;
-							tabVille = realloc(tabVille, (nbVille + 1) * sizeof(Ville));
 						}
-						strcpy(nomVille, data);
 						tabVille[nbVille].id = nbVille;
-						strcpy(tabVille[nbVille].nom, nomVille);
+						strcpy(tabVille[nbVille].nom, data);
 						tabVille[nbVille].idDepartement = nbDep;
 						nbChar = 0;
 
 						break;
 
 						// Nom du musée -------------------------------------------------------------------
-					case 4:
+					case 3:
 						data[nbChar] = '\0';
 						if (strcmp(data, oldMusee) != 0)
 						{
 							strcpy(oldMusee, data);
 							nbMusee++;
-							tabMusee = realloc(tabMusee, (nbMusee + 1)* sizeof(Musee));
 						}
-						strcpy(nomMusee, data);
 						tabMusee[nbMusee].id = nbMusee;
-						strcpy(tabMusee[nbMusee].nom, nomMusee);
+						strcpy(tabMusee[nbMusee].nom, data);
 						tabMusee[nbMusee].idVille = nbVille;
-						nbChar = 0;
 						break;
 
 						// Adresse -------------------------------------------------------------------------
-					case 5:
+					case 4:
 						data[nbChar] = '\0';
-						strcpy(strAdresse, data);
-						strcpy(tabMusee[nbMusee].adresse, strAdresse);
-						nbChar = 0;
+						strcpy(tabMusee[nbMusee].adresse, data);
 						break;
 
 						// Code postal ---------------------------------------------------------------------
-					case 6:
+					case 5:
 						data[nbChar] = '\0';
-						strcpy(strCp, data);
-						strcpy(tabMusee[nbMusee].cp, strCp);
-						nbChar = 0;
+						strcpy(tabMusee[nbMusee].cp, data);
 						break;
 
 						// Année ouverture -----------------------------------------------------------------
-					case 7:
+					case 6:
 						data[nbChar] = '\0';
-						strcpy(strAnnee, data);
-						strcpy(tabMusee[nbMusee].anneereouv, strAnnee);
-						nbChar = 0;
+						strcpy(tabMusee[nbMusee].anneereouv, data);
 						break;
 
 						// Fermé? --------------------------------------------------------------------------
-					case 8:
+					case 7:
 						data[nbChar] = '\0';
-						strcpy(strFerme, data);
-						strcpy(tabMusee[nbMusee].ferme, strFerme);
-						nbChar = 0;
+						strcpy(tabMusee[nbMusee].ferme, data);
 						break;
 
 						// Site Web ------------------------------------------------------------------------
-					case 9:
+					case 10:
 						data[nbChar] = '\0';
-						strcpy(strWeb, data);
-						strcpy(tabMusee[nbMusee].siteweb, strWeb);
-						nbChar = 0;
+						strcpy(tabMusee[nbMusee].siteweb, data);
 
 						break;
 
 						// Fermeture annuelle --------------------------------------------------------------
-					case 10:
+					case 9:
 						if (!strcmp(data, ""))
 						{
 							data[nbChar] = '\0';
-							strcpy(strFermeAnn, data);
-							strcpy(tabMusee[nbMusee].fermetureannuelle, strFermeAnn);
-							nbChar = 0;
+							strcpy(tabMusee[nbMusee].fermetureannuelle, data);
 						}
 						else
 						{
@@ -218,27 +191,26 @@ void ouvertureFichier(Region* tabRegions, Departement* tabDepartement, Ville* ta
 
 					}
 					countColonne++;
+					strcpy(data, "");
+					nbChar = 0;
 				}
 
-				// Horaires d'ouverture -> case 11 -------------------------------------------------------------
+				
 				else if (lettre != '\n')
 				{
+					data[nbChar] = '\0';
+					strcpy(tabMusee[nbMusee].periodeouverture, strOuvert);
+					countColonne = 0;
+					strcpy(data, "");
+					nbChar = 0;
+				}
+				else // Horaires d'ouverture -> case 11 ----------------------------------------------------
+				{
+					data = realloc(data, (nbChar + 1) * sizeof(char));
 					data[nbChar] = lettre;
 					nbChar++;
 				}
-				else
-				{
-					data[nbChar] = '\0';
-					strcpy(strOuvert, data);
-					strcpy(tabMusee[nbMusee].periodeouverture, strOuvert);
-					nbChar = 0;
-
-				}
-			} while (lettre != '\n');
-
-			countColonne = 1;
-
-		} while ((lettre = fgetc(fichier)) != EOF); // Tant que le carractère est différent de la fin du fichier (EOF) -------
+		} while (lettre != EOF); // Tant que le carractère est différent de la fin du fichier (EOF) -------
 	}
 	fclose(fichier);
 	*numRegion = nbRegion;

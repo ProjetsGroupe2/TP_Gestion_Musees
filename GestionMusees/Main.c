@@ -26,7 +26,7 @@ void main()
 	int nbDepartement = 0;
 	int nbVille = 0;
 	int nbMusee = 0;
-	int choix = -1;
+	
 
 	/* /!\ à décommenter avant de commiter /!\ */
 
@@ -41,33 +41,39 @@ void main()
 
 	ouvertureFichier(tabRegion, tabDepartement, tabVille, tabMusee, &nbRegion, &nbDepartement, &nbVille, &nbMusee);
 
-	
+	int* TailleListe[4];
+	TailleListe[0] = nbMusee;
+	TailleListe[1] = nbVille;
+	TailleListe[2] = nbDepartement;
+	TailleListe[3] = nbRegion;
 
 	for (int i = 0; i < nbRegion; i++)
 	{
-	printf("%d%c\n", tabRegion[i].id, tabRegion[i].nom);
+	printf("%d - %c\n", i, tabRegion[i].nom);
 	}
 	system("pause");
-//	do
-//	{
-//		affichage();
-//		affichageMenu(&choix);
-//		switch (choix)
-//		{
-//		case 1:
-//			system("cls");
-//			MenuGererMusees();
-//			break;
-//		case 2:
-//			system("cls");
-//			MenuRechercherMusee();
-//			break;
-//		case 3:
-//			system("cls");
-//			/* /!\ Commenté par Martin dans le Main et dans Sauvegerde pour cause de déboggage d'ouverture fichier /!\ */
-//			//creationFichier();
-//			break;
-//		}
-//	} while (choix != 0);
+
+	int choix = -1;
+	do
+	{
+		affichage();
+		affichageMenu(&choix);
+		switch (choix)
+		{
+		case 1:
+			system("cls");
+			MenuGererMusees();
+			break;
+		case 2:
+			system("cls");
+			MenuRechercherMusee();
+			break;
+		case 3:
+			system("cls");
+			/* /!\ Commenté par Martin dans le Main et dans Sauvegerde pour cause de déboggage d'ouverture fichier /!\ */
+			//creationFichier();
+			break;
+		}
+	} while (choix != 0);
 }
 
