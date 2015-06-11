@@ -33,20 +33,20 @@ void main()
 
 	comptageOuvertureFichier(&nbRegion, &nbDepartement, &nbVille, &nbMusee);
 
-	tabRegion = calloc(nbRegion, sizeof(Region));
+	/*tabRegion = calloc(nbRegion, sizeof(Region));
 	tabDepartement = calloc(nbDepartement, sizeof(Departement));
 	tabVille = calloc(nbVille, sizeof(Ville));
-	tabMusee = calloc(nbMusee, sizeof(Musee));
+	tabMusee = calloc(nbMusee, sizeof(Musee));*/
 
 	/* /!\ à décommenter avant de commiter /!\ */
 
-	ouvertureFichier(tabRegion, tabDepartement, tabVille, tabMusee);
+	//ouvertureFichier(tabRegion, tabDepartement, tabVille, tabMusee, &nbRegion, &nbDepartement, &nbVille, &nbMusee);
 
 	
 
 	for (int i = 0; i < nbRegion; i++)
 	{
-		printf("%d %s\n", tabRegion[i].id, tabRegion[i].nom);
+	//	printf("%d %s\n", tabRegion[i].id, tabRegion[i].nom);
 	}
 	system("pause");
 	do
@@ -57,7 +57,7 @@ void main()
 		{
 		case 1:
 			system("cls");
-			//MenuGererMusees();
+			MenuGererMusees();
 			break;
 		case 2:
 			system("cls");

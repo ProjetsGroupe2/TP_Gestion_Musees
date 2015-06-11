@@ -1,39 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <windows.h>
-
-void  MenuGererMusees()
-{
-	int choix;
-
-	printf("        ----Gestion de Mus%lce----\n\n", 130);
-	printf("              1. Ajouter          \n");
-	printf("              2. Modifier         \n");
-	printf("              3. Supprimer        \n");
-	printf("              4. Quitter          \n");
-	printf("			  Entrer le num%lcro du menu que vous avez choisie : ", 130);
-	do
-	{
-		scanf("%d", &choix);
-
-		switch (choix)
-		{
-		case 1:
-			system("cls");
-			//AjouterMusee();
-			break;
-		case 2:
-			system("cls");
-			//ModifierMusee();
-			break;
-		case 3:
-			system("cls");
-			//SupprimerMusee();
-			break;
-		}
-	} while (choix != 0);
-}
-					
+	
 
 
 		/*menu de gestion des musées : Ajouter, modifier ou supprimer un musée

@@ -76,6 +76,39 @@ void affichageMenu(int* choix)
 	scanf("%d", choix);
 }
 
+void MenuGererMusees()
+{
+	system("cls");
+	petitaffichage();
+	int choix = -1;
+	do
+
+	{
+		printf("                  1 .     Ajouter un Mus%lc                           \n", 130); //Ajouter "%lc" a la place du "é" puis ajouter en fin de phrase "130" pour un accent donc si deux accents mettre comme cela "130, 130".
+		printf("                  2 .     Modifier un Mus%lc                         \n", 130);
+		printf("                  3 .     Supprimer un Mus%lc                         \n", 130);
+		printf("                  0 .     Quitter                          \n\n");
+		printf("			  Entrer le num%lcro du menu que vous avez choisie : ", 130);
+
+		scanf("%d", &choix);
+
+		switch (choix)
+		{
+		case 1:
+			//AjouterMusee();
+			break;
+		case 2:
+			//ModifierMusee();
+			break;
+		case 3:
+			//SupprimerMusee();
+			break;
+		}
+	} while (choix != 0);
+	system("cls");
+	affichage();
+}
+
 void MenuRechercherMusee()
 {
 	system("cls");
