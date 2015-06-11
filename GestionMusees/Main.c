@@ -26,7 +26,6 @@ void main()
 	int nbDepartement = 0;
 	int nbVille = 0;
 	int nbMusee = 0;
-	char nomregion = " ";
 	int choix = -1;
 
 	/* /!\ à décommenter avant de commiter /!\ */
@@ -36,17 +35,17 @@ void main()
 	/*tabRegion = calloc(nbRegion, sizeof(Region));
 	tabDepartement = calloc(nbDepartement, sizeof(Departement));
 	tabVille = calloc(nbVille, sizeof(Ville));
-	tabMusee = calloc(nbMusee, sizeof(Musee));*/
-
+	tabMusee = calloc(nbMusee, sizeof(Musee));
+*/
 	/* /!\ à décommenter avant de commiter /!\ */
 
-	ouvertureFichier(tabRegion, tabDepartement, tabVille, tabMusee, &nbRegion, &nbDepartement, &nbVille, &nbMusee);
+	ouvertureFichier(tabRegion, tabDepartement, tabVille, tabMusee/*, &nbRegion, &nbDepartement, &nbVille, &nbMusee*/);
 
 	
 
 	for (int i = 0; i < nbRegion; i++)
 	{
-	//	printf("%d %s\n", tabRegion[i].id, tabRegion[i].nom);
+	printf("%d%s\n", tabRegion[i].id, tabRegion[i].nom);
 	}
 	system("pause");
 	do
