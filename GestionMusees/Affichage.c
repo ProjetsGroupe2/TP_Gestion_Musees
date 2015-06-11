@@ -76,6 +76,40 @@ void affichageMenu(int* choix)
 	scanf("%d", choix);
 }
 
+void MenuGererMusees()
+{
+	system("cls");
+	petitaffichage();
+	int choix = -1;
+	do
+
+	{
+		printf("        ----Gestion de Mus%lce----\n\n", 130);
+		printf("              1. Ajouter          \n");
+		printf("              2. Modifier         \n");
+		printf("              3. Supprimer        \n");
+		printf("              4. Quitter          \n");
+		printf("			  Entrer le num%lcro du menu que vous avez choisie : ", 130);
+
+		scanf("%d", &choix);
+
+		switch (choix)
+		{
+		case 1:
+			AjouterMusee();
+			break;
+		case 2:
+			ModifierMusee();
+			break;
+		case 3:
+			SupprimerMusee();
+			break;
+		}
+	} while (choix != 0);
+	system("cls");
+	affichage();
+}
+
 void MenuRechercherMusee()
 {
 	system("cls");
