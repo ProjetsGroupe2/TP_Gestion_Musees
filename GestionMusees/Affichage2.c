@@ -10,18 +10,38 @@
 		Pour la modif : un scanf pour saisir l'identifiant du musée à modifier + un affichage pour modifier chaque champs à modifier -> Nom , adresse, ville, Département et la région...
 		et pour la suppression un titre plus l'affichage d'une liste des musés et un scanf pour récupérer l'id du musé à supprimer
 
-// /!\ NE BUTTER PAS SUR LES FONCTIONS QUI SONT A FAIRE LAISSEZ SIMPLEMENT DES COMMENTAIRES A LA PLACE SAUF SI VOUS PENSEZ POUVOIR LES FAIRE /!\
+		NE BUTTER PAS SUR LES FONCTIONS QUI SONT A FAIRE LAISSEZ SIMPLEMENT DES COMMENTAIRES A LA PLACE SAUF SI VOUS PENSEZ POUVOIR LES FAIRE */
+
+
 
 void AjouterMusee()
 {
-	Affichage();
-	int nom;
+	system("cls");
+	petitaffichage();
+	int nom = -1;
+	do
+
 	{
 		printf("                             COPYRIGHT © FRANCE                          \n\n");
-		printf("				Saisir le nom :											   \n");
+		printf("                  1 .     Saisir le nom du mus%lcee \n",130); //Ajouter "%lc" a la place du "é" puis ajouter en fin de phrase "130" pour un accent donc si deux accents mettre comme cela "130, 130".
+		printf("                  0 .     Retour menu pr%lcc%lcdent \n\n\n",130 ,130);
+		printf("				  Nom du mus%lcee :", 130);
+		
 		scanf("%d", &nom);
 
-	}
+		switch (nom)
+		{
+		case 1:
+			AjouterMusee();
+			break;
+		case 0:
+		MenuGererMusees()
+		break;
+		}
+	}while (nom != 0);
+}
+	
+	
 	
 	Affichage();
 	int adresse;
@@ -58,14 +78,35 @@ void AjouterMusee()
 
 void ModifierMusee()
 {
-	Affichage();
-	int saisie;
-	{
-		printf("                             COPYRIGHT © FRANCE                          \n\n");
-		printf("				Saisir l'identifiant du mus%lcee :					       \n", 130);
-		scanf("%d", &saisie);
-	}
+	system("cls");
+	petitaffichage();
+	int saisie = -1;
+	do
 	
+	printf("                             COPYRIGHT © FRANCE                          \n\n");
+	printf("                  1 .     Modifier le nom du mus%lcee \n", 130); //Ajouter "%lc" a la place du "é" puis ajouter en fin de phrase "130" pour un accent donc si deux accents mettre comme cela "130, 130".
+	printf("				  2 .     Modifier la ville du mus%lcee \n", 130);
+	printf("                  3 .     Modifier le ds%lcpartement du mus%lcee \n", 130 , 130);
+	printf("                  4 .     Modifier la rs%lcgion du mus%lcee \n", 130, 130);
+	printf("                  0 .     Retour menu pr%lcc%lcdent \n\n\n", 130, 130);
+	printf("				  Nom du mus%lcee :", 130);
+
+	scanf("%d", &saisie);
+
+	switch (saisie)
+		{
+		case 1:
+			ModifierMusee();
+			break;
+		case 0:
+			MenuGererMusees()
+			break;
+		}
+	}while (nom != 0);
+}
+	
+	
+
 	Affichage();
 	int modifnom;
 	{
@@ -119,4 +160,30 @@ void SupprimerMusee()
 		printf("				Saisir l'identifiant du mus%lce :						   \n", 130);
 		scanf("%d", &suppr);
 	}
-	}*/
+	}
+
+void SupprimerMusee()
+{
+	system("cls");
+	petitaffichage();
+	int suppr = -1;
+	do
+
+	printf("                             COPYRIGHT © FRANCE                          \n\n");
+	printf("                  1 .     Supprimer un mus%lcee \n", 130); //Ajouter "%lc" a la place du "é" puis ajouter en fin de phrase "130" pour un accent donc si deux accents mettre comme cela "130, 130".
+	printf("                  0 .     Retour menu pr%lcc%lcdent \n\n\n", 130, 130);
+	printf("				  Nom du mus%lcee :", 130);
+
+	scanf("%d", &suppr);
+
+	switch (suppr)
+		{
+		case 1:
+			SupprimerMusee();
+			break;
+		case 0:
+			MenuGererMusees()
+			break;
+		}
+	}while (nom != 0);
+}
