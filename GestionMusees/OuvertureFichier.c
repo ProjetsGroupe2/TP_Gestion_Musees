@@ -7,7 +7,7 @@
 #include "Ville.h"
 #include "Musee.h"
 
-void ouvertureFichier(Region* tabRegion, Departement* tabDepartement, Ville* tabVille, Musee* tabMusee, int *nbRegion, int *nbDep, int *nbVille, int *nbMusee)
+void ouvertureFichier(Region* tabRegion, Departement* tabDepartement, Ville* tabVille, Musee* tabMusee)
 {
 	char lettre = ' ';
 	int nbChar = 0;
@@ -241,8 +241,8 @@ void ouvertureFichier(Region* tabRegion, Departement* tabDepartement, Ville* tab
 		} while ((lettre = fgetc(fichier)) != EOF); // Tant que le carractère est différent de la fin du fichier (EOF) -------
 	}
 	fclose(fichier);
-	*nbRegion = numRegion;
+	/**nbRegion = numRegion;
 	*nbDep = numDep;
 	*nbVille = numVille;
-	*nbMusee = numMusee;
+	*nbMusee = numMusee;*/
 }

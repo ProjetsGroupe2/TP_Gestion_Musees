@@ -33,14 +33,14 @@ void main()
 
 	comptageOuvertureFichier(&nbRegion, &nbDepartement, &nbVille, &nbMusee);
 
-	/*tabRegion = calloc(nbRegion, sizeof(Region));
+	tabRegion = calloc(nbRegion, sizeof(Region));
 	tabDepartement = calloc(nbDepartement, sizeof(Departement));
 	tabVille = calloc(nbVille, sizeof(Ville));
-	tabMusee = calloc(nbMusee, sizeof(Musee));*/
+	tabMusee = calloc(nbMusee, sizeof(Musee));
 
 	/* /!\ à décommenter avant de commiter /!\ */
 
-	ouvertureFichier(tabRegion, tabDepartement, tabVille, tabMusee, &nbRegion, &nbDepartement, &nbVille, &nbMusee);
+	ouvertureFichier(tabRegion, tabDepartement, tabVille, tabMusee);
 
 	
 
