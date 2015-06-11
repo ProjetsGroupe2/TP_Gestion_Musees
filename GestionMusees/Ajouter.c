@@ -5,21 +5,21 @@
 #include "Musee.h"
 #include "Departement.h"
 
-void AjouterMusee(MUSEE* ptrmusee)
+ // void AjouterMusee(MUSEE* ptrmusee)
+// {
+
+ // FILE* fichier = NULL;
+// fichier = fopen("biblio.csv", "r+");
+
+// if (fichier == NULL)
+// {
+//	printf("Erreur lors de l'ouverture du fichier personnes.csv");
+// }
 
 
-FILE* fichier = NULL;
-fichier = fopen("biblio.csv", "r+");
+// fputs("", fichier);
 
-if (fichier == NULL)
-{
-	printf("Erreur lors de l'ouverture du fichier personnes.csv");
-}
-
-
-fputs("", fichier);
-
-fprintf(fichier, " ", test);
+// fprintf(fichier, " ", test);
 
 
 /*
@@ -64,7 +64,6 @@ main(){
 
 
 //	getchar();
-}
-fclose(fichier);
+// }
+// fclose(fichier);
 
-*/
