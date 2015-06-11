@@ -87,7 +87,7 @@ void MenuGererMusees()
 		printf("                  1 .     Ajouter un Mus%lc                           \n", 130); //Ajouter "%lc" a la place du "é" puis ajouter en fin de phrase "130" pour un accent donc si deux accents mettre comme cela "130, 130".
 		printf("                  2 .     Modifier un Mus%lc                         \n", 130);
 		printf("                  3 .     Supprimer un Mus%lc                         \n", 130);
-		printf("                  0 .     Quitter                          \n\n");
+		printf("                  0 .     Retour menu pr%lcc%lcdent \n\n", 130, 130);
 		printf("			  Entrer le num%lcro du menu que vous avez choisie : ", 130);
 
 		scanf("%d", &choix);
@@ -95,7 +95,7 @@ void MenuGererMusees()
 		switch (choix)
 		{
 		case 1:
-			//AjouterMusee();
+			AjouterMusee();
 			break;
 		case 2:
 			//ModifierMusee();
@@ -109,6 +109,7 @@ void MenuGererMusees()
 	affichage();
 }
 
+
 void MenuRechercherMusee()
 {
 	system("cls");
@@ -120,7 +121,7 @@ void MenuRechercherMusee()
 		printf("                  1 .     Rechercher par R%lcgion                          \n", 130); //Ajouter "%lc" a la place du "é" puis ajouter en fin de phrase "130" pour un accent donc si deux accents mettre comme cela "130, 130".
 		printf("                  2 .     Rechercher par D%lcpartement                          \n", 130);
 		printf("                  3 .     Rechercher par Ville                           \n");
-		printf("                  0 .     Quitter                          \n\n");
+		printf("                  0 .     Retour menu pr%lcc%lcdent \n\n", 130, 130);
 		printf("			  Entrer le num%lcro du menu que vous avez choisie : ", 130);
 
 		scanf("%d", &choix);
