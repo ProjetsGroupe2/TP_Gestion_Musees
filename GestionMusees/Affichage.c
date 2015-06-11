@@ -84,11 +84,10 @@ void MenuGererMusees()
 	do
 
 	{
-		printf("        ----Gestion de Mus%lce----\n\n", 130);
-		printf("              1. Ajouter          \n");
-		printf("              2. Modifier         \n");
-		printf("              3. Supprimer        \n");
-		printf("              4. Quitter          \n");
+		printf("                  1 .     Ajouter un Mus%lc                           \n", 130); //Ajouter "%lc" a la place du "é" puis ajouter en fin de phrase "130" pour un accent donc si deux accents mettre comme cela "130, 130".
+		printf("                  2 .     Modifier un Mus%lc                         \n", 130);
+		printf("                  3 .     Supprimer un Mus%lc                         \n", 130);
+		printf("                  0 .     Quitter                          \n\n");
 		printf("			  Entrer le num%lcro du menu que vous avez choisie : ", 130);
 
 		scanf("%d", &choix);
@@ -96,13 +95,13 @@ void MenuGererMusees()
 		switch (choix)
 		{
 		case 1:
-			AjouterMusee();
+			//AjouterMusee();
 			break;
 		case 2:
-			ModifierMusee();
+			//ModifierMusee();
 			break;
 		case 3:
-			SupprimerMusee();
+			//SupprimerMusee();
 			break;
 		}
 	} while (choix != 0);
