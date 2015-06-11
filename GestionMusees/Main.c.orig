@@ -6,6 +6,7 @@
 #include "Affichage2.h"
 #include "Sauvegarde.h"
 #include "OuvertureFichier.h"
+#include "comptageOuvertureFichier.h"
 
 #include "Region.h"
 #include "Departement.h"
@@ -31,16 +32,22 @@ void main()
 	/* /!\ à décommenter avant de commiter /!\ */
 
 <<<<<<< HEAD
-	//ouvertureFichier(tabRegions, tabDepartement, tabVille, tabMusee, &nbRegion, &nbDepartement, &nbVille, &nbMusee);
+	//ouvertureFichier(tabRegion, tabDepartement, tabVille, tabMusee, &nbRegion, &nbDepartement, &nbVille, &nbMusee);
 =======
-	ouvertureFichier(tabRegion, tabDepartement, tabVille, tabMusee, &nbRegion, &nbDepartement, &nbVille, &nbMusee);
->>>>>>> 328616803db34b02d6387067ac80b922fd2399c8
+	comptageOuvertureFichier(&nbRegion, &nbDepartement, &nbVille, &nbMusee);
+>>>>>>> c53c448e5e5225bde9a4d03f4b2027b7d515d274
 
 	/*tabRegion = calloc(nbRegion, sizeof(Region));
-    tabDepartement = calloc(nbDepartement, sizeof(Departement));
+	tabDepartement = calloc(nbDepartement, sizeof(Departement));
 	tabVille = calloc(nbVille, sizeof(Ville));
-	tabMusee = calloc(nbMusee, sizeof(Musee));
-*/
+	tabMusee = calloc(nbMusee, sizeof(Musee));*/
+
+	/* /!\ à décommenter avant de commiter /!\ */
+
+	ouvertureFichier(tabRegion, tabDepartement, tabVille, tabMusee, &nbRegion, &nbDepartement, &nbVille, &nbMusee);
+
+	
+
 	for (int i = 0; i < nbRegion; i++)
 	{
 		printf("%d %s\n", tabRegion[i].id, tabRegion[i].nom);

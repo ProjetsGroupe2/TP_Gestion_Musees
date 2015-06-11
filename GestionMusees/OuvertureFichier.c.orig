@@ -7,11 +7,7 @@
 #include "Ville.h"
 #include "Musee.h"
 
-<<<<<<< HEAD
-//void ouvertureFichier(Region* tabRegions, Departement* tabDepartement, Ville* tabVille, Musee* tabMusee,  int* nbRegion, int* nbDep, int* nbVille, int* nbMusee)
-=======
-void ouvertureFichier(Region* tabRegions, Departement* tabDepartement, Ville* tabVille, Musee* tabMusee, int *nbRegion, int *nbDep, int *nbVille, int *nbMusee)
->>>>>>> b12b47d52c72750714446a3997b5a4ce942457d4
+void ouvertureFichier(Region* tabRegion, Departement* tabDepartement, Ville* tabVille, Musee* tabMusee, int *nbRegion, int *nbDep, int *nbVille, int *nbMusee)
 {
 	char lettre = ' ';
 	int nbChar = 0;
@@ -72,7 +68,7 @@ void ouvertureFichier(Region* tabRegions, Departement* tabDepartement, Ville* ta
 	else
 	{
 		
-		tabRegions = calloc(1, sizeof(Region));
+		tabRegion = calloc(1, sizeof(Region));
 		tabDepartement =  calloc(1, sizeof(Departement));
 		tabVille = calloc(1, sizeof(Ville));
 		tabMusee = calloc(1, sizeof(Musee));
@@ -105,11 +101,11 @@ void ouvertureFichier(Region* tabRegions, Departement* tabDepartement, Ville* ta
 								{
 								strcpy(oldRegion, data); // Copie une char dans une autre (destination, source)
 									numRegion++;
-									tabRegions = realloc(tabRegions, (numRegion + 1) * sizeof(Region));
+									tabRegion = realloc(tabRegion, (numRegion + 1) * sizeof(Region));
 								}
 							strcpy(nomRegion, data);
-							tabRegions[numRegion].id = numRegion;
-							strcpy(tabRegions[numRegion].nom, nomRegion);
+							tabRegion[numRegion].id = numRegion;
+							strcpy(tabRegion[numRegion].nom, nomRegion);
 							nbChar = 0;
 
 						break;
@@ -163,6 +159,54 @@ void ouvertureFichier(Region* tabRegions, Departement* tabDepartement, Ville* ta
 							nbChar = 0;
 						break;
 
+<<<<<<< HEAD
+					//	// Ville
+					//case 3:
+					//	break;
+
+					//	// Nom du musée
+					//case 4:
+					//	break;
+
+					//	// Adresse 
+					//case 5:
+					//	break;
+
+					//	// Code postal
+					//case 6:
+					//	break;
+
+					//	// Année ouverture
+					//case 7:
+					//	break;
+
+					//	// Fermé?
+					//case 8:
+					//	break;
+
+					//	// Site Web
+					//case 9:
+					//	break;
+
+					//	// Fermeture annuelle 
+					//case 10:
+					//	break;
+
+					//	// Horaires d'ouverture
+					//case 11:
+					//	break;
+					default : 
+						strcpy(data, " ");
+						break;
+					}
+					countColonne++;
+			}
+			else
+			{
+				data[nbChar] = lettre;
+				nbChar++;
+			}
+=======
 							// Adresse -------------------------------------------------------------------------
 						case 5:
 							data[nbChar] = '\0';
@@ -194,6 +238,7 @@ void ouvertureFichier(Region* tabRegions, Departement* tabDepartement, Ville* ta
 							strcpy(tabMusee[numMusee].ferme, strFerme);
 							nbChar = 0;
 						break;
+>>>>>>> 250c113e8fb7dd53e0d6ade46a0244eed855bf2b
 
 							// Site Web ------------------------------------------------------------------------
 						case 9:
