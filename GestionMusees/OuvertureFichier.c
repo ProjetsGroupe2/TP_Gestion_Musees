@@ -1,14 +1,18 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "Region.h"
-#include "Departement.h"
-#include "Traitement.h"
-#include "Ville.h"
-#include "Musee.h"
+//#include "Region.h"
+//#include "Departement.h"
+//#include "Traitement.h"
+//#include "Ville.h"
+//#include "Musee.h"
 
-void ouvertureFichier(Region* tabRegion, Departement* tabDepartement, Ville* tabVille, Musee* tabMusee)
+#include "OuvertureFichier.h"
+
+void ouvertureFichier(Region* tabRegion, Departement* tabDepartement, Ville* tabVille, Musee* tabMusee,/* int *nbRegion, int *nbDep, int *nbVille, int *nbMusee*/)
 {
+	
+
 	char lettre = ' ';
 	int nbChar = 0;
 	int countColonne = 1;
@@ -68,10 +72,10 @@ void ouvertureFichier(Region* tabRegion, Departement* tabDepartement, Ville* tab
 	else
 	{
 		
-		tabRegion = calloc(1, sizeof(Region));
+		/*tabRegion = calloc(1, sizeof(Region));
 		tabDepartement =  calloc(1, sizeof(Departement));
 		tabVille = calloc(1, sizeof(Ville));
-		tabMusee = calloc(1, sizeof(Musee));
+		tabMusee = calloc(1, sizeof(Musee));*/
 
 
 		// Retourne au début du fichier
@@ -107,7 +111,6 @@ void ouvertureFichier(Region* tabRegion, Departement* tabDepartement, Ville* tab
 							tabRegion[numRegion].id = numRegion;
 							strcpy(tabRegion[numRegion].nom, nomRegion);
 							nbChar = 0;
-
 						break;
 
 							// Département --------------------------------------------------------------------
@@ -140,7 +143,6 @@ void ouvertureFichier(Region* tabRegion, Departement* tabDepartement, Ville* tab
 							strcpy(tabVille[numVille].nom, nomVille);
 							tabVille[numVille].idDepartement = numDep;
 							nbChar = 0;
-
 						break;
 
 							// Nom du musée -------------------------------------------------------------------
@@ -241,8 +243,13 @@ void ouvertureFichier(Region* tabRegion, Departement* tabDepartement, Ville* tab
 		} while ((lettre = fgetc(fichier)) != EOF); // Tant que le carractère est différent de la fin du fichier (EOF) -------
 	}
 	fclose(fichier);
-	/**nbRegion = numRegion;
+	*nbRegion = numRegion;
 	*nbDep = numDep;
 	*nbVille = numVille;
-	*nbMusee = numMusee;*/
+	*nbMusee = numMusee;
+	/*for (int i = 0; i < numRegion; i++)
+	{
+		printf("%d %s\n", tabRegion[i].id, tabRegion[i].nom);
+	}
+	system("pause");*/
 }
