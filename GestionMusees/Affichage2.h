@@ -1,6 +1,3 @@
-#ifndef AFFICHAGE2
-#define AFFICHAGE2
-
 void MenuGererMusees();
 void Affichage();
 void AjouterMusee();
@@ -11,4 +8,3 @@ void ModifDep();
 void ModifReg();
 void SupprimerMusee();
 
-#endif

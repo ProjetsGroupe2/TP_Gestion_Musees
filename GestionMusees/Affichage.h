@@ -1,6 +1,3 @@
-#ifndef AFFICHAGE
-#define AFFICHAGE
-
 void Color(int couleurDuTexte, int couleurDeFond);
 void petitaffichage();
 void affichage();
@@ -11,4 +8,3 @@ void RechercheRegion();
 void RechercheDepartement();
 void RechercheVille();
 
-#endif
