@@ -5,65 +5,41 @@
 #include "Musee.h"
 #include "Departement.h"
 
- // void AjouterMusee(MUSEE* ptrmusee)
-// {
+void AjouterMusee()
 
- // FILE* fichier = NULL;
-// fichier = fopen("biblio.csv", "r+");
+FILE* fopen(const char* nomDuFichier, const char* modeOuverture);
+char* fputs(const char* chaine, FILE* pointeurSurFichier);
+char* fgets(char* chaine, int nbreDeCaracteresALire, FILE* pointeurSurFichier);
 
-// if (fichier == NULL)
-// {
-//	printf("Erreur lors de l'ouverture du fichier personnes.csv");
-// }
+#define TAILLE_MAX 1000 // Tableau de taille 1000
 
+int main(int argc, char *argv[])
+{
+	FILE* fichier = NULL;
+	char chaine[TAILLE_MAX] = ""; // Chaîne vide de taille TAILLE_MAX
+	fichier = fopen("biblio.csv", "r+");
+	int ajout[4] = { 0 }; 
 
-// fputs("", fichier);
-
-// fprintf(fichier, " ", test);
-
-
-/*
-main(){
-	char* data[255];
-	printf("Saisir nom Musee");
-	scanf("%s", &data);
-	for (int i = 0; i<n; i++){
-
-
-		printf("Musee       :");
-		scanf("%s", &T[i].Nom);
-		printf("Ville    :");
-		scanf("%s", &T[i].Adresse);
-		printf("Departement   :");
-		scanf("%s", &T[i].Departement);
-		printf("Region	:");
-		scanf("%s", &T[i].Region);
-		
-		tabRegion[i].id, tabRegion[i].nom;
-		tabDepartement;
-		tabVille;
-		tabMusee;
-
-
-
+	if (fichier != NULL)
+	{
+		fputs(fichier);
+		fscanf(fichier, "%d %d %d %d", &Nom, &Ville, &Departement, &Region);
+		printf("Les meilleurs scores sont : %d, %d et %d", Nom, Ville, Departement, Region);
+		while (fgets(chaine, TAILLE_MAX, fichier); // On lit maximum TAILLE_MAX caractères du fichier, on stocke le tout dans "chaine"
+		{
+			printf("%s", chaine); // On affiche la chaîne
+		}
+		fclose(fichier);
+	
+	}
+	else
+	{
+		// On affiche un message d'erreur si on veut
+		printf("Impossible d'ouvrir le fichier test.txt");
+	
 	}
 
-	printf("\n\tLe Nouveau Musee est \n");                         Fin du Tri
-//	for (i = 0; i<n; i++){
-
-//		printf("\nMusee %s", T[i].Nom);
-//		printf("\nVille %s", T[i].Adresse);
-//		printf("\nDepartement %s", T[i].Departement);
-//		printf("\nRegion %s", T[i].Region);
-
+	return 0;
 }
 
-
-
-//	getchar();
-
-
-//	getchar();
-// }
-// fclose(fichier);*/
 
