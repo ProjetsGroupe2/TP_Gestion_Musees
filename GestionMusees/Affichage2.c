@@ -35,8 +35,8 @@ void AjouterMusee()
 			AjouterMusee();
 			break;
 		case 0:
-		MenuGererMusees()
-		break;
+			MenuGererMusees();
+			break;
 		}
 	}while (nom != 0);
 }
@@ -87,9 +87,9 @@ void ModifierMusee()
 	printf("                  1 .     Modifier le nom du mus%lcee \n", 130); //Ajouter "%lc" a la place du "é" puis ajouter en fin de phrase "130" pour un accent donc si deux accents mettre comme cela "130, 130".
 	printf("				  2 .     Modifier la ville du mus%lcee \n", 130);
 	printf("                  3 .     Modifier le ds%lcpartement du mus%lcee \n", 130 , 130);
-	printf("                  4 .     Modifier la rs%lcgion du mus%lcee \n", 130, 130);
+	printf("                  4 .     Modifier la rs%lcgion du printf("                             COPYRIGHT © FRANCE                          \n\n");
 	printf("                  0 .     Retour menu pr%lcc%lcdent \n\n\n", 130, 130);
-	printf("				  Nom du mus%lcee :", 130);
+	printf("				  Indiquer votre choix1 :");
 
 	scanf("%d", &saisie);
 
@@ -102,65 +102,110 @@ void ModifierMusee()
 			MenuGererMusees()
 			break;
 		}
-	}while (nom != 0);
-}
-	
-	
-
-	Affichage();
-	int modifnom;
-	{
-		printf("                             COPYRIGHT © FRANCE                          \n\n");
-		printf("				Saisir le nouveau nom :									   \n");
-		scanf("%d", &modifnom);
-
-	}
-
-	Affichage();
-	int modifadresse;
-	{
-		printf("                             COPYRIGHT © FRANCE                          \n\n");
-		printf("				Saisir la nouvelle adresse :							   \n");
-		scanf("%d", &modifadresse);
-	}
-
-	Affichage();
-	int modifville;
-	{
-		printf("                             COPYRIGHT © FRANCE                          \n\n");
-		printf("				Saisir la nouvelle ville :								   \n");
-		scanf("%d", &modifville);
-	}
-
-	Affichage();
-	int modifdep;
-	{
-		printf("                             COPYRIGHT © FRANCE                          \n\n");
-		printf("				Saisir le nouveau d%lpartement :					       \n", 130);
-		scanf("%d", &modifdep);
-	}
-
-	Affichage();
-	int modifregion;
-	{
-		printf("                             COPYRIGHT © FRANCE                          \n\n");
-		printf("				Saisir la nouvelle r%lcgion :							   \n", 130);
-		scanf("%d", &modifregion);
-	}
+	}while (saisie != 0);
 }
 
-
-
-void SupprimerMusee()
+void ModifierNom()
 {
-	Affichage();
-	int suppr;
-	{
-		printf("                             COPYRIGHT © FRANCE                          \n\n");
-		printf("				Saisir l'identifiant du mus%lce :						   \n", 130);
-		scanf("%d", &suppr);
-	}
-	}
+	system("cls");
+	petitaffichage();
+	int modifnom = -1;
+	do
+	
+	printf("                             COPYRIGHT © FRANCE                          \n\n");
+	printf("                  1 .     Modifier le nom du mus%lcee \n", 130);
+	printf("                  Nom  du mus%lcee :", 130);
+	
+	scanf("%d", &modifnom);
+
+	switch (modifnom)
+		{
+		case 1:
+			ModifierNom();
+			break;
+		case 0:
+			ModifierMusee()
+			break;
+		}
+	}while (modifnom != 0);
+}
+
+void ModifVille()
+{
+	system("cls");
+	petitaffichage();
+	int modifville = -1;
+	do
+
+	printf("                             COPYRIGHT © FRANCE                          \n\n");
+	printf("                  1 .     Modifier la ville du mus%lcee \n", 130);
+	printf("                  Ville  du mus%lcee :", 130);
+
+	scanf("%d", &modifville);
+
+	switch (modifville)
+		{
+		case 1:
+			ModifierVille();
+			break;
+	case 0:
+			ModifierMusee()
+			break;
+		}
+	}while (modifville != 0);
+}
+
+void ModifDep()
+{
+	system("cls");
+	petitaffichage();
+	int modifdep = -1;
+	do
+
+	printf("                             COPYRIGHT © FRANCE                          \n\n");
+	printf("                  1 .     Modifier le ds%lcpartement du mus%lcee \n", 130 , 130);
+	printf("                  Ds%lcpartement du mus%lcee :", 130 , 130);
+
+	scanf("%d", &modifdep);
+
+	switch (modifdep)
+		{
+		case 1:
+			ModifierDep();
+			break;
+		case 0:
+			ModifierMusee()
+			break;
+		}
+	}while (modifdep != 0);
+}
+
+void ModifReg()
+{
+	system("cls");
+	petitaffichage();
+	int modifreg = -1;
+	do
+
+	printf("                             COPYRIGHT © FRANCE                          \n\n");
+	printf("                  1 .     Modifier la r%lcgion du mus%lcee \n", 130, 130);
+	printf("                  R%lcgion du mus%lcee :", 130, 130);
+
+	scanf("%d", &modifreg);
+
+	switch (modifreg)
+		{
+		case 1:
+			ModifierReg();
+			break;
+		case 0:
+			ModifierMusee()
+			break;
+		}
+	}	while (modifreg != 0);
+}
+
+
 
 void SupprimerMusee()
 {
@@ -185,5 +230,5 @@ void SupprimerMusee()
 			MenuGererMusees()
 			break;
 		}
-	}while (nom != 0);
+	}while (suppr != 0);
 }
