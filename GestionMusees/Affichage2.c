@@ -18,18 +18,19 @@ void AjouterMusee()
 {
 	system("cls");
 	petitaffichage();
-	int nom = -1;
+	int ajout = -1;
 	do
 
 	{
 		printf("                             COPYRIGHT © FRANCE                          \n\n");
-		printf("                  1 .     Saisir le nom du mus%lcee \n",130); //Ajouter "%lc" a la place du "é" puis ajouter en fin de phrase "130" pour un accent donc si deux accents mettre comme cela "130, 130".
+		printf("                  1 .     Saisir les informations concernant le nouveau mus%lcee \n",130); //Ajouter "%lc" a la place du "é" puis ajouter en fin de phrase "130" pour un accent donc si deux accents mettre comme cela "130, 130".
 		printf("                  0 .     Retour menu pr%lcc%lcdent \n\n\n",130 ,130);
-		printf("				  Nom du mus%lcee :", 130);
+		printf("				  Nom, Ville, ds%lcpartement, rs%lcgion du mus%lcee :\n", 130, 130, 130);
+		prinft("				  (Saisir dans cet ordre ss%lcparer par un espace", 130);
 		
-		scanf("%d", &nom);
+		scanf("%d", &ajout);
 
-		switch (nom)
+		switch (ajout)
 		{
 		case 1:
 			AjouterMusee();
@@ -38,43 +39,11 @@ void AjouterMusee()
 			MenuGererMusees();
 			break;
 		}
-	}while (nom != 0);
+	}while (ajout != 0);
 }
 	
 	
 	
-	Affichage();
-	int adresse;
-	{
-		printf("                             COPYRIGHT © FRANCE                          \n\n");
-		printf("				Saisir l'adresse :										   \n");
-		scanf("%d", &adresse);
-	}
-
-	Affichage();
-	int ville;
-	{
-		printf("                             COPYRIGHT © FRANCE                          \n\n");
-		printf("				Saisir la ville :										   \n");
-		scanf("%d", &ville);
-	}
-
-	Affichage();
-	int departement;
-	{
-		printf("                             COPYRIGHT © FRANCE                          \n\n");
-		printf("				Saisir le d%lpartement :								   \n", 130);
-		scanf("%d", &departement);
-	}
-
-	Affichage();
-	int region;
-	{
-		printf("                             COPYRIGHT © FRANCE                          \n\n");
-		printf("				Saisir la r%lcgion :									   \n", 130);
-		scanf("%d", &region);
-	}
-}
 
 void ModifierMusee()
 {
