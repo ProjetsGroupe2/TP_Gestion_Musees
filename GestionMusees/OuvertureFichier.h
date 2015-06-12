@@ -1,7 +1,6 @@
-#include "Region.h"
-#include "Departement.h"
-#include "Traitement.h"
-#include "Ville.h"
-#include "Musee.h"
+#ifndef OUVERTUREFICHIERS
+#define OUVERTUREFICHIERS
 
-void ouvertureFichier(Region* tabRegion, Departement* tabDepartement, Ville* tabVille, Musee* tabMusee, int *nbRegion, int *nbDepartement, int *nbVille, int *nbMusee);
+void ouvertureFichier(Region* tabRegions, Departement* tabDepartements, Ville* tabVilles, Musee* tabMusees, int *nbRegion, int *nbDepartement, int *nbVille, int *nbMusee);
+
+#endif

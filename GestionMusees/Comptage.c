@@ -114,7 +114,7 @@ void Comptage(int *nbRegions, int * nbDep, int * nbVilles, int * nbMusees)
 					break;
 				}
 				countColonne++;
-				if (countColonne == 4)
+				if (countColonne == 4) // On va à la ligne suivante
 				{
 					do
 					{
@@ -126,14 +126,15 @@ void Comptage(int *nbRegions, int * nbDep, int * nbVilles, int * nbMusees)
 			
 			else 
 			{
-				data[nbChar] = lettre;
+				data[nbChar] = lettre; // On récupère chaque lettre pour la mettre dans data avec le nbChar pour connaitre le nomre de caratère de la chaine
 				nbChar++;
 			}
 		} while (lettre != EOF);
 	}
-	fclose(fichier);
-	*nbRegions = nbR;
-	*nbDep = nbD;
-	*nbVilles = nbV;
-	*nbMusees = nbM;
+	fclose(fichier); // Fermer le fichier
+
+	*nbRegions = nbR;	//************
+	*nbDep = nbD;		//Récupération
+	*nbVilles = nbV;	//des poiteurs
+	*nbMusees = nbM;	//************
 }

@@ -1,6 +1,6 @@
 #include "Region.h"
 #include "Departement.h"
-#include "Traitement.h"
+#include "comptage.h"
 #include "Ville.h"
 #include "Musee.h"
 

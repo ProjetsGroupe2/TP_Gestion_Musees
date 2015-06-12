@@ -17,10 +17,10 @@
 void main()
 
 {
-	Region* tabRegion = NULL;
-	Departement* tabDepartement = NULL;
-	Ville* tabVille = NULL;
-	Musee* tabMusee = NULL;
+	Region* tabRegions = NULL;
+	Departement* tabDepartements = NULL;
+	Ville* tabVilles = NULL;
+	Musee* tabMusees = NULL;
 
 
 	int nbRegion = 0;
@@ -35,26 +35,21 @@ void main()
 	
 	Comptage(&nbRegion, &nbDepartement, &nbVille, &nbMusee);
 
-	tabRegion = calloc(nbRegion, sizeof(Region));
-	tabDepartement = calloc(nbDepartement, sizeof(Departement));
-	tabVille = calloc(nbVille, sizeof(Ville));
-	tabMusee = calloc(nbMusee, sizeof(Musee));
+	tabRegions = calloc(nbRegion, sizeof(Region));
+	tabDepartements = calloc(nbDepartement, sizeof(Departement));
+	tabVilles = calloc(nbVille, sizeof(Ville));
+	tabMusees = calloc(nbMusee, sizeof(Musee));
 
 	/* /!\ à décommenter avant de commiter /!\ */
 
-	ouvertureFichier(tabRegion, tabDepartement, tabVille, tabMusee, &nbRegion, &nbDepartement, &nbVille, &nbMusee);
-
-	int* TailleListe[4];
-	TailleListe[0] = nbMusee;
-	TailleListe[1] = nbVille;
-	TailleListe[2] = nbDepartement;
-	TailleListe[3] = nbRegion;
+	ouvertureFichier(tabRegions, tabDepartements, tabVilles, tabMusees, &nbRegion, &nbDepartement, &nbVille, &nbMusee);
 
 	for (int i = 0; i < nbRegion; i++)
 	{
-	printf("%d - %c\n", i, tabRegion[i].nom);
+		printf("%s\n", tabRegions[i].nom);
 	}
 	system("pause");
+	
 
 	int choix = -1;
 	do
