@@ -83,7 +83,7 @@
     <ClCompile Include="Main.c" />
     <ClCompile Include="OuvertureFichier.c" />
     <ClCompile Include="Sauvegarde.c" />
-    <ClCompile Include="Traitement.c" />
+    <ClCompile Include="Comptage.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Affichage.h" />
@@ -95,7 +95,7 @@
     <ClInclude Include="OuvertureFichier.h" />
     <ClInclude Include="Region.h" />
     <ClInclude Include="Sauvegarde.h" />
-    <ClInclude Include="Traitement.h" />
+    <ClInclude Include="Comptage.h" />
     <ClInclude Include="Ville.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

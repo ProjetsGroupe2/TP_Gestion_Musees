@@ -85,6 +85,7 @@ void ouvertureFichier(Region* tabRegions, Departement* tabDepartement, Ville* ta
 				lettre = fgetc(fichier);
 				if (lettre == ';')
 				{
+#pragma region cas differents
 
 					switch (countColonne)
 					{
@@ -182,35 +183,31 @@ void ouvertureFichier(Region* tabRegions, Departement* tabDepartement, Ville* ta
 							data[nbChar] = '\0';
 							strcpy(tabMusee[nbMusee].fermetureannuelle, data);
 						}
-						else
-						{
-							data[nbChar] = '\0';
-							strcpy(tabMusee[nbMusee].fermetureannuelle, data);
-						}
+
 						break;
 
 					}
+#pragma endregion
+
 					countColonne++;
 					strcpy(data, "");
 					nbChar = 0;
 				}
-
-				
-				else if (lettre != '\n')
+				else if (lettre == '\n')// Horaires d'ouverture -> case 11 -----------------------------
 				{
 					data[nbChar] = '\0';
-					strcpy(tabMusee[nbMusee].periodeouverture, strOuvert);
+					strcpy(tabMusee[nbMusee].periodeouverture, data);
 					countColonne = 0;
 					strcpy(data, "");
 					nbChar = 0;
 				}
-				else // Horaires d'ouverture -> case 11 ----------------------------------------------------
+				else 
 				{
 					data = realloc(data, (nbChar + 1) * sizeof(char));
 					data[nbChar] = lettre;
 					nbChar++;
 				}
-		} while (lettre != EOF); // Tant que le carractère est différent de la fin du fichier (EOF) -------
+		} while (lettre != EOF); // Tant que le carractère est différent de la fin du fichier (EOF) --------
 	}
 	fclose(fichier);
 	*numRegion = nbRegion;

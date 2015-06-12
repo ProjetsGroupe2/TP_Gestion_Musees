@@ -6,7 +6,8 @@
 #include "Affichage2.h"
 #include "Sauvegarde.h"
 #include "OuvertureFichier.h"
-#include "comptageOuvertureFichier.h"
+//#include "comptageOuvertureFichier.h"
+#include "Comptage.h"
 
 #include "Region.h"
 #include "Departement.h"
@@ -30,7 +31,9 @@ void main()
 
 	/* /!\ à décommenter avant de commiter /!\ */
 
-	comptageOuvertureFichier(&nbRegion, &nbDepartement, &nbVille, &nbMusee);
+	/*comptageOuvertureFichier(&nbRegion, &nbDepartement, &nbVille, &nbMusee);*/
+	
+	Comptage(&nbRegion, &nbDepartement, &nbVille, &nbMusee);
 
 	tabRegion = calloc(nbRegion, sizeof(Region));
 	tabDepartement = calloc(nbDepartement, sizeof(Departement));

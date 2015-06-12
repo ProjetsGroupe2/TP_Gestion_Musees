@@ -48,7 +48,7 @@ main(){
 
 	}
 
-	printf("\n\tLe Nouveau Musee est \n");                         /*Fin du Tri*/
+	printf("\n\tLe Nouveau Musee est \n");                         Fin du Tri
 //	for (i = 0; i<n; i++){
 
 //		printf("\nMusee %s", T[i].Nom);
@@ -65,5 +65,5 @@ main(){
 
 //	getchar();
 // }
-// fclose(fichier);
+// fclose(fichier);*/
 

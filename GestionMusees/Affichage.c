@@ -95,7 +95,7 @@ void MenuGererMusees()
 		switch (choix)
 		{
 		case 1:
-			AjouterMusee();
+			//AjouterMusee();
 			break;
 		case 2:
 			//ModifierMusee();

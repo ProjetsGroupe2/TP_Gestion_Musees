@@ -84,8 +84,6 @@ void comptageOuvertureFichier(int *nbRegion, int *nbDep, int *nbVille, int *nbMu
 		// Parcour les lignes en vérifiant chaque caractère de ";" jusqu'à la fin de ligne '\n' 
 		do
 		{
-			do
-			{
 				lettre = fgetc(fichier);
 				if (lettre == ';')
 				{
@@ -187,9 +185,12 @@ void comptageOuvertureFichier(int *nbRegion, int *nbDep, int *nbVille, int *nbMu
 					data[nbChar] = lettre;
 					nbChar++;
 				}
-			} while (lettre != '\n');
+				else
+				{
+					countColonne = 0;
+				}
 
-			countColonne = 0;
+			
 
 		} while ((lettre = fgetc(fichier)) != EOF); // Tant que le carractère est différent de la fin du fichier (EOF) -------
 	}
