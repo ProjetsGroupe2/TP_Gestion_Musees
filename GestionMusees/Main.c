@@ -35,16 +35,16 @@ void main()
 	Comptage(&nbRegion, &nbDepartement, &nbVille, &nbMusee);
 
 	// Allocation de la memoire 
-	tabRegions = calloc(nbRegion, sizeof(Region));
-	tabDepartements = calloc(nbDepartement, sizeof(Departement));
-	tabVilles = calloc(nbVille, sizeof(Ville));
-	tabMusees = calloc(nbMusee, sizeof(Musee));
+	tabRegions = calloc(nbRegion + 1, sizeof(Region));
+	tabDepartements = calloc(nbDepartement + 1, sizeof(Departement));
+	tabVilles = calloc(nbVille + 1, sizeof(Ville));
+	tabMusees = calloc(nbMusee + 1, sizeof(Musee));
 
 	// Fonction d'ouverture du fichier biblio.csv et remplissage des tableaux de structures
-	ouvertureFichier(tabRegions, tabDepartements, tabVilles, tabMusees, &nbRegion, &nbDepartement, &nbVille, &nbMusee);
+	ouvertureFichier(tabRegions, tabDepartements, tabVilles, tabMusees);
 
 	// Fonction d'affichage des tableaux de structures
-	AfficherTab(tabRegions, tabDepartements, tabVilles, tabMusees, nbRegion, nbDepartement, nbVille, nbMusee);
+	AfficherTab(tabRegions, tabDepartements, tabVilles, tabMusees, &nbRegion, &nbDepartement, &nbVille, &nbMusee);
 
 			/*for (i = 0; i < nbRegion; i++)
 			{

@@ -21,6 +21,7 @@ void AfficherTab(Region* tabRegions, Departement* tabDepartement, Ville* tabVill
 
 	for (i = 0; i < nbRegion; i++)
 	{
-		printf("%d - %s\n", tabRegions[i].id, tabRegions[i].nom);
+		printf("%d - %s\n", tabRegions[i + 1].id, tabRegions[i + 1].nom);
 	}
+	system("pause");
 }
