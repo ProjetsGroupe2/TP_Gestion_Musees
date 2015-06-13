@@ -1,6 +1,7 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <windows.h>
+#include "Region.h"
+#include "Departement.h"
+#include "Ville.h"
+#include "Musee.h"
 
 #include "Affichage.h"
 #include "Affichage2.h"
@@ -8,10 +9,9 @@
 #include "OuvertureFichier.h"
 #include "Comptage.h"
 
-#include "Region.h"
-#include "Departement.h"
-#include "Ville.h"
-#include "Musee.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <windows.h>
 
 void main()
 
@@ -26,7 +26,7 @@ void main()
 	int nbDepartement = 0;
 	int nbVille = 0;
 	int nbMusee = 0;
-	
+	int i = 0;
 
 	/* /!\ à décommenter avant de commiter /!\ */
 
@@ -41,9 +41,10 @@ void main()
 
 	ouvertureFichier(tabRegions, tabDepartements, tabVilles, tabMusees, &nbRegion, &nbDepartement, &nbVille, &nbMusee);
 
-	for (int i = 0; i < nbRegion; i++)
+
+	for (i = 0; i < nbRegion; i++)
 	{
-		printf("%s\n", tabRegions[i].nom);
+		printf("%d - %s\n",tabRegions[i].id ,tabRegions[i].nom);
 	}
 	system("pause");
 	

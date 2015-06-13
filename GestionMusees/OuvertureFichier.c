@@ -1,11 +1,15 @@
+#include "Region.h"
+#include "Departement.h"
+#include "Ville.h"
+#include "Musee.h"
+
+#include "Comptage.h"
+#include "OuvertureFichier.h"
+
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "Region.h"
-#include "Departement.h"
-#include "Comptage.h"
-#include "Ville.h"
-#include "Musee.h"
+
 
 void ouvertureFichier(Region* tabRegions, Departement* tabDepartement, Ville* tabVille, Musee* tabMusee, int* numRegion, int* numDep, int* numVille, int* numMusee)
 {
@@ -203,11 +207,11 @@ void ouvertureFichier(Region* tabRegions, Departement* tabDepartement, Ville* ta
 					nbChar++;
 				}
 		} while (lettre != EOF); // Tant que le carractère est différent de la fin du fichier (EOF) --------
-		for (int i = 0; i < nbRegion; i++)
+		/*for (int i = 0; i < nbRegion; i++)
 		{
 			printf("%s\n", tabRegions[i].nom);
 		}
-		system("pause");
+		system("pause");*/
 	}
 	fclose(fichier);
 	*numRegion  = nbRegion;
