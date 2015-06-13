@@ -12,6 +12,7 @@
 #include "Sauvegarde.h"
 #include "OuvertureFichier.h"
 #include "Comptage.h"
+#include "Ajouter.h"
 
 
 
