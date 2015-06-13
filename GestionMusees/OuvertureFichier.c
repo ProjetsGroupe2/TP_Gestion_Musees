@@ -1,3 +1,6 @@
+#include <stdio.h>
+#include <stdlib.h>
+
 #include "Region.h"
 #include "Departement.h"
 #include "Ville.h"
@@ -6,8 +9,6 @@
 #include "Comptage.h"
 #include "OuvertureFichier.h"
 
-#include <stdio.h>
-#include <stdlib.h>
 
 
 
@@ -89,7 +90,6 @@ void ouvertureFichier(Region* tabRegions, Departement* tabDepartement, Ville* ta
 				lettre = fgetc(fichier);
 				if (lettre == ';')
 				{
-#pragma region cas differents
 
 					switch (countColonne)
 					{
@@ -193,7 +193,7 @@ void ouvertureFichier(Region* tabRegions, Departement* tabDepartement, Ville* ta
 					strcpy(data, "");
 					nbChar = 0;
 				}
-				else if (lettre == '\n')// Horaires d'ouverture -> case 11 -----------------------------
+				else if (lettre == '\n')// Horaires d'ouverture -> "case 11:" -----------------------------
 				{
 					data[nbChar] = '\0';
 					strcpy(tabMusee[nbMusee].periodeouverture, data);
@@ -206,12 +206,14 @@ void ouvertureFichier(Region* tabRegions, Departement* tabDepartement, Ville* ta
 					data[nbChar] = lettre;
 					nbChar++;
 				}
-		} while (lettre != EOF); // Tant que le carractère est différent de la fin du fichier (EOF) --------
+		} while (lettre != EOF); // Tant que le carractère est différent de la fin du fichier (EOF) -------
+
 		/*for (int i = 0; i < nbRegion; i++)
 		{
 			printf("%s\n", tabRegions[i].nom);
 		}
 		system("pause");*/
+
 	}
 	fclose(fichier);
 	*numRegion  = nbRegion;

@@ -1,7 +1,7 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include "Musee.h"
-
+//#include <stdio.h>
+//#include <stdlib.h>
+//#include "Musee.h"
+//
 
 /* /!\ Commenté par Martin dans le Main et dans Sauvegerde pour cause de déboggage d'ouverture fichier /!\ */
 

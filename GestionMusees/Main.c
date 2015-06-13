@@ -1,3 +1,7 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <windows.h>
+
 #include "Region.h"
 #include "Departement.h"
 #include "Ville.h"
@@ -9,9 +13,7 @@
 #include "OuvertureFichier.h"
 #include "Comptage.h"
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <windows.h>
+
 
 void main()
 
@@ -28,26 +30,27 @@ void main()
 	int nbMusee = 0;
 	int i = 0;
 
-	/* /!\ à décommenter avant de commiter /!\ */
-
+	// Fonction de comptage
 	Comptage(&nbRegion, &nbDepartement, &nbVille, &nbMusee);
 
+	// Allocation de la memoire 
 	tabRegions = calloc(nbRegion, sizeof(Region));
 	tabDepartements = calloc(nbDepartement, sizeof(Departement));
 	tabVilles = calloc(nbVille, sizeof(Ville));
 	tabMusees = calloc(nbMusee, sizeof(Musee));
 
-	/* /!\ à décommenter avant de commiter /!\ */
-
+	// Fonction d'ouverture du fichier biblio.csv et remplissage des tableaux de structures
 	ouvertureFichier(tabRegions, tabDepartements, tabVilles, tabMusees, &nbRegion, &nbDepartement, &nbVille, &nbMusee);
 
+	// Fonction d'affichage des tableaux de structures
+	AfficherTab(tabRegions, tabDepartements, tabVilles, tabMusees, nbRegion, nbDepartement, nbVille, nbMusee);
 
-	for (i = 0; i < nbRegion; i++)
-	{
-		printf("%d - %s\n",tabRegions[i].id ,tabRegions[i].nom);
-	}
-	system("pause");
-	
+			/*for (i = 0; i < nbRegion; i++)
+			{
+				printf("%d - %s\n",tabRegions[i].id ,tabRegions[i].nom);	---	test Martin ---
+			}
+			system("pause");
+			*/
 
 	int choix = -1;
 	do

@@ -1,3 +1,5 @@
+
+
 #ifndef AFFICHAGE2
 #define AFFICHAGE2
 

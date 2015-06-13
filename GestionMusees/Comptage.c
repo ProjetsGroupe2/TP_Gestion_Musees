@@ -1,12 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+
 #include "Region.h"
 #include "Departement.h"
 #include "Musee.h"
 #include "Ville.h"
 
 #include "Comptage.h"
+
 
 
 // Code pour compter les régions, départements, villes et musées
