@@ -10,8 +10,9 @@
 #include "Affichage.h"
 #include "Affichage2.h"
 #include "Sauvegarde.h"
-#include "OuvertureFichier.h"
 #include "Comptage.h"
+#include "OuvertureFichier.h"
+#include "AfficherTableaux.h"
 #include "Ajouter.h"
 
 
@@ -24,12 +25,10 @@ void main()
 	Ville* tabVilles = NULL;
 	Musee* tabMusees = NULL;
 
-
 	int nbRegion = 0;
 	int nbDepartement = 0;
 	int nbVille = 0;
 	int nbMusee = 0;
-	int i = 0;
 
 	// Fonction de comptage
 	Comptage(&nbRegion, &nbDepartement, &nbVille, &nbMusee);
@@ -43,15 +42,17 @@ void main()
 	// Fonction d'ouverture du fichier biblio.csv et remplissage des tableaux de structures
 	ouvertureFichier(tabRegions, tabDepartements, tabVilles, tabMusees);
 
-	// Fonction d'affichage des tableaux de structures
-	AfficherTab(tabRegions, tabDepartements, tabVilles, tabMusees, &nbRegion, &nbDepartement, &nbVille, &nbMusee);
+	// Fonction d'affichage du tableau de Régions
+	AfficherRegion(tabRegions,&nbRegion);
 
-			/*for (i = 0; i < nbRegion; i++)
-			{
-				printf("%d - %s\n",tabRegions[i].id ,tabRegions[i].nom);	---	test Martin ---
-			}
-			system("pause");
-			*/
+	// Fonction d'affichage du tableau de Départements
+	AfficherDepartement(tabDepartements, &nbDepartement);
+
+	// Fonction d'affichage du tableau de Villes
+	AfficherVille(tabVilles, &nbVille);
+	
+	//Fonction d'affichage du tableau de Musées
+	AfficherMusee(tabMusees, &nbMusee);
 
 	int choix = -1;
 	do

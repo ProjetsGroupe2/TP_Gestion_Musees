@@ -3,6 +3,9 @@
 #ifndef AFFICHERTABLEAUX
 #define AFFICHERTABLEAUX
 
-void AfficherTab(Region* tabRegions, Departement* tabDepartement, Ville* tabVille, Musee* tabMusee, int* numRegion, int* numDep, int* numVille, int* numMusee);
+void AfficherRegion(Region* tabRegion, int* numRegion);
+void AfficherDepartement(Departement* tabDepartement, int* numDep);
+void AfficherVille(Ville* tabVille, int* numVille);
+void AfficherMusee(Musee* tabMusee, int* numMusee);
 
 #endif

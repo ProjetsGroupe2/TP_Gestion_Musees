@@ -174,28 +174,22 @@ void ouvertureFichier(Region* tabRegions, Departement* tabDepartement, Ville* ta
 						break;
 
 					}
-					countColonne++;
+					countColonne++; // ajoute une colone pour changer de cas
 					nbChar = 0;
 				}
-				else if (lettre == '\n')// Horaires d'ouverture -> "case 11:" -----------------------------
+				else if (lettre == '\n') // Horaires d'ouverture -> "case 11:" -----------------------------
 				{
 					data[nbChar] = '\0';
-					countColonne = 0;
+					countColonne = 0; // Remise à zéro des colonnes pour changement de lignes
 					nbChar = 0;
 				}
 				else 
 				{
-					data[nbChar] = lettre;
+					data[nbChar] = lettre; // Insère chaque carractères dans data
 					nbChar++;
 				}
 		} while (lettre != EOF); // Tant que le carractère est différent de la fin du fichier (EOF) -------
 		
-		/*for (int i = 0; i < nbRegion; i++)
-		{
-			printf("%s\n", tabRegions[i].nom);
-		}
-		system("pause");*/
 		fclose(fichier); // ferme le fichier
 	}
-	
 }
