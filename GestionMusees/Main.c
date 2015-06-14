@@ -30,8 +30,10 @@ void main()
 	int nbVille = 0;
 	int nbMusee = 0;
 
-	// Fonction pour ajouter un muséeà la fin du 
-	//AjouterMusee();
+	// /!\ Y'a plus qu'à mettre les fonction là ou elles doivent se trouver dans l'affichage sauf comptage et OuvertureFichier qui ne bougent pas /!\
+
+	// Fonction pour ajouter un musée à la fin du fichier biblio.csv
+	AjouterMusee();
 
 	// Fonction de comptage
 	Comptage(&nbRegion, &nbDepartement, &nbVille, &nbMusee);
