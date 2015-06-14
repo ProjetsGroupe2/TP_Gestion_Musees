@@ -36,16 +36,16 @@ void AfficherDepartement(Departement* tabDepartement, int* numDep)
 
 	for (i = 0; i < nbDep; i++)
 	{
-		if (i < (nbDep / 2))
+		if (i < 10)
 		{
 			printf("%d - %s\n", tabDepartement[i + 1].id, tabDepartement[i + 1].nom);
 		}
-		else if (i > (nbDep / 2))
+		else if (i < 100)
 		{
 			printf("%d - %s\n", tabDepartement[i + 1].id, tabDepartement[i + 1].nom);
 		}
 	}
-	system("pause");
+	system("pause>nul");
 }
 
 void AfficherVille(Ville* tabVille, int* numVille)

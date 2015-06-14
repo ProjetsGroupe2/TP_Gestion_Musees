@@ -6,7 +6,7 @@
 #include "Ville.h"
 #include "Musee.h"
 
-#include "Comptage.h"
+//#include "Comptage.h"
 #include "OuvertureFichier.h"
 
 
@@ -76,6 +76,8 @@ void ouvertureFichier(Region* tabRegions, Departement* tabDepartement, Ville* ta
 		{
 			lettre = getc(fichier);
 		} while (lettre != '\n');
+
+		// *************************
 
 		// Parcour les lignes en vérifiant chaque caractère de ";" jusqu'à la fin de ligne '\n' 
 		do
@@ -185,7 +187,7 @@ void ouvertureFichier(Region* tabRegions, Departement* tabDepartement, Ville* ta
 				}
 				else 
 				{
-					data[nbChar] = lettre; // Insère chaque carractères dans data
+					data[nbChar] = lettre; // On récupère chaque lettre pour la mettre dans data avec le nbChar pour connaitre le nombre de caratère de la chaine
 					nbChar++;
 				}
 		} while (lettre != EOF); // Tant que le carractère est différent de la fin du fichier (EOF) -------

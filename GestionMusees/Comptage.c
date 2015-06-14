@@ -61,6 +61,8 @@ void Comptage(int *nbRegions, int * nbDep, int * nbVilles, int * nbMusees)
 			lettre = fgetc(fichier);
 		} while (lettre != '\n');
 
+		// *************************
+
 		do
 		{
 
@@ -116,7 +118,7 @@ void Comptage(int *nbRegions, int * nbDep, int * nbVilles, int * nbMusees)
 					break;
 				}
 				countColonne++;
-				if (countColonne == 4) // On va à la ligne suivante
+				if (countColonne == 4) // Boucle pour passer la fin de la ligne et passer à la ligne suivante
 				{
 					do
 					{
@@ -128,7 +130,7 @@ void Comptage(int *nbRegions, int * nbDep, int * nbVilles, int * nbMusees)
 			
 			else 
 			{
-				data[nbChar] = lettre; // On récupère chaque lettre pour la mettre dans data avec le nbChar pour connaitre le nomre de caratère de la chaine
+				data[nbChar] = lettre; // On récupère chaque lettre pour la mettre dans data avec le nbChar pour connaitre le nombre de caratère de la chaine
 				nbChar++;
 			}
 		} while (lettre != EOF);

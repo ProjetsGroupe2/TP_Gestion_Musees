@@ -30,6 +30,9 @@ void main()
 	int nbVille = 0;
 	int nbMusee = 0;
 
+	// Fonction pour ajouter un muséeà la fin du 
+	//AjouterMusee();
+
 	// Fonction de comptage
 	Comptage(&nbRegion, &nbDepartement, &nbVille, &nbMusee);
 
@@ -53,6 +56,8 @@ void main()
 	
 	//Fonction d'affichage du tableau de Musées
 	AfficherMusee(tabMusees, &nbMusee);
+
+	
 
 	int choix = -1;
 	do
