@@ -29,11 +29,12 @@ void main()
 	int nbDepartement = 0;
 	int nbVille = 0;
 	int nbMusee = 0;
+	int retour = 0;
 
 	// /!\ Y'a plus qu'à mettre les fonction là ou elles doivent se trouver dans l'affichage sauf comptage et OuvertureFichier qui ne bougent pas /!\
 
 	// Fonction pour ajouter un musée à la fin du fichier biblio.csv
-	AjouterMusee();
+	AjouterMusee(tabRegions, tabDepartements, tabVilles, tabMusees, &nbRegion, &nbDepartement, &nbVille, &nbMusee);
 
 	// Fonction de comptage
 	Comptage(&nbRegion, &nbDepartement, &nbVille, &nbMusee);
@@ -60,6 +61,7 @@ void main()
 	AfficherMusee(tabMusees, &nbMusee);
 
 	
+	
 
 	int choix = -1;
 	do
@@ -78,8 +80,16 @@ void main()
 			break;
 		case 3:
 			system("cls");
-			/* /!\ Commenté par Martin dans le Main et dans Sauvegerde pour cause de déboggage d'ouverture fichier /!\ */
-			//creationFichier();
+			// fonction de sauvegarde ------------------------------------------------------- OK
+			CreationFichier(tabRegions, tabDepartements, tabVilles, tabMusees, &nbMusee);
+			if (1)
+			{
+				printf("Enregistrement du fichier effectué avec succès!");
+			}
+			else
+			{
+				printf("Erreur lors de l'enregistrement du fichier");
+			}
 			break;
 		}
 	} while (choix != 0);

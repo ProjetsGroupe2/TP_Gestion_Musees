@@ -1,4 +1,5 @@
-NOMREG;NOMDEP;VILLE;NOM DU MUSEE;ADR;CP;ANNREOUV;FERME;SITWEB;FERMETURE ANNUELLE;PERIODE OUVERTURE;;;;;;;;;;
+NOMREG;NOMDEP;VILLE;NOM DU MUSEE;ADR;CP;ANNREOUV;FERME;SITWEB;FERMETURE ANNUELLE;PERIODE OUVERTURE
+;;;;;;;;;;
 ALSACE;BAS-RHIN;BARR;Musée de la Folie Marco;30, Rue du Dr Sultzer;67140;;NON;www.barr.fr;;
 ALSACE;BAS-RHIN;BETSCHDORF;Musée de la Poterie;2, rue de Kuhlendorf;67660;;NON;www.betschdorf.fr/tourisme/visiter_betschdrof/musee_poterie.php;11/11,01/12-01/04;
 ALSACE;BAS-RHIN;BOUXWILLER;Musée de Bouxwiller et du Pays de Hanau;2, Place du Château Halle aux Blés;67330;2016OUI;OUI;www.musee-pays-hanau.webmuseo.com;11/11,01/12-01/04;
@@ -1235,4 +1236,7 @@ RHÔNE-ALPES;SAVOIE;AIX-LES-BAINS;Musée du docteur Faure;"Villa ""Les Chimères"" 
 RHÔNE-ALPES;SAVOIE;ALBERTVILLE;Musée Municipal d'Albertville-Conflans;Maison Rouge Grande Place de Conflans;73200;;NON;www.albertville.com;;
 RHÔNE-ALPES;SAVOIE;BOURG-SAINT-MAURICE;Musée du Costume;Hauteville-Gondon;73700;;OUI;;24/12,25/12;
 RHÔNE-ALPES;SAVOIE;CHAMBERY;Musée Savoisien;Square de Lannoy de Bissy;73000;;NON;Site du conseil général ou www.musee-savoisien.fr;;
-gigi;fofo;jfjfjfj;fifou;fofo;35446;2101oui;oui;www.duc;1044/45121/55;
+RHÔNE-ALPES;SAVOIE;CHAMBERY;Musée des Beaux-Arts;Place du Palais de Justice;73000;;NON;Site de la ville - www.chambery.fr;24/12,25/12;
+RHÔNE-ALPES;SAVOIE;CHAMBERY;Musée des Charmettes;890, Chemin des Charmettes;73000;;NON;Site de la mairie;01/01,01/04,25/12;
+RHÔNE-ALPES;SAVOIE;CHAMBERY CEDEX;Muséum d'histoire naturelle;208, Avenue de Lyon B.P. 844;73007;;OUI;;;
+RHÔNE-ALPES;SAVOIE;MOÛTIERS;Musée de l'Académie de La Val d'Isère;23, Place Saint-Pierre;73600;;NON;Site de l'Académie - http://academie.sup.fr;11/11,01/12-01/04;

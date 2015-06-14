@@ -1,55 +1,55 @@
 #include <stdio.h>
 #include <stdlib.h>
+
+#include "Region.h"
+#include "Departement.h"
+#include "Ville.h"
 #include "Musee.h"
 
 
 
+/* /!\ Commenté par Martin dans le Main et dans Sauvegerde pour cause de déboggage d'ouverture fichier /!\ */
 
-///* /!\ Commenté par Martin dans le Main et dans Sauvegerde pour cause de déboggage d'ouverture fichier /!\ */
-//
-//
-//int creationFichier()
-//{
-//	// Code à remplacer par la vraie liste
-//	Musee* tabMusees;
-//	tabMusees = malloc(sizeof(Musee)* 2);
-//	// Faux musee 1
-//	strcpy((tabMusees)->nom, "Musee 1");
-//	(tabMusee)->anneereouv = "2012";
-//	
-//	// Faux musee 2
-//	strcpy((tabMusees + 1)->nom, "Musee 2");
-//
-//	system("cls");
-//	printf("1 - Afficher le fichier");
-//
-//	FILE* fichier = NULL;
-//	fichier = fopen("biblio.csv", "w+");
-//
-//	if (fichier == NULL)
-//	{
-//		return 0;
-//	}
-//	else
-//	{
-//		char line[500];
-//		strcpy(line, "NOMREG;NOMDEP;FERME;ANNREOUV;NOM DU MUSEE;ADR;CP;VILLE;SITWEB;FERMETURE ANNUELLE;PERIODE OUVERTURE\n");
-//
-//		fputs(line, fichier);
-//
-//		for (int i = 0; i < 2; i++)
-//		{
-//			strcpy(line, (tabMusees + i)->nom);
-//			strcat(line, ";");
-//
-//			strcat(line, "\n");
-//			fputs(line, fichier);
-//		}
-//
-//		fclose(fichier);
-//		system("pause>nul");
-//		return 1;
-//		
-//	}
-//
-//}
+
+int CreationFichier(Region * tabRegion, Departement * tabDepartement, Ville * tabVille, Musee * tabMusee, int * numMus)
+{
+
+	int nbMus = *numMus;
+
+	FILE* fichier = NULL;
+	fichier = fopen("biblio.csv", "w+");
+
+	if (fichier == NULL)
+	{
+		printf("Erreur lors de l'ouverture du fichier biblio.csv pour la sauvegarde");
+	}
+	else
+	{
+		char line[500];
+		fprintf(fichier, "NOMREG;NOMDEP;VILLE;NOM DU MUSEE;ADR;CP;ANNREOUV;FERME;SITWEB;FERMETURE ANNUELLE;PERIODE OUVERTURE");
+		
+
+		for (int i = 0; i < nbMus ; i++)
+		{
+			int idVille = tabMusee[i].idVille;
+			int idDepartement = tabVille[idVille].idDepartement;
+			int idRegion = tabDepartement[idDepartement].idRegion;							// On récupère chaque id en relation dans les structures
+			fprintf(fichier, "%s;", tabRegion[idRegion].nom);								// On les insères dans le fichier
+			fprintf(fichier, "%s;", tabDepartement[idDepartement].nom);
+			fprintf(fichier, "%s;", tabVille[idVille].nom);
+			fprintf(fichier, "%s;", tabMusee[i].nom);
+			fprintf(fichier, "%s;", tabMusee[i].adresse);
+			fprintf(fichier, "%s;", tabMusee[i].cp);
+			fprintf(fichier, "%s;", tabMusee[i].anneereouv);
+			fprintf(fichier, "%s;", tabMusee[i].ferme);
+			fprintf(fichier, "%s;", tabMusee[i].siteweb);
+			fprintf(fichier, "%s;", tabMusee[i].fermetureannuelle);
+			fprintf(fichier, "%s\n", tabMusee[i].periodeouverture);
+		}
+	
+		fclose(fichier);
+
+		return 1;
+	}
+
+}

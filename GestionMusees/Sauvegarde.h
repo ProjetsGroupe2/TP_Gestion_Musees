@@ -3,6 +3,6 @@
 #ifndef SAUVEGARDER
 #define SAUVEGARDER
 
-int creationFichier();
+int CreationFichier(Region * tabRegion, Departement * tabDepartement, Ville * tabVille, Musee * tabMusee, int * numMus);
 
 #endif
