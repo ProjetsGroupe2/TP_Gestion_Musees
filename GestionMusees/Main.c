@@ -32,7 +32,7 @@ void main()
 	int nbMusee = 0;
 	int retour = 0;
 
-	// /!\ Y'a plus qu'à mettre les fonction là ou elles doivent se trouver dans l'affichage sauf comptage et OuvertureFichier qui ne bougent pas /!\
+	// /!\ Y'a plus qu'à mettre les fonction là ou elles doivent se trouver dans l'affichage sauf Comptage et ouvertureFichier qui ne bougent pas /!\
 
 	
 	// Fonction de comptage
@@ -50,8 +50,8 @@ void main()
 	//// Fonction pour ajouter un musée dans les tableau de structures
 	//AjouterMusee(tabRegions, tabDepartements, tabVilles, tabMusees, &nbRegion, &nbDepartement, &nbVille, &nbMusee);
 
-	//// Fonction pour Modifier un musée dans les tableau de structures
-	//Modifier(tabRegions, tabDepartements, tabVilles, tabMusees, &nbRegion, &nbDepartement, &nbVille, &nbMusee);
+	// Fonction pour Modifier un musée dans les tableau de structures
+	Modifier(tabRegions, tabDepartements, tabVilles, tabMusees, &nbRegion, &nbDepartement, &nbVille, &nbMusee);
 
 	//// Fonction d'affichage du tableau de Régions
 	//AfficherRegion(tabRegions,&nbRegion);
@@ -59,11 +59,11 @@ void main()
 	//// Fonction d'affichage du tableau de Départements
 	//AfficherDepartement(tabDepartements, &nbDepartement);
 
-	// Fonction d'affichage du tableau de Villes
-	AfficherVille(tabVilles, &nbVille);
-	
-	//Fonction d'affichage du tableau de Musées
-	AfficherMusee(tabMusees, &nbMusee);
+	//// Fonction d'affichage du tableau de Villes
+	//AfficherVille(tabVilles, &nbVille);
+	//
+	////Fonction d'affichage du tableau de Musées
+	//AfficherMusee(tabMusees, &nbMusee);
 
 	
 	

@@ -103,8 +103,8 @@ void AfficherMusee(Musee* tabMusee, int* numMusee)
 		printf("\n");
 		system("pause");
 		printf("\n");
-		nbTours += 20;
+		nbTours += 10;
 	}
-	printf("FIN DES DEPARTEMENTS\n");
+	printf("FIN DES MUSEE\n");
 	system("pause");
 }
