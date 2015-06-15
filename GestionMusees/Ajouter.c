@@ -7,7 +7,7 @@
 #include "Musee.h"
 
 #include "Ajouter.h"
-#include "OuvertureFichier.h"
+
 
 
 void AjouterMusee(Region * tabRegion, Departement* tabDepartement, Ville* tabVille, Musee* tabMusee, int *nbRegion, int * nbDep, int * nbVille, int * nbMusee)

@@ -81,6 +81,7 @@
     <ClCompile Include="AfficherTableaux.c" />
     <ClCompile Include="Ajouter.c" />
     <ClCompile Include="Main.c" />
+    <ClCompile Include="Modifier.c" />
     <ClCompile Include="OuvertureFichier.c" />
     <ClCompile Include="Sauvegarde.c" />
     <ClCompile Include="Comptage.c" />
@@ -92,6 +93,7 @@
     <ClInclude Include="AfficherTableaux.h" />
     <ClInclude Include="Ajouter.h" />
     <ClInclude Include="Departement.h" />
+    <ClInclude Include="Modifier.h" />
     <ClInclude Include="Musee.h" />
     <ClInclude Include="OuvertureFichier.h" />
     <ClInclude Include="Region.h" />

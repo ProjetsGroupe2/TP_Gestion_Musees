@@ -14,6 +14,7 @@
 #include "OuvertureFichier.h"
 #include "AfficherTableaux.h"
 #include "Ajouter.h"
+#include "Modifier.h"
 
 
 
@@ -46,15 +47,17 @@ void main()
 	// Fonction d'ouverture du fichier biblio.csv et remplissage des tableaux de structures
 	ouvertureFichier(tabRegions, tabDepartements, tabVilles, tabMusees);
 
-	// Fonction pour ajouter un musée à la fin du fichier biblio.csv
-	AjouterMusee(tabRegions, tabDepartements, tabVilles, tabMusees, &nbRegion, &nbDepartement, &nbVille, &nbMusee);
+	//// Fonction pour ajouter un musée dans les tableau de structures
+	//AjouterMusee(tabRegions, tabDepartements, tabVilles, tabMusees, &nbRegion, &nbDepartement, &nbVille, &nbMusee);
 
+	//// Fonction pour Modifier un musée dans les tableau de structures
+	//Modifier(tabRegions, tabDepartements, tabVilles, tabMusees, &nbRegion, &nbDepartement, &nbVille, &nbMusee);
 
-	// Fonction d'affichage du tableau de Régions
-	AfficherRegion(tabRegions,&nbRegion);
+	//// Fonction d'affichage du tableau de Régions
+	//AfficherRegion(tabRegions,&nbRegion);
 
-	// Fonction d'affichage du tableau de Départements
-	AfficherDepartement(tabDepartements, &nbDepartement);
+	//// Fonction d'affichage du tableau de Départements
+	//AfficherDepartement(tabDepartements, &nbDepartement);
 
 	// Fonction d'affichage du tableau de Villes
 	AfficherVille(tabVilles, &nbVille);
