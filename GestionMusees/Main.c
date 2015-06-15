@@ -33,9 +33,7 @@ void main()
 
 	// /!\ Y'a plus qu'à mettre les fonction là ou elles doivent se trouver dans l'affichage sauf comptage et OuvertureFichier qui ne bougent pas /!\
 
-	// Fonction pour ajouter un musée à la fin du fichier biblio.csv
-	AjouterMusee(tabRegions, tabDepartements, tabVilles, tabMusees, &nbRegion, &nbDepartement, &nbVille, &nbMusee);
-
+	
 	// Fonction de comptage
 	Comptage(&nbRegion, &nbDepartement, &nbVille, &nbMusee);
 
@@ -47,6 +45,10 @@ void main()
 
 	// Fonction d'ouverture du fichier biblio.csv et remplissage des tableaux de structures
 	ouvertureFichier(tabRegions, tabDepartements, tabVilles, tabMusees);
+
+	// Fonction pour ajouter un musée à la fin du fichier biblio.csv
+	AjouterMusee(tabRegions, tabDepartements, tabVilles, tabMusees, &nbRegion, &nbDepartement, &nbVille, &nbMusee);
+
 
 	// Fonction d'affichage du tableau de Régions
 	AfficherRegion(tabRegions,&nbRegion);

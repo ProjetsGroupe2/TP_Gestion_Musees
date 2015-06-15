@@ -136,9 +136,16 @@ void Comptage(int *nbRegions, int * nbDep, int * nbVilles, int * nbMusees)
 		} while (lettre != EOF);
 	}
 	fclose(fichier); // Fermer le fichier
-
-	*nbRegions = nbR;	//************
-	*nbDep = nbD;		//Récupération
-	*nbVilles = nbV;	//des poiteurs
-	*nbMusees = nbM;	//************
+	
+	if (nbR == 0 && nbD == 0 && nbV == 0 && nbM == 0) // Si les nombres des region departements ville et musées son == 0 alors erreur
+	{
+		printf("Erreur dans le remplissage des listes !!!\n");
+	}
+	else
+	{
+		*nbRegions = nbR;	//************
+		*nbDep = nbD;		//Récupération 
+		*nbVilles = nbV;	//des poiteurs
+		*nbMusees = nbM;	//************
+	}
 }

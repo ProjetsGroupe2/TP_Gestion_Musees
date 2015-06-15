@@ -8,7 +8,7 @@
 
 
 
-/* /!\ Commenté par Martin dans le Main et dans Sauvegerde pour cause de déboggage d'ouverture fichier /!\ */
+/* /!\ Fonction terminée /!\ */
 
 
 int CreationFichier(Region * tabRegion, Departement * tabDepartement, Ville * tabVille, Musee * tabMusee, int * numMus)
@@ -49,7 +49,7 @@ int CreationFichier(Region * tabRegion, Departement * tabDepartement, Ville * ta
 	
 		fclose(fichier);
 
-		return 1;
+		return 1; // Pour afficher à l'aide d'un booléen le succès de la sauvegarde
 	}
 
 }
