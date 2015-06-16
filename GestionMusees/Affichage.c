@@ -2,18 +2,18 @@
 #include <stdlib.h>
 #include <windows.h>
 
+#include "Region.h"
+#include "Departement.h"
+#include "Ville.h"
+#include "Musee.h"
+
 #include "Affichage.h"
-<<<<<<< HEAD
 #include "Sauvegarde.h"
 #include "Comptage.h"
 #include "OuvertureFichier.h"
 #include "AfficherTableaux.h"
 #include "Ajouter.h"
 #include "Modifier.h"
-=======
-
->>>>>>> 81d3b5bddcde2628aedab02a957bb90b11836249
-
 
 void Color(int couleurDuTexte, int couleurDeFond) // fonction d'affichage de couleurs
 {
@@ -87,7 +87,7 @@ void affichageMenu(int* choix)
 	scanf("%d", choix);
 }
 
-void MenuGererMusees()
+void MenuGererMusees(Region * tabRegion, Departement* tabDepartement, Ville* tabVille, Musee* tabMusee, int *nbRegion, int * nbDep, int * nbVille, int * nbMusee)
 {
 	system("cls");
 	petitaffichage();
@@ -106,14 +106,10 @@ void MenuGererMusees()
 		switch (choix)
 		{
 		case 1:
-			AjouterMusee();
+			AjouterMusee(tabRegion, tabDepartement, tabVille, tabMusee, nbRegion, nbDep, nbVille, nbMusee);
 			break;
 		case 2:
-<<<<<<< HEAD
-			Modifier(tabRegion, tabDepartement, tabVille, tabMusee, nbRegion, nbDep, nbVille, nbMusee);
-=======
-			Modifier();
->>>>>>> 81d3b5bddcde2628aedab02a957bb90b11836249
+			//Modifier();
 			break;
 		case 3:
 			//SupprimerMusee();
@@ -124,8 +120,7 @@ void MenuGererMusees()
 	affichage();
 }
 
-<<<<<<< HEAD
-//void MenuAjouterMusee()
+//void AjouterMusee()
 //{
 //	system("cls");
 //	petitaffichage();
@@ -148,36 +143,9 @@ void MenuGererMusees()
 //
 //		}
 //	} while (choix != 0);
-//system("cls");
-//affichage();
+//	system("cls");
+//	affichage();
 //}
-=======
-void AjouterMusee()
-{
-	system("cls");
-	petitaffichage();
-	int choix = -1;
-	do
-	{
-		printf("                  0 .     Retour menu pr%lcc%lcdent \n\n", 130, 130);
-		printf("			  Entrer le nom du mus%lce a ajouter : ", 130);
-
-		scanf("%d", &choix);
-
-		switch (choix)
-		{
-		case 1:
-			//NomMusee();
-			break;
-		case 0:
-			MenuRechercherMusee();
-			break;
-
-		}
-	} while (choix != 0);
-	system("cls");
-	affichage();
-}
 
 void ModifierMusee()
 {
@@ -217,61 +185,21 @@ void SupprimerMusee()
 		printf("			  Entrer le nom du mus%lce a supprimer : ", 130);
 
 		scanf("%d", &choix);
->>>>>>> 81d3b5bddcde2628aedab02a957bb90b11836249
 
-//void ModifierMusee()
-//{
-//	system("cls");
-//	petitaffichage();
-//	int choix = -1;
-//	do
-//	{
-//		printf("                  0 .     Retour menu pr%lcc%lcdent \n\n", 130, 130);
-//		printf("			  Entrer le nom du mus%lce a modifier : ", 130);
-//
-//		scanf("%d", &choix);
-//
-//		switch (choix)
-//		{
-//		case 1:
-//			//ModifierMusee();
-//			break;
-//		case 0:
-//			MenuRechercherMusee();
-//			break;
-//
-//		}
-//	} while (choix != 0);
-//	system("cls");
-//	affichage();
-//}
+		switch (choix)
+		{
+		case 1:
+			//SupprimerMusee();
+			break;
+		case 0:
+			MenuRechercherMusee();
+			break;
 
-//void SupprimerMusee()
-//{
-//	system("cls");
-//	petitaffichage();
-//	int choix = -1;
-//	do
-//	{
-//		printf("                  0 .     Retour menu pr%lcc%lcdent \n\n", 130, 130);
-//		printf("			  Entrer le nom du mus%lce a supprimer : ", 130);
-//
-//		scanf("%d", &choix);
-//
-//		switch (choix)
-//		{
-//		case 1:
-//			//SupprimerMusee();
-//			break;
-//		case 0:
-//			MenuRechercherMusee();
-//			break;
-//
-//		}
-//	} while (choix != 0);
-//	system("cls");
-//	affichage();
-//}
+		}
+	} while (choix != 0);
+	system("cls");
+	affichage();
+}
 
 void MenuRechercherMusee()
 {
@@ -331,7 +259,7 @@ void RechercheRegion()
 
 		}
 	} while (choix != 0);
-	system("cls");
+
 
 }
 

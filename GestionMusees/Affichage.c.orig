@@ -2,20 +2,32 @@
 #include <stdlib.h>
 #include <windows.h>
 
-#include "Region.h"
-#include "Departement.h"
-#include "Ville.h"
-#include "Musee.h"
-
+<<<<<<< HEAD
 #include "Affichage.h"
-#include "Affichage2.h"
+<<<<<<< HEAD
 #include "Sauvegarde.h"
 #include "Comptage.h"
 #include "OuvertureFichier.h"
 #include "AfficherTableaux.h"
 #include "Ajouter.h"
 #include "Modifier.h"
+=======
 
+>>>>>>> 81d3b5bddcde2628aedab02a957bb90b11836249
+=======
+#include "Region.h"
+#include "Departement.h"
+#include "Ville.h"
+#include "Musee.h"
+>>>>>>> e7f74c505577512467e41424f95f89e469eb347a
+
+#include "Affichage.h"
+#include "Sauvegarde.h"
+#include "Comptage.h"
+#include "OuvertureFichier.h"
+#include "AfficherTableaux.h"
+#include "Ajouter.h"
+#include "Modifier.h"
 
 void Color(int couleurDuTexte, int couleurDeFond) // fonction d'affichage de couleurs
 {
@@ -97,9 +109,9 @@ void MenuGererMusees(Region * tabRegion, Departement* tabDepartement, Ville* tab
 	do
 
 	{
-		printf("                  1 .     Ajouter un Mus%lc                           \n", 130); //Ajouter "%lc" a la place du "é" puis ajouter en fin de phrase "130" pour un accent donc si deux accents mettre comme cela "130, 130".
-		printf("                  2 .     Modifier un Mus%lc                         \n", 130);
-		printf("                  3 .     Supprimer un Mus%lc                         \n", 130);
+		printf("                  1 .     Ajouter un Mus%lce                           \n", 130); //Ajouter "%lc" a la place du "é" puis ajouter en fin de phrase "130" pour un accent donc si deux accents mettre comme cela "130, 130".
+		printf("                  2 .     Modifier un Mus%lce                          \n", 130);
+		printf("                  3 .     Supprimer un Mus%lce                         \n", 130);
 		printf("                  0 .     Retour menu pr%lcc%lcdent \n\n", 130, 130);
 		printf("			  Entrer le num%lcro du menu que vous avez choisie : ", 130);
 
@@ -111,98 +123,58 @@ void MenuGererMusees(Region * tabRegion, Departement* tabDepartement, Ville* tab
 			AjouterMusee(tabRegion, tabDepartement, tabVille, tabMusee, nbRegion, nbDep, nbVille, nbMusee);
 			break;
 		case 2:
-			ModifierMusee();
+<<<<<<< HEAD
+<<<<<<< HEAD
+			Modifier(tabRegion, tabDepartement, tabVille, tabMusee, nbRegion, nbDep, nbVille, nbMusee);
+=======
+			Modifier();
+>>>>>>> 81d3b5bddcde2628aedab02a957bb90b11836249
+=======
+			//Modifier();
+>>>>>>> e7f74c505577512467e41424f95f89e469eb347a
 			break;
 		case 3:
-			SupprimerMusee();
-			break;
-		}
-	} while (choix != 0);
-	system("cls");
-	affichage();
-}
-
-void MenuAjouterMusee()
-{
-	system("cls");
-	petitaffichage();
-	int choix = -1;
-	do
-	{
-		printf("                  0 .     Retour menu pr%lcc%lcdent \n\n", 130, 130);
-		printf("			  Entrer le nom du mus%lce a ajouter : ", 130);
-
-		scanf("%d", &choix);
-
-		switch (choix)
-		{
-		case 1:
-			//NomMusee();
-			break;
-		case 0:
-			MenuRechercherMusee();
-			break;
-
-		}
-	} while (choix != 0);
-system("cls");
-affichage();
-}
-
-void ModifierMusee()
-{
-	system("cls");
-	petitaffichage();
-	int choix = -1;
-	do
-	{
-		printf("                  0 .     Retour menu pr%lcc%lcdent \n\n", 130, 130);
-		printf("			  Entrer le nom du mus%lce a modifier : ", 130);
-
-		scanf("%d", &choix);
-
-		switch (choix)
-		{
-		case 1:
-			//ModifierMusee();
-			break;
-		case 0:
-			MenuRechercherMusee();
-			break;
-
-		}
-	} while (choix != 0);
-	system("cls");
-	affichage();
-}
-
-void SupprimerMusee()
-{
-	system("cls");
-	petitaffichage();
-	int choix = -1;
-	do
-	{
-		printf("                  0 .     Retour menu pr%lcc%lcdent \n\n", 130, 130);
-		printf("			  Entrer le nom du mus%lce a supprimer : ", 130);
-
-		scanf("%d", &choix);
-
-		switch (choix)
-		{
-		case 1:
 			//SupprimerMusee();
 			break;
-		case 0:
-			MenuRechercherMusee();
-			break;
-
 		}
 	} while (choix != 0);
 	system("cls");
 	affichage();
 }
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+//void MenuAjouterMusee()
+=======
+//void AjouterMusee()
+>>>>>>> e7f74c505577512467e41424f95f89e469eb347a
+//{
+//	system("cls");
+//	petitaffichage();
+//	int choix = -1;
+//	do
+//	{
+//		printf("                  0 .     Retour menu pr%lcc%lcdent \n\n", 130, 130);
+//		printf("			  Entrer le nom du mus%lce a ajouter : ", 130);
+//
+//		scanf("%d", &choix);
+//
+//		switch (choix)
+//		{
+//		case 1:
+//			//NomMusee();
+//			break;
+//		case 0:
+//			MenuRechercherMusee();
+//			break;
+//
+//		}
+//	} while (choix != 0);
+<<<<<<< HEAD
+//system("cls");
+//affichage();
+//}
+=======
 void AjouterMusee()
 {
 	system("cls");
@@ -229,6 +201,11 @@ void AjouterMusee()
 	system("cls");
 	affichage();
 }
+=======
+//	system("cls");
+//	affichage();
+//}
+>>>>>>> e7f74c505577512467e41424f95f89e469eb347a
 
 void ModifierMusee()
 {
@@ -268,21 +245,61 @@ void SupprimerMusee()
 		printf("			  Entrer le nom du mus%lce a supprimer : ", 130);
 
 		scanf("%d", &choix);
+>>>>>>> 81d3b5bddcde2628aedab02a957bb90b11836249
 
-		switch (choix)
-		{
-		case 1:
-			//SupprimerMusee();
-			break;
-		case 0:
-			MenuRechercherMusee();
-			break;
+//void ModifierMusee()
+//{
+//	system("cls");
+//	petitaffichage();
+//	int choix = -1;
+//	do
+//	{
+//		printf("                  0 .     Retour menu pr%lcc%lcdent \n\n", 130, 130);
+//		printf("			  Entrer le nom du mus%lce a modifier : ", 130);
+//
+//		scanf("%d", &choix);
+//
+//		switch (choix)
+//		{
+//		case 1:
+//			//ModifierMusee();
+//			break;
+//		case 0:
+//			MenuRechercherMusee();
+//			break;
+//
+//		}
+//	} while (choix != 0);
+//	system("cls");
+//	affichage();
+//}
 
-		}
-	} while (choix != 0);
-	system("cls");
-	affichage();
-}
+//void SupprimerMusee()
+//{
+//	system("cls");
+//	petitaffichage();
+//	int choix = -1;
+//	do
+//	{
+//		printf("                  0 .     Retour menu pr%lcc%lcdent \n\n", 130, 130);
+//		printf("			  Entrer le nom du mus%lce a supprimer : ", 130);
+//
+//		scanf("%d", &choix);
+//
+//		switch (choix)
+//		{
+//		case 1:
+//			//SupprimerMusee();
+//			break;
+//		case 0:
+//			MenuRechercherMusee();
+//			break;
+//
+//		}
+//	} while (choix != 0);
+//	system("cls");
+//	affichage();
+//}
 
 void MenuRechercherMusee()
 {
@@ -325,8 +342,9 @@ void RechercheRegion()
 	do
 
 	{
+		printf("                  1 .     Indiquez le num%lcro de la r%lcgion choisie \n",130,130, 130); //Ajouter "%lc" a la place du "é" puis ajouter en fin de phrase "130" pour un accent donc si deux accents mettre comme cela "130, 130".
 		printf("                  0 .     Retour menu pr%lcc%lcdent \n\n\n",130 ,130);
-		printf("			   Entrer le nom de la r%lcgion choisie : ", 130);
+		printf("			  Entrer le num%lcro du menu que vous avez choisie : ", 130);
 
 		scanf("%d", &choix);
 
@@ -341,7 +359,7 @@ void RechercheRegion()
 
 		}
 	} while (choix != 0);
-
+	system("cls");
 
 }
 
@@ -355,8 +373,9 @@ void RechercheDepartement()
 	int choix = -1;
 	do
 	{
-		printf("                  0 .     Retour menu pr%lcc%lcdent \n\n\n", 130, 130);
-		printf("			   Entrer le nom de la d%lcpartement choisie : ", 130);
+		printf("                  1 .     Indiquez le num%lcro du d%lcpartement choisie \n",130 , 130); //Ajouter "%lc" a la place du "é" puis ajouter en fin de phrase "130" pour un accent donc si deux accents mettre comme cela "130, 130".
+		printf("                  0 .     Retour menu pr%lcc%lcdent \n\n", 130, 130);
+		printf("			  Entrer le num%lcro du menu que vous avez choisie : ", 130);
 
 		scanf("%d", &choix);
 
@@ -384,8 +403,9 @@ void RechercheVille()
 	do
 
 	{
-		printf("                  0 .     Retour menu pr%lcc%lcdent \n\n\n", 130, 130);
-		printf("			   Entrer le nom de la ville choisie : ", 130);
+		printf("                  1 .     Indiquez le num%lcro de la ville choisie \n", 130); //Ajouter "%lc" a la place du "é" puis ajouter en fin de phrase "130" pour un accent donc si deux accents mettre comme cela "130, 130".
+		printf("                  0 .     Retour menu pr%lcc%lcdent \n\n", 130, 130);
+		printf("			  Entrer le num%lcro du menu que vous avez choisie : ", 130);
 
 		scanf("%d", &choix);
 
@@ -401,10 +421,7 @@ void RechercheVille()
 	} while (choix != 0);
 }
 
-<<<<<<< HEAD
 
-=======
->>>>>>> f26e1d46ccff967aa3c57c38045d49dcdf426af4
 void Sauvegarde()
 {
 	system("cls");
