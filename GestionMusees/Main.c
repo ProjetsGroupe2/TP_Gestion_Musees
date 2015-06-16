@@ -8,7 +8,6 @@
 #include "Musee.h"
 
 #include "Affichage.h"
-#include "Affichage2.h"
 #include "Sauvegarde.h"
 #include "Comptage.h"
 #include "OuvertureFichier.h"
