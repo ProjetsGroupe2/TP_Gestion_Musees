@@ -87,7 +87,7 @@ void affichageMenu(int* choix)
 	scanf("%d", choix);
 }
 
-void MenuGererMusees(Region * tabRegion, Departement* tabDepartement, Ville* tabVille, Musee* tabMusee, int *nbRegion, int * nbDep, int * nbVille, int * nbMusee);
+void MenuGererMusees(Region * tabRegion, Departement* tabDepartement, Ville* tabVille, Musee* tabMusee, int *nbRegion, int * nbDep, int * nbVille, int * nbMusee)
 {
 	system("cls");
 	petitaffichage();
@@ -106,10 +106,10 @@ void MenuGererMusees(Region * tabRegion, Departement* tabDepartement, Ville* tab
 		switch (choix)
 		{
 		case 1:
-			AjouterMusee();
+			AjouterMusee(tabRegion, tabDepartement, tabVille, tabMusee, nbRegion, nbDep, nbVille, nbMusee);
 			break;
 		case 2:
-			Modifier();
+			//Modifier();
 			break;
 		case 3:
 			//SupprimerMusee();
@@ -120,32 +120,32 @@ void MenuGererMusees(Region * tabRegion, Departement* tabDepartement, Ville* tab
 	affichage();
 }
 
-void AjouterMusee()
-{
-	system("cls");
-	petitaffichage();
-	int choix = -1;
-	do
-	{
-		printf("                  0 .     Retour menu pr%lcc%lcdent \n\n", 130, 130);
-		printf("			  Entrer le nom du mus%lce a ajouter : ", 130);
-
-		scanf("%d", &choix);
-
-		switch (choix)
-		{
-		case 1:
-			//NomMusee();
-			break;
-		case 0:
-			MenuRechercherMusee();
-			break;
-
-		}
-	} while (choix != 0);
-	system("cls");
-	affichage();
-}
+//void AjouterMusee()
+//{
+//	system("cls");
+//	petitaffichage();
+//	int choix = -1;
+//	do
+//	{
+//		printf("                  0 .     Retour menu pr%lcc%lcdent \n\n", 130, 130);
+//		printf("			  Entrer le nom du mus%lce a ajouter : ", 130);
+//
+//		scanf("%d", &choix);
+//
+//		switch (choix)
+//		{
+//		case 1:
+//			//NomMusee();
+//			break;
+//		case 0:
+//			MenuRechercherMusee();
+//			break;
+//
+//		}
+//	} while (choix != 0);
+//	system("cls");
+//	affichage();
+//}
 
 void ModifierMusee()
 {
