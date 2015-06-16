@@ -77,7 +77,6 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Affichage.c" />
-    <ClCompile Include="Affichage2.c" />
     <ClCompile Include="AfficherTableaux.c" />
     <ClCompile Include="Ajouter.c" />
     <ClCompile Include="Main.c" />
@@ -90,7 +89,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Affichage.h" />
-    <ClInclude Include="Affichage2.h" />
     <ClInclude Include="AfficherTableaux.h" />
     <ClInclude Include="Ajouter.h" />
     <ClInclude Include="Departement.h" />
