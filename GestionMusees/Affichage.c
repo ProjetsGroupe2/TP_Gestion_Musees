@@ -109,10 +109,10 @@ void MenuGererMusees(Region * tabRegion, Departement* tabDepartement, Ville* tab
 			AjouterMusee(tabRegion, tabDepartement, tabVille, tabMusee, nbRegion, nbDep, nbVille, nbMusee);
 			break;
 		case 2:
-			//Modifier();
+			Modifier(tabRegion, tabDepartement, tabVille, tabMusee, nbRegion, nbDep, nbVille, nbMusee);
 			break;
 		case 3:
-			//SupprimerMusee();
+			Supprimer(tabRegion, tabDepartement, tabVille, tabMusee, nbRegion, nbDep, nbVille, nbMusee);
 			break;
 		}
 	} while (choix != 0);
@@ -120,86 +120,7 @@ void MenuGererMusees(Region * tabRegion, Departement* tabDepartement, Ville* tab
 	affichage();
 }
 
-//void AjouterMusee()
-//{
-//	system("cls");
-//	petitaffichage();
-//	int choix = -1;
-//	do
-//	{
-//		printf("                  0 .     Retour menu pr%lcc%lcdent \n\n", 130, 130);
-//		printf("			  Entrer le nom du mus%lce a ajouter : ", 130);
-//
-//		scanf("%d", &choix);
-//
-//		switch (choix)
-//		{
-//		case 1:
-//			//NomMusee();
-//			break;
-//		case 0:
-//			MenuRechercherMusee();
-//			break;
-//
-//		}
-//	} while (choix != 0);
-//	system("cls");
-//	affichage();
-//}
 
-void ModifierMusee()
-{
-	system("cls");
-	petitaffichage();
-	int choix = -1;
-	do
-	{
-		printf("                  0 .     Retour menu pr%lcc%lcdent \n\n", 130, 130);
-		printf("			  Entrer le nom du mus%lce a modifier : ", 130);
-
-		scanf("%d", &choix);
-
-		switch (choix)
-		{
-		case 1:
-			//ModifierMusee();
-			break;
-		case 0:
-			MenuRechercherMusee();
-			break;
-
-		}
-	} while (choix != 0);
-	system("cls");
-	affichage();
-}
-
-void SupprimerMusee()
-{
-	system("cls");
-	petitaffichage();
-	int choix = -1;
-	do
-	{
-		printf("                  0 .     Retour menu pr%lcc%lcdent \n\n", 130, 130);
-		printf("			  Entrer le nom du mus%lce a supprimer : ", 130);
-
-		scanf("%d", &choix);
-
-		switch (choix)
-		{
-		case 1:
-			//SupprimerMusee();
-			break;
-		case 0:
-			MenuRechercherMusee();
-			break;
-
-		}
-	} while (choix != 0);
-	system("cls");
-	affichage();
-}
 
 void MenuRechercherMusee()
 {
