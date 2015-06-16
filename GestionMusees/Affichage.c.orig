@@ -2,24 +2,10 @@
 #include <stdlib.h>
 #include <windows.h>
 
-<<<<<<< HEAD
-#include "Affichage.h"
-<<<<<<< HEAD
-#include "Sauvegarde.h"
-#include "Comptage.h"
-#include "OuvertureFichier.h"
-#include "AfficherTableaux.h"
-#include "Ajouter.h"
-#include "Modifier.h"
-=======
-
->>>>>>> 81d3b5bddcde2628aedab02a957bb90b11836249
-=======
 #include "Region.h"
 #include "Departement.h"
 #include "Ville.h"
 #include "Musee.h"
->>>>>>> e7f74c505577512467e41424f95f89e469eb347a
 
 #include "Affichage.h"
 #include "Sauvegarde.h"
@@ -101,7 +87,11 @@ void affichageMenu(int* choix)
 	scanf("%d", choix);
 }
 
+<<<<<<< HEAD
+void MenuGererMusees(Region * tabRegion, Departement* tabDepartement, Ville* tabVille, Musee* tabMusee, int *nbRegion, int * nbDep, int * nbVille, int * nbMusee);
+=======
 void MenuGererMusees(Region * tabRegion, Departement* tabDepartement, Ville* tabVille, Musee* tabMusee, int *nbRegion, int * nbDep, int * nbVille, int * nbMusee)
+>>>>>>> 8e64b23ae2350834c6dc4e97120a5380869bff8a
 {
 	system("cls");
 	petitaffichage();
@@ -123,15 +113,7 @@ void MenuGererMusees(Region * tabRegion, Departement* tabDepartement, Ville* tab
 			AjouterMusee(tabRegion, tabDepartement, tabVille, tabMusee, nbRegion, nbDep, nbVille, nbMusee);
 			break;
 		case 2:
-<<<<<<< HEAD
-<<<<<<< HEAD
-			Modifier(tabRegion, tabDepartement, tabVille, tabMusee, nbRegion, nbDep, nbVille, nbMusee);
-=======
-			Modifier();
->>>>>>> 81d3b5bddcde2628aedab02a957bb90b11836249
-=======
 			//Modifier();
->>>>>>> e7f74c505577512467e41424f95f89e469eb347a
 			break;
 		case 3:
 			//SupprimerMusee();
@@ -142,12 +124,7 @@ void MenuGererMusees(Region * tabRegion, Departement* tabDepartement, Ville* tab
 	affichage();
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-//void MenuAjouterMusee()
-=======
 //void AjouterMusee()
->>>>>>> e7f74c505577512467e41424f95f89e469eb347a
 //{
 //	system("cls");
 //	petitaffichage();
@@ -170,42 +147,9 @@ void MenuGererMusees(Region * tabRegion, Departement* tabDepartement, Ville* tab
 //
 //		}
 //	} while (choix != 0);
-<<<<<<< HEAD
-//system("cls");
-//affichage();
-//}
-=======
-void AjouterMusee()
-{
-	system("cls");
-	petitaffichage();
-	int choix = -1;
-	do
-	{
-		printf("                  0 .     Retour menu pr%lcc%lcdent \n\n", 130, 130);
-		printf("			  Entrer le nom du mus%lce a ajouter : ", 130);
-
-		scanf("%d", &choix);
-
-		switch (choix)
-		{
-		case 1:
-			//NomMusee();
-			break;
-		case 0:
-			MenuRechercherMusee();
-			break;
-
-		}
-	} while (choix != 0);
-	system("cls");
-	affichage();
-}
-=======
 //	system("cls");
 //	affichage();
 //}
->>>>>>> e7f74c505577512467e41424f95f89e469eb347a
 
 void ModifierMusee()
 {
@@ -245,61 +189,21 @@ void SupprimerMusee()
 		printf("			  Entrer le nom du mus%lce a supprimer : ", 130);
 
 		scanf("%d", &choix);
->>>>>>> 81d3b5bddcde2628aedab02a957bb90b11836249
 
-//void ModifierMusee()
-//{
-//	system("cls");
-//	petitaffichage();
-//	int choix = -1;
-//	do
-//	{
-//		printf("                  0 .     Retour menu pr%lcc%lcdent \n\n", 130, 130);
-//		printf("			  Entrer le nom du mus%lce a modifier : ", 130);
-//
-//		scanf("%d", &choix);
-//
-//		switch (choix)
-//		{
-//		case 1:
-//			//ModifierMusee();
-//			break;
-//		case 0:
-//			MenuRechercherMusee();
-//			break;
-//
-//		}
-//	} while (choix != 0);
-//	system("cls");
-//	affichage();
-//}
+		switch (choix)
+		{
+		case 1:
+			//SupprimerMusee();
+			break;
+		case 0:
+			MenuRechercherMusee();
+			break;
 
-//void SupprimerMusee()
-//{
-//	system("cls");
-//	petitaffichage();
-//	int choix = -1;
-//	do
-//	{
-//		printf("                  0 .     Retour menu pr%lcc%lcdent \n\n", 130, 130);
-//		printf("			  Entrer le nom du mus%lce a supprimer : ", 130);
-//
-//		scanf("%d", &choix);
-//
-//		switch (choix)
-//		{
-//		case 1:
-//			//SupprimerMusee();
-//			break;
-//		case 0:
-//			MenuRechercherMusee();
-//			break;
-//
-//		}
-//	} while (choix != 0);
-//	system("cls");
-//	affichage();
-//}
+		}
+	} while (choix != 0);
+	system("cls");
+	affichage();
+}
 
 void MenuRechercherMusee()
 {
@@ -359,7 +263,7 @@ void RechercheRegion()
 
 		}
 	} while (choix != 0);
-	system("cls");
+
 
 }
 
