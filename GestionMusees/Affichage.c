@@ -243,30 +243,7 @@ void RechercheVille()
 }
 
 
-void Sauvegarde()
-{
-	system("cls");
-	petitaffichage();
-	int choix = -1;
-	do
 
-	{
-		printf("                  0 .     Retour menu pr%lcc%lcdent \n\n\n", 130, 130);
-		printf("			   Sauvegarde effectuer appuyez sur 0 pour quitter : ", 130);
-
-		scanf("%d", &choix);
-
-		switch (choix)
-		{
-		case 1:
-			//FonctionSauvegarde();
-			break;
-		case 0:
-			affichageMenu(choix);
-			break;
-		}
-	} while (choix != 0);
-}
 
 	// ajouter fonction recherche des musees pour le ville choisie
 
