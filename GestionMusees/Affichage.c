@@ -2,9 +2,18 @@
 #include <stdlib.h>
 #include <windows.h>
 
+#include "Region.h"
+#include "Departement.h"
+#include "Ville.h"
+#include "Musee.h"
+
 #include "Affichage.h"
-
-
+#include "Sauvegarde.h"
+#include "Comptage.h"
+#include "OuvertureFichier.h"
+#include "AfficherTableaux.h"
+#include "Ajouter.h"
+#include "Modifier.h"
 
 void Color(int couleurDuTexte, int couleurDeFond) // fonction d'affichage de couleurs
 {
@@ -78,7 +87,7 @@ void affichageMenu(int* choix)
 	scanf("%d", choix);
 }
 
-void MenuGererMusees()
+void MenuGererMusees(Region * tabRegion, Departement* tabDepartement, Ville* tabVille, Musee* tabMusee, int *nbRegion, int * nbDep, int * nbVille, int * nbMusee);
 {
 	system("cls");
 	petitaffichage();
