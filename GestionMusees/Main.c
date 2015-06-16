@@ -65,6 +65,10 @@ void main()
 			break;
 		case 3:
 			system("cls");
+			Sauvegarde();
+			break;
+		case 4:
+			system("cls");
 			/* /!\ Commenté par Martin dans le Main et dans Sauvegerde pour cause de déboggage d'ouverture fichier /!\ */
 			//creationFichier();
 			break;

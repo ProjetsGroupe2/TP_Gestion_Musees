@@ -95,14 +95,95 @@ void MenuGererMusees()
 		switch (choix)
 		{
 		case 1:
-			//AjouterMusee();
+			AjouterMusee();
 			break;
 		case 2:
-			//ModifierMusee();
+			ModifierMusee();
 			break;
 		case 3:
+			SupprimerMusee();
+			break;
+		}
+	} while (choix != 0);
+	system("cls");
+	affichage();
+}
+
+void AjouterMusee()
+{
+	system("cls");
+	petitaffichage();
+	int choix = -1;
+	do
+	{
+		printf("                  0 .     Retour menu pr%lcc%lcdent \n\n", 130, 130);
+		printf("			  Entrer le nom du mus%lce a ajouter : ", 130);
+
+		scanf("%d", &choix);
+
+		switch (choix)
+		{
+		case 1:
+			//NomMusee();
+			break;
+		case 0:
+			MenuRechercherMusee();
+			break;
+
+		}
+	} while (choix != 0);
+system("cls");
+affichage();
+}
+
+void ModifierMusee()
+{
+	system("cls");
+	petitaffichage();
+	int choix = -1;
+	do
+	{
+		printf("                  0 .     Retour menu pr%lcc%lcdent \n\n", 130, 130);
+		printf("			  Entrer le nom du mus%lce a modifier : ", 130);
+
+		scanf("%d", &choix);
+
+		switch (choix)
+		{
+		case 1:
+			//ModifierMusee();
+			break;
+		case 0:
+			MenuRechercherMusee();
+			break;
+
+		}
+	} while (choix != 0);
+	system("cls");
+	affichage();
+}
+
+void SupprimerMusee()
+{
+	system("cls");
+	petitaffichage();
+	int choix = -1;
+	do
+	{
+		printf("                  0 .     Retour menu pr%lcc%lcdent \n\n", 130, 130);
+		printf("			  Entrer le nom du mus%lce a supprimer : ", 130);
+
+		scanf("%d", &choix);
+
+		switch (choix)
+		{
+		case 1:
 			//SupprimerMusee();
 			break;
+		case 0:
+			MenuRechercherMusee();
+			break;
+
 		}
 	} while (choix != 0);
 	system("cls");
@@ -150,9 +231,8 @@ void RechercheRegion()
 	do
 
 	{
-		printf("                  1 .     Indiquez le num%lcro de la r%lcgion choisie \n",130,130, 130); //Ajouter "%lc" a la place du "é" puis ajouter en fin de phrase "130" pour un accent donc si deux accents mettre comme cela "130, 130".
 		printf("                  0 .     Retour menu pr%lcc%lcdent \n\n\n",130 ,130);
-		printf("			  Entrer le num%lcro du menu que vous avez choisie : ", 130);
+		printf("			   Entrer le nom de la r%lcgion choisie : ", 130);
 
 		scanf("%d", &choix);
 
@@ -181,9 +261,8 @@ void RechercheDepartement()
 	int choix = -1;
 	do
 	{
-		printf("                  1 .     Indiquez le num%lcro du d%lcpartement choisie \n",130 , 130); //Ajouter "%lc" a la place du "é" puis ajouter en fin de phrase "130" pour un accent donc si deux accents mettre comme cela "130, 130".
-		printf("                  0 .     Retour menu pr%lcc%lcdent \n\n", 130, 130);
-		printf("			  Entrer le num%lcro du menu que vous avez choisie : ", 130);
+		printf("                  0 .     Retour menu pr%lcc%lcdent \n\n\n", 130, 130);
+		printf("			   Entrer le nom de la d%lcpartement choisie : ", 130);
 
 		scanf("%d", &choix);
 
@@ -211,9 +290,8 @@ void RechercheVille()
 	do
 
 	{
-		printf("                  1 .     Indiquez le num%lcro de la ville choisie \n", 130); //Ajouter "%lc" a la place du "é" puis ajouter en fin de phrase "130" pour un accent donc si deux accents mettre comme cela "130, 130".
-		printf("                  0 .     Retour menu pr%lcc%lcdent \n\n", 130, 130);
-		printf("			  Entrer le num%lcro du menu que vous avez choisie : ", 130);
+		printf("                  0 .     Retour menu pr%lcc%lcdent \n\n\n", 130, 130);
+		printf("			   Entrer le nom de la ville choisie : ", 130);
 
 		scanf("%d", &choix);
 
@@ -224,6 +302,31 @@ void RechercheVille()
 			break;
 		case 0:
 			MenuRechercherMusee();
+			break;
+		}
+	} while (choix != 0);
+}
+
+void Sauvegarde()
+{
+	system("cls");
+	petitaffichage();
+	int choix = -1;
+	do
+
+	{
+		printf("                  0 .     Retour menu pr%lcc%lcdent \n\n\n", 130, 130);
+		printf("			   Sauvegarde effectuer appuyez sur 0 pour quitter : ", 130);
+
+		scanf("%d", &choix);
+
+		switch (choix)
+		{
+		case 1:
+			//FonctionSauvegarde();
+			break;
+		case 0:
+			affichageMenu(choix);
 			break;
 		}
 	} while (choix != 0);
