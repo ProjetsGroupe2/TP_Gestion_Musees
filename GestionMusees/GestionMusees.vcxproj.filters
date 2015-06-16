@@ -42,6 +42,9 @@
     <ClCompile Include="Modifier.c">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
+    <ClCompile Include="Recherche.c">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Region.h">
@@ -78,6 +81,9 @@
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
     <ClInclude Include="Modifier.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Recherche.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
   </ItemGroup>

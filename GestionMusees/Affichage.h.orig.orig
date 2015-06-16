@@ -13,7 +13,11 @@ void ModifierMusee();
 void SupprimerMusee();
 =======
 void MenuGererMusees();
+<<<<<<< HEAD
+>>>>>>> 7a26b007d06d6417952fb79a416c75e01e3a824e
+=======
 >>>>>>> 8d13eeacf400c9f4608aa1ae8f64d8ab9aa093c3
+>>>>>>> f26e1d46ccff967aa3c57c38045d49dcdf426af4
 void MenuRechercherMusee();
 void RechercheRegion();
 void RechercheDepartement();
