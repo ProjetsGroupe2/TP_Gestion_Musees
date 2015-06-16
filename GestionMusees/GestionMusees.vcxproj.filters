@@ -27,9 +27,6 @@
     <ClCompile Include="OuvertureFichier.c">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="Affichage2.c">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
     <ClCompile Include="Ajouter.c">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
@@ -66,9 +63,6 @@
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
     <ClInclude Include="OuvertureFichier.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="Affichage2.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
     <ClInclude Include="Ajouter.h">
