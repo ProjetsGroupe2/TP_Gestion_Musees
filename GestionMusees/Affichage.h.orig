@@ -1,12 +1,23 @@
+
+
+#ifndef AFFICHAGE
+#define AFFICHAGE
+
 void Color(int couleurDuTexte, int couleurDeFond);
+void petitaffichage();
 void affichage();
 void affichageMenu(int* choix);
+<<<<<<< HEAD
+void AjouterMusee();
+void ModifierMusee();
+void SupprimerMusee();
+=======
+void MenuGererMusees();
+>>>>>>> 7a26b007d06d6417952fb79a416c75e01e3a824e
 void MenuRechercherMusee();
 void RechercheRegion();
 void RechercheDepartement();
 void RechercheVille();
-<<<<<<< master
-=======
 void Sauvegarde();
->>>>>>> local
 
+#endif

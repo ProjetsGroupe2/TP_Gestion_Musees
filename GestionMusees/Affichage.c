@@ -111,6 +111,86 @@ void MenuGererMusees()
 	affichage();
 }
 
+void AjouterMusee()
+{
+	system("cls");
+	petitaffichage();
+	int choix = -1;
+	do
+	{
+		printf("                  0 .     Retour menu pr%lcc%lcdent \n\n", 130, 130);
+		printf("			  Entrer le nom du mus%lce a ajouter : ", 130);
+
+		scanf("%d", &choix);
+
+		switch (choix)
+		{
+		case 1:
+			//NomMusee();
+			break;
+		case 0:
+			MenuRechercherMusee();
+			break;
+
+		}
+	} while (choix != 0);
+	system("cls");
+	affichage();
+}
+
+void ModifierMusee()
+{
+	system("cls");
+	petitaffichage();
+	int choix = -1;
+	do
+	{
+		printf("                  0 .     Retour menu pr%lcc%lcdent \n\n", 130, 130);
+		printf("			  Entrer le nom du mus%lce a modifier : ", 130);
+
+		scanf("%d", &choix);
+
+		switch (choix)
+		{
+		case 1:
+			//ModifierMusee();
+			break;
+		case 0:
+			MenuRechercherMusee();
+			break;
+
+		}
+	} while (choix != 0);
+	system("cls");
+	affichage();
+}
+
+void SupprimerMusee()
+{
+	system("cls");
+	petitaffichage();
+	int choix = -1;
+	do
+	{
+		printf("                  0 .     Retour menu pr%lcc%lcdent \n\n", 130, 130);
+		printf("			  Entrer le nom du mus%lce a supprimer : ", 130);
+
+		scanf("%d", &choix);
+
+		switch (choix)
+		{
+		case 1:
+			//SupprimerMusee();
+			break;
+		case 0:
+			MenuRechercherMusee();
+			break;
+
+		}
+	} while (choix != 0);
+	system("cls");
+	affichage();
+}
 
 void MenuRechercherMusee()
 {
@@ -232,6 +312,32 @@ void RechercheVille()
 	} while (choix != 0);
 }
 
+
+void Sauvegarde()
+{
+	system("cls");
+	petitaffichage();
+	int choix = -1;
+	do
+
+	{
+		printf("                  0 .     Retour menu pr%lcc%lcdent \n\n\n", 130, 130);
+		printf("			   Sauvegarde effectuer appuyez sur 0 pour quitter : ", 130);
+
+		scanf("%d", &choix);
+
+		switch (choix)
+		{
+		case 1:
+			//FonctionSauvegarde();
+			break;
+		case 0:
+			affichageMenu(choix);
+			break;
+		}
+	} while (choix != 0);
+}
+
 	// ajouter fonction recherche des musees pour le ville choisie
 
 
@@ -258,3 +364,5 @@ void RechercheVille()
 //
 //*/
 //}
+
+
