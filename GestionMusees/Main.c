@@ -51,7 +51,10 @@ void main()
 	//AjouterMusee(tabRegions, tabDepartements, tabVilles, tabMusees, &nbRegion, &nbDepartement, &nbVille, &nbMusee);
 
 	// Fonction pour Modifier un musée dans les tableau de structures
-	Modifier(tabRegions, tabDepartements, tabVilles, tabMusees, &nbRegion, &nbDepartement, &nbVille, &nbMusee);
+	/*Modifier(tabRegions, tabDepartements, tabVilles, tabMusees, &nbRegion, &nbDepartement, &nbVille, &nbMusee);*/
+
+	// Fonction de recherche de regions
+	//Rechercher(tabRegions, tabDepartements, tabVilles, tabMusees, &nbRegion, &nbDepartement, &nbVille, &nbMusee);
 
 	//// Fonction d'affichage du tableau de Régions
 	//AfficherRegion(tabRegions,&nbRegion);
@@ -77,7 +80,7 @@ void main()
 		{
 		case 1:
 			system("cls");
-			MenuGererMusees();
+			MenuGererMusees(tabRegions, tabDepartements, tabVilles, tabMusees, &nbRegion, &nbDepartement, &nbVille, &nbMusee);
 			break;
 		case 2:
 			system("cls");
