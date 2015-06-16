@@ -17,7 +17,6 @@ struct Musee
 	char siteweb[255];
 	char fermetureannuelle[255];
 	char periodeouverture[255];
-
 };
 
 #endif

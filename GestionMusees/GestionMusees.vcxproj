@@ -77,23 +77,27 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Affichage.c" />
-    <ClCompile Include="Affichage2.c" />
-    <ClCompile Include="comptageOuvertureFichier.c" />
+    <ClCompile Include="AfficherTableaux.c" />
+    <ClCompile Include="Ajouter.c" />
     <ClCompile Include="Main.c" />
+    <ClCompile Include="Modifier.c" />
     <ClCompile Include="OuvertureFichier.c" />
     <ClCompile Include="Sauvegarde.c" />
-    <ClCompile Include="Traitement.c" />
+    <ClCompile Include="Comptage.c" />
+    <ClCompile Include="Supprimer.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Affichage.h" />
-    <ClInclude Include="Affichage2.h" />
-    <ClInclude Include="comptageOuvertureFichier.h" />
+    <ClInclude Include="AfficherTableaux.h" />
+    <ClInclude Include="Ajouter.h" />
     <ClInclude Include="Departement.h" />
+    <ClInclude Include="Modifier.h" />
     <ClInclude Include="Musee.h" />
     <ClInclude Include="OuvertureFichier.h" />
     <ClInclude Include="Region.h" />
     <ClInclude Include="Sauvegarde.h" />
-    <ClInclude Include="Traitement.h" />
+    <ClInclude Include="Comptage.h" />
+    <ClInclude Include="Supprimer.h" />
     <ClInclude Include="Ville.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

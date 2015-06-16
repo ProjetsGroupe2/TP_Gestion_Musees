@@ -1,7 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <windows.h>
+
 #include "Affichage.h"
+
 
 
 void Color(int couleurDuTexte, int couleurDeFond) // fonction d'affichage de couleurs
@@ -84,9 +86,9 @@ void MenuGererMusees()
 	do
 
 	{
-		printf("                  1 .     Ajouter un Mus%lc                           \n", 130); //Ajouter "%lc" a la place du "é" puis ajouter en fin de phrase "130" pour un accent donc si deux accents mettre comme cela "130, 130".
-		printf("                  2 .     Modifier un Mus%lc                         \n", 130);
-		printf("                  3 .     Supprimer un Mus%lc                         \n", 130);
+		printf("                  1 .     Ajouter un Mus%lce                           \n", 130); //Ajouter "%lc" a la place du "é" puis ajouter en fin de phrase "130" pour un accent donc si deux accents mettre comme cela "130, 130".
+		printf("                  2 .     Modifier un Mus%lce                          \n", 130);
+		printf("                  3 .     Supprimer un Mus%lce                         \n", 130);
 		printf("                  0 .     Retour menu pr%lcc%lcdent \n\n", 130, 130);
 		printf("			  Entrer le num%lcro du menu que vous avez choisie : ", 130);
 
@@ -98,7 +100,7 @@ void MenuGererMusees()
 			AjouterMusee();
 			break;
 		case 2:
-			//ModifierMusee();
+			Modifier();
 			break;
 		case 3:
 			//SupprimerMusee();
