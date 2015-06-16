@@ -31,6 +31,9 @@ void Rechercher(Region * tabRegion, Departement* tabDepartement, Ville* tabVille
 
 	printf("\n\nChoisissez le numero de la region dans laquelle se trouve le musee que vous cherchez\n");
 	scanf("%d", &choix);
+	system("cls");
+	printf("\n");
+
 
 	idReg = tabRegion[choix].id;
 	
@@ -44,11 +47,13 @@ void Rechercher(Region * tabRegion, Departement* tabDepartement, Ville* tabVille
 		}
 	}
 
+	
+
 	for (int i = 1; i < numDep; i++)				// Boucle pour Afficher
 	{
 		if (idReg == tabDepartement[idDep].idRegion)
 		{
-			printf("%d - %s\n",tabDepartement[i].id, tabDepartement[idDep].nom);
+			printf("%d - %s\n",tabDepartement[idDep].id, tabDepartement[idDep].nom);
 			idDep++;
 		}
 		else
@@ -57,10 +62,65 @@ void Rechercher(Region * tabRegion, Departement* tabDepartement, Ville* tabVille
 		}
 	}
 
-	printf("Choisissez le numero du département dans la lequel se trouve le musee que vous cherchez\n");
-	scanf("%d", &choix);
 
-	idVil = tabMusee[idMus].idVille;
-	idDep = tabVille[idVil].idDepartement;
-	idReg = tabDepartement[idDep].idRegion;
+
+	printf("\nChoisissez le numero du departement dans la lequel se trouve le musee que vous cherchez\n");
+	scanf("%d", &choix);
+	system("cls");
+	printf("\n\n");
+
+	idDep = tabDepartement[choix].id;
+
+	for (int i = 0; i < numVil; i++)				// Boucle pour trouver l'idRegion de tabDepartement 
+	{
+		if (idDep == tabVille[i].idDepartement)
+		{
+			idVil = i;
+			break;
+		}
+	}
+
+
+	for (int i = 1; i < numVil; i++)				// Boucle pour Afficher
+	{
+		if (idDep == tabVille[idVil].idDepartement)
+		{
+			printf("%d - %s\n", tabVille[idVil].id, tabVille[idVil].nom);
+			idVil++;
+		}
+		else
+		{
+			break;
+		}
+	}
+
+	printf("\nChoisissez le numero de la ville quel se trouve le musee que vous cherchez\n");
+	scanf("%d", &choix);
+	system("cls");
+	printf("\n\n");
+	
+	idVil = tabVille[choix].id;
+
+	for (int i = 0; i < numMus; i++)				// Boucle pour trouver l'idRegion de tabDepartement 
+	{
+		if (idVil == tabMusee[i].idVille)
+		{
+			idMus = i;
+			break;
+		}
+	}
+
+
+	for (int i = 1; i < numMus; i++)				// Boucle pour Afficher
+	{
+		if (idVil == tabMusee[idMus].idVille)
+		{
+			printf("%d - %s\n", tabMusee[idMus].id, tabMusee[idMus].nom);
+			idMus++;
+		}
+		else
+		{
+			break;
+		}
+	}
 }

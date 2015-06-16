@@ -50,10 +50,10 @@ void main()
 	//AjouterMusee(tabRegions, tabDepartements, tabVilles, tabMusees, &nbRegion, &nbDepartement, &nbVille, &nbMusee);
 
 	// Fonction pour Modifier un musée dans les tableau de structures
-	/*Modifier(tabRegions, tabDepartements, tabVilles, tabMusees, &nbRegion, &nbDepartement, &nbVille, &nbMusee);*/
+	//Modifier(tabRegions, tabDepartements, tabVilles, tabMusees, &nbRegion, &nbDepartement, &nbVille, &nbMusee);
 
 	// Fonction de recherche de regions
-	//Rechercher(tabRegions, tabDepartements, tabVilles, tabMusees, &nbRegion, &nbDepartement, &nbVille, &nbMusee);
+	Rechercher(tabRegions, tabDepartements, tabVilles, tabMusees, &nbRegion, &nbDepartement, &nbVille, &nbMusee);
 
 	//// Fonction d'affichage du tableau de Régions
 	//AfficherRegion(tabRegions,&nbRegion);
@@ -89,7 +89,7 @@ void main()
 			system("cls");
 			// fonction de sauvegarde ------------------------------------------------------- OK
 			CreationFichier(tabRegions, tabDepartements, tabVilles, tabMusees, &nbMusee);
-			if (1)
+			if (CreationFichier(tabRegions, tabDepartements, tabVilles, tabMusees, &nbMusee))
 			{
 				printf("Enregistrement du fichier effectué avec succès!");
 			}
