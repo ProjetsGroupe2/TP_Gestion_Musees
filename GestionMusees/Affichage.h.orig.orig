@@ -1,18 +1,27 @@
+
+
+#ifndef AFFICHAGE
+#define AFFICHAGE
+
 void Color(int couleurDuTexte, int couleurDeFond);
 void petitaffichage();
 void affichage();
 void affichageMenu(int* choix);
 <<<<<<< HEAD
-void MenuGererMusees(Region * tabRegion, Departement* tabDepartement, Ville* tabVille, Musee* tabMusee, int *nbRegion, int * nbDep, int * nbVille, int * nbMusee);
-void MenuAjouterMusee();
-=======
 void AjouterMusee();
->>>>>>> 804b0d30ef5852812ac131a0174c24ccb55d8340
 void ModifierMusee();
 void SupprimerMusee();
+=======
+void MenuGererMusees();
+<<<<<<< HEAD
+>>>>>>> 7a26b007d06d6417952fb79a416c75e01e3a824e
+=======
+>>>>>>> 8d13eeacf400c9f4608aa1ae8f64d8ab9aa093c3
+>>>>>>> f26e1d46ccff967aa3c57c38045d49dcdf426af4
 void MenuRechercherMusee();
 void RechercheRegion();
 void RechercheDepartement();
 void RechercheVille();
 void Sauvegarde();
 
+#endif

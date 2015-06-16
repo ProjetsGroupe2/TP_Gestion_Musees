@@ -2,18 +2,17 @@
 #include <stdlib.h>
 #include <windows.h>
 
-#include "Region.h"
-#include "Departement.h"
-#include "Ville.h"
-#include "Musee.h"
-
 #include "Affichage.h"
+<<<<<<< HEAD
 #include "Sauvegarde.h"
 #include "Comptage.h"
 #include "OuvertureFichier.h"
 #include "AfficherTableaux.h"
 #include "Ajouter.h"
 #include "Modifier.h"
+=======
+
+>>>>>>> 81d3b5bddcde2628aedab02a957bb90b11836249
 
 
 void Color(int couleurDuTexte, int couleurDeFond) // fonction d'affichage de couleurs
@@ -88,7 +87,7 @@ void affichageMenu(int* choix)
 	scanf("%d", choix);
 }
 
-void MenuGererMusees(Region * tabRegion, Departement* tabDepartement, Ville* tabVille, Musee* tabMusee, int *nbRegion, int * nbDep, int * nbVille, int * nbMusee)
+void MenuGererMusees()
 {
 	system("cls");
 	petitaffichage();
@@ -96,9 +95,9 @@ void MenuGererMusees(Region * tabRegion, Departement* tabDepartement, Ville* tab
 	do
 
 	{
-		printf("                  1 .     Ajouter un Mus%lc                           \n", 130); //Ajouter "%lc" a la place du "é" puis ajouter en fin de phrase "130" pour un accent donc si deux accents mettre comme cela "130, 130".
-		printf("                  2 .     Modifier un Mus%lc                         \n", 130);
-		printf("                  3 .     Supprimer un Mus%lc                         \n", 130);
+		printf("                  1 .     Ajouter un Mus%lce                           \n", 130); //Ajouter "%lc" a la place du "é" puis ajouter en fin de phrase "130" pour un accent donc si deux accents mettre comme cela "130, 130".
+		printf("                  2 .     Modifier un Mus%lce                          \n", 130);
+		printf("                  3 .     Supprimer un Mus%lce                         \n", 130);
 		printf("                  0 .     Retour menu pr%lcc%lcdent \n\n", 130, 130);
 		printf("			  Entrer le num%lcro du menu que vous avez choisie : ", 130);
 
@@ -107,13 +106,17 @@ void MenuGererMusees(Region * tabRegion, Departement* tabDepartement, Ville* tab
 		switch (choix)
 		{
 		case 1:
-			AjouterMusee(tabRegion, tabDepartement, tabVille, tabMusee, nbRegion, nbDep, nbVille, nbMusee);
+			AjouterMusee();
 			break;
 		case 2:
+<<<<<<< HEAD
 			Modifier(tabRegion, tabDepartement, tabVille, tabMusee, nbRegion, nbDep, nbVille, nbMusee);
+=======
+			Modifier();
+>>>>>>> 81d3b5bddcde2628aedab02a957bb90b11836249
 			break;
 		case 3:
-			SupprimerMusee();
+			//SupprimerMusee();
 			break;
 		}
 	} while (choix != 0);
@@ -121,6 +124,7 @@ void MenuGererMusees(Region * tabRegion, Departement* tabDepartement, Ville* tab
 	affichage();
 }
 
+<<<<<<< HEAD
 //void MenuAjouterMusee()
 //{
 //	system("cls");
@@ -147,6 +151,73 @@ void MenuGererMusees(Region * tabRegion, Departement* tabDepartement, Ville* tab
 //system("cls");
 //affichage();
 //}
+=======
+void AjouterMusee()
+{
+	system("cls");
+	petitaffichage();
+	int choix = -1;
+	do
+	{
+		printf("                  0 .     Retour menu pr%lcc%lcdent \n\n", 130, 130);
+		printf("			  Entrer le nom du mus%lce a ajouter : ", 130);
+
+		scanf("%d", &choix);
+
+		switch (choix)
+		{
+		case 1:
+			//NomMusee();
+			break;
+		case 0:
+			MenuRechercherMusee();
+			break;
+
+		}
+	} while (choix != 0);
+	system("cls");
+	affichage();
+}
+
+void ModifierMusee()
+{
+	system("cls");
+	petitaffichage();
+	int choix = -1;
+	do
+	{
+		printf("                  0 .     Retour menu pr%lcc%lcdent \n\n", 130, 130);
+		printf("			  Entrer le nom du mus%lce a modifier : ", 130);
+
+		scanf("%d", &choix);
+
+		switch (choix)
+		{
+		case 1:
+			//ModifierMusee();
+			break;
+		case 0:
+			MenuRechercherMusee();
+			break;
+
+		}
+	} while (choix != 0);
+	system("cls");
+	affichage();
+}
+
+void SupprimerMusee()
+{
+	system("cls");
+	petitaffichage();
+	int choix = -1;
+	do
+	{
+		printf("                  0 .     Retour menu pr%lcc%lcdent \n\n", 130, 130);
+		printf("			  Entrer le nom du mus%lce a supprimer : ", 130);
+
+		scanf("%d", &choix);
+>>>>>>> 81d3b5bddcde2628aedab02a957bb90b11836249
 
 //void ModifierMusee()
 //{
@@ -202,7 +273,6 @@ void MenuGererMusees(Region * tabRegion, Departement* tabDepartement, Ville* tab
 //	affichage();
 //}
 
-
 void MenuRechercherMusee()
 {
 	system("cls");
@@ -244,8 +314,9 @@ void RechercheRegion()
 	do
 
 	{
+		printf("                  1 .     Indiquez le num%lcro de la r%lcgion choisie \n",130,130, 130); //Ajouter "%lc" a la place du "é" puis ajouter en fin de phrase "130" pour un accent donc si deux accents mettre comme cela "130, 130".
 		printf("                  0 .     Retour menu pr%lcc%lcdent \n\n\n",130 ,130);
-		printf("			   Entrer le nom de la r%lcgion choisie : ", 130);
+		printf("			  Entrer le num%lcro du menu que vous avez choisie : ", 130);
 
 		scanf("%d", &choix);
 
@@ -274,8 +345,9 @@ void RechercheDepartement()
 	int choix = -1;
 	do
 	{
-		printf("                  0 .     Retour menu pr%lcc%lcdent \n\n\n", 130, 130);
-		printf("			   Entrer le nom de la d%lcpartement choisie : ", 130);
+		printf("                  1 .     Indiquez le num%lcro du d%lcpartement choisie \n",130 , 130); //Ajouter "%lc" a la place du "é" puis ajouter en fin de phrase "130" pour un accent donc si deux accents mettre comme cela "130, 130".
+		printf("                  0 .     Retour menu pr%lcc%lcdent \n\n", 130, 130);
+		printf("			  Entrer le num%lcro du menu que vous avez choisie : ", 130);
 
 		scanf("%d", &choix);
 
@@ -303,8 +375,9 @@ void RechercheVille()
 	do
 
 	{
-		printf("                  0 .     Retour menu pr%lcc%lcdent \n\n\n", 130, 130);
-		printf("			   Entrer le nom de la ville choisie : ", 130);
+		printf("                  1 .     Indiquez le num%lcro de la ville choisie \n", 130); //Ajouter "%lc" a la place du "é" puis ajouter en fin de phrase "130" pour un accent donc si deux accents mettre comme cela "130, 130".
+		printf("                  0 .     Retour menu pr%lcc%lcdent \n\n", 130, 130);
+		printf("			  Entrer le num%lcro du menu que vous avez choisie : ", 130);
 
 		scanf("%d", &choix);
 
@@ -319,6 +392,7 @@ void RechercheVille()
 		}
 	} while (choix != 0);
 }
+
 
 void Sauvegarde()
 {
@@ -371,3 +445,5 @@ void Sauvegarde()
 //
 //*/
 //}
+
+
