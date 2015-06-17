@@ -11,11 +11,9 @@
 
 
 
-<<<<<<< HEAD
-void Supprimer(Region* tabRegions, Departement* tabDepartement, Ville* tabVille, Musee* tabMusee, int *nbRegions, int * nbDep, int * nbVilles, int * nbMusees)
-=======
-int Supprimer(Region* tabRegion, Departement* tabDepartement, Ville* tabVille, Musee* tabMusee, int *nbRegions, int * nbDep, int * nbVilles, int * nbMusees)
->>>>>>> cfe240ad5fe319ff39d3b65dd7ceaffa35a9b46d
+
+void Supprimer(Region* tabRegion, Departement* tabDepartement, Ville* tabVille, Musee* tabMusee, int *nbRegions, int * nbDep, int * nbVilles, int * nbMusees)
+
 {
 
 	int numRegion = *nbRegions;
@@ -31,9 +29,9 @@ int Supprimer(Region* tabRegion, Departement* tabDepartement, Ville* tabVille, M
 	int choix = 0;
 	char blanc[255] = "";
 
-	printf(" /!\\ Chercher l'index du musee a supprimer /!\\ \n");
+	printf(" /!\\ Chercher l'index du mus%lce %lc supprimer /!\\ \n", 130, 133);
 	AfficherMusee(tabMusee, nbMusees);
-	printf("Saisissez l'index du musee a supprimer : ");
+	printf("Saisissez l'index du mus%lce %lc supprimer : \n", 130, 133);
 	scanf("%d", &idMus);
 
 	idVil = tabMusee[idMus].idVille;

@@ -76,11 +76,11 @@ void affichageMenu(int* choix)
 {
 	system("cls");
 	affichage();
-	printf("                             COPYRIGHT © FRANCE                          \n\n");
+	printf("                             COPYRIGHT © FRANCE                         \n\n");
 	printf("                  1 .     G%lcrer les Mus%lces                          \n", 130, 130); //Ajouter "%lc" a la place du "é" puis ajouter en fin de phrase "130" pour un accent donc si deux accents mettre comme cela "130, 130".
-	printf("                  2 .     Rechercher les Mus%lces                          \n", 130);
-	printf("                  3 .     Sauvegarder                          \n");
-	printf("                  0 .     Quitter                          \n\n");
+	printf("                  2 .     Rechercher les Mus%lces                       \n", 130);
+	printf("                  3 .     Sauvegarder									\n");
+	printf("                  0 .     Quitter										\n\n");
 	printf("			  Entrer le num%lcro du menu que vous avez choisie : ", 130);
 
 	
@@ -98,7 +98,7 @@ void MenuGererMusees(Region * tabRegion, Departement* tabDepartement, Ville* tab
 		printf("                  1 .     Ajouter un Mus%lce                           \n", 130); //Ajouter "%lc" a la place du "é" puis ajouter en fin de phrase "130" pour un accent donc si deux accents mettre comme cela "130, 130".
 		printf("                  2 .     Modifier un Mus%lce                          \n", 130);
 		printf("                  3 .     Supprimer un Mus%lce                         \n", 130);
-		printf("                  0 .     Retour menu pr%lcc%lcdent \n\n", 130, 130);
+		printf("                  0 .     Retour menu pr%lcc%lcdent					   \n\n", 130, 130);
 		printf("			  Entrer le num%lcro du menu que vous avez choisie : ", 130);
 
 		scanf("%d", &choix);
@@ -122,125 +122,97 @@ void MenuGererMusees(Region * tabRegion, Departement* tabDepartement, Ville* tab
 
 
 
-void MenuRechercherMusee()
-{
-	system("cls");
-	petitaffichage();
-	int choix = -1;
-	do
+//void MenuRechercherMusee()
+//{
+//	system("cls");
+//	petitaffichage();
+//	int choix = -1;
+//	do
+//
+//	{
+//		printf("                  1 .     Rechercher par R%lcgion                          \n", 130); //Ajouter "%lc" a la place du "é" puis ajouter en fin de phrase "130" pour un accent donc si deux accents mettre comme cela "130, 130".
+//		printf("                  2 .     Rechercher par D%lcpartement                          \n", 130);
+//		printf("                  3 .     Rechercher par Ville                           \n");
+//		printf("                  0 .     Retour menu pr%lcc%lcdent \n\n", 130, 130);
+//		printf("			  Entrer le num%lcro du menu que vous avez choisie : ", 130);
+//
+//		scanf("%d", &choix);
+//
+//		switch (choix)
+//		{
+//		case 1:
+//			RechercheRegion();
+//			break;
+//		case 2:
+//			RechercheDepartement();
+//			break;
+//		case 3:
+//			RechercheVille();
+//			break;
+//		}
+//	} while (choix != 0);
+//	system("cls");
+//	affichage();
+//}
+//
+//void RechercheRegion()
+//{
+//	system("cls");
+//	petitaffichage();
+//	int choix = -1;
+//	do
+//
+//	{
+//		printf("                  1 .     Indiquez le num%lcro de la r%lcgion choisie \n",130,130, 130); //Ajouter "%lc" a la place du "é" puis ajouter en fin de phrase "130" pour un accent donc si deux accents mettre comme cela "130, 130".
+//		printf("                  0 .     Retour menu pr%lcc%lcdent \n\n\n",130 ,130);
+//		printf("			  Entrer le num%lcro du menu que vous avez choisie : ", 130);
+//
+//		scanf("%d", &choix);
+//
+//		switch (choix)
+//		{
+//		case 1:
+//			//RechercheRegion();
+//			break;
+//		case 0:
+//			MenuRechercherMusee();
+//			break;
+//
+//		}
+//	} while (choix != 0);
+//
+//
+//}
+//
+//	// ajouter fonction recherche des musees pour le region choisie
+//
+//
+//void RechercheDepartement()
+//{
+//	system("cls");
+//	petitaffichage();
+//	int choix = -1;
+//	do
+//	{
+//		printf("                  1 .     Indiquez le num%lcro du d%lcpartement choisie \n",130 , 130); //Ajouter "%lc" a la place du "é" puis ajouter en fin de phrase "130" pour un accent donc si deux accents mettre comme cela "130, 130".
+//		printf("                  0 .     Retour menu pr%lcc%lcdent \n\n", 130, 130);
+//		printf("			  Entrer le num%lcro du menu que vous avez choisie : ", 130);
+//
+//		scanf("%d", &choix);
+//
+//		switch (choix)
+//		{
+//		case 1:
+//			//FonctionRechercheDepartement();
+//			break;
+//		case 0:
+//			MenuRechercherMusee();
+//			break;
+//		}
+//	} while (choix != 0);
+//}
+//
 
-	{
-		printf("                  1 .     Rechercher par R%lcgion                          \n", 130); //Ajouter "%lc" a la place du "é" puis ajouter en fin de phrase "130" pour un accent donc si deux accents mettre comme cela "130, 130".
-		printf("                  2 .     Rechercher par D%lcpartement                          \n", 130);
-		printf("                  3 .     Rechercher par Ville                           \n");
-		printf("                  0 .     Retour menu pr%lcc%lcdent \n\n", 130, 130);
-		printf("			  Entrer le num%lcro du menu que vous avez choisie : ", 130);
-
-		scanf("%d", &choix);
-
-		switch (choix)
-		{
-		case 1:
-			RechercheRegion();
-			break;
-		case 2:
-			RechercheDepartement();
-			break;
-		case 3:
-			RechercheVille();
-			break;
-		}
-	} while (choix != 0);
-	system("cls");
-	affichage();
-}
-
-void RechercheRegion()
-{
-	system("cls");
-	petitaffichage();
-	int choix = -1;
-	do
-
-	{
-		printf("                  1 .     Indiquez le num%lcro de la r%lcgion choisie \n",130,130, 130); //Ajouter "%lc" a la place du "é" puis ajouter en fin de phrase "130" pour un accent donc si deux accents mettre comme cela "130, 130".
-		printf("                  0 .     Retour menu pr%lcc%lcdent \n\n\n",130 ,130);
-		printf("			  Entrer le num%lcro du menu que vous avez choisie : ", 130);
-
-		scanf("%d", &choix);
-
-		switch (choix)
-		{
-		case 1:
-			//RechercheRegion();
-			break;
-		case 0:
-			MenuRechercherMusee();
-			break;
-
-		}
-	} while (choix != 0);
-
-
-}
-
-	// ajouter fonction recherche des musees pour le region choisie
-
-
-void RechercheDepartement()
-{
-	system("cls");
-	petitaffichage();
-	int choix = -1;
-	do
-	{
-		printf("                  1 .     Indiquez le num%lcro du d%lcpartement choisie \n",130 , 130); //Ajouter "%lc" a la place du "é" puis ajouter en fin de phrase "130" pour un accent donc si deux accents mettre comme cela "130, 130".
-		printf("                  0 .     Retour menu pr%lcc%lcdent \n\n", 130, 130);
-		printf("			  Entrer le num%lcro du menu que vous avez choisie : ", 130);
-
-		scanf("%d", &choix);
-
-		switch (choix)
-		{
-		case 1:
-			//FonctionRechercheDepartement();
-			break;
-		case 0:
-			MenuRechercherMusee();
-			break;
-		}
-	} while (choix != 0);
-}
-
-	// ajouter fonction recherche des musees pour le departement choisie
-
-
-
-void RechercheVille()
-{
-	system("cls");
-	petitaffichage();
-	int choix = -1;
-	do
-
-	{
-		printf("                  1 .     Indiquez le num%lcro de la ville choisie \n", 130); //Ajouter "%lc" a la place du "é" puis ajouter en fin de phrase "130" pour un accent donc si deux accents mettre comme cela "130, 130".
-		printf("                  0 .     Retour menu pr%lcc%lcdent \n\n", 130, 130);
-		printf("			  Entrer le num%lcro du menu que vous avez choisie : ", 130);
-
-		scanf("%d", &choix);
-
-		switch (choix)
-		{
-		case 1:
-			//FonctionRechercheVille();
-			break;
-		case 0:
-			MenuRechercherMusee();
-			break;
-		}
-	} while (choix != 0);
-}
 
 
 

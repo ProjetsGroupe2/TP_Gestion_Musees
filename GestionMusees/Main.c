@@ -14,6 +14,7 @@
 #include "AfficherTableaux.h"
 #include "Ajouter.h"
 #include "Modifier.h"
+#include "Recherche.h"
 
 
 
@@ -53,7 +54,7 @@ void main()
 	//Modifier(tabRegions, tabDepartements, tabVilles, tabMusees, &nbRegion, &nbDepartement, &nbVille, &nbMusee);
 
 	// Fonction de recherche de regions
-	Rechercher(tabRegions, tabDepartements, tabVilles, tabMusees, &nbRegion, &nbDepartement, &nbVille, &nbMusee);
+	//Rechercher(tabRegions, tabDepartements, tabVilles, tabMusees, &nbRegion, &nbDepartement, &nbVille, &nbMusee);
 
 	//// Fonction d'affichage du tableau de Régions
 	//AfficherRegion(tabRegions,&nbRegion);
@@ -68,7 +69,7 @@ void main()
 	//AfficherMusee(tabMusees, &nbMusee);
 
 	// Fontion de suppression 
-	Supprimer(tabRegions, tabDepartements, tabVilles, tabMusees, &nbRegion, &nbDepartement, &nbVille, &nbMusee);
+	//Supprimer(tabRegions, tabDepartements, tabVilles, tabMusees, &nbRegion, &nbDepartement, &nbVille, &nbMusee);
 	
 
 	int choix = -1;
@@ -84,7 +85,7 @@ void main()
 			break;
 		case 2:
 			system("cls");
-			MenuRechercherMusee();
+			Rechercher(tabRegions, tabDepartements, tabVilles, tabMusees, &nbRegion, &nbDepartement, &nbVille, &nbMusee);
 			break;
 		case 3:
 			system("cls");
@@ -92,7 +93,7 @@ void main()
 			CreationFichier(tabRegions, tabDepartements, tabVilles, tabMusees, &nbMusee);
 			if (CreationFichier(tabRegions, tabDepartements, tabVilles, tabMusees, &nbMusee))
 			{
-				printf("Enregistrement du fichier effectué avec succès!");
+				printf("Enregistrement du fichier effectu%lc avec succ%lcs!", 130, 138);
 			}
 			else
 			{

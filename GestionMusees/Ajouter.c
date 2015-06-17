@@ -39,7 +39,7 @@ void AjouterMusee(Region * tabRegion, Departement* tabDepartement, Ville* tabVil
 	else
 	{
 
-	printf("Entrer le nom d'un nouveau musee : \n");
+	printf("Entrer le nom d'un nouveau mus%lce : \n", 130);
 	gets(data);
 
 	for (int i = 1; i < numMusee; i++)
@@ -55,7 +55,7 @@ void AjouterMusee(Region * tabRegion, Departement* tabDepartement, Ville* tabVil
 	}
 	if (count < numMusee - 1) // NumMusee - 1 -> index musée commence à 1
 	{
-		printf("Ce musee existe deja!");
+		printf("Ce mus%lce existe d%lcj%lc!", 130, 130, 133);
 	}
 	else
 	{
@@ -97,35 +97,35 @@ void AjouterMusee(Region * tabRegion, Departement* tabDepartement, Ville* tabVil
 
 	// ----------------------------------------------------------------------
 	data[255] = '\0';
-	printf("Est-il fermé? (OUI / NON) : \n");
+	printf("Est-il ferm%lc ? (OUI / NON) : \n", 130);
 	gets(data);
 
 	strcpy(tabMusee[numMusee].ferme, data);
 
 	// ----------------------------------------------------------------------
 	data[255] = '\0';
-	printf("En quelle année reouvre-t'il? : \n");
+	printf("En quelle ann%lce reouvre-t'il ? : \n", 130);
 	gets(data);
 
 	strcpy(tabMusee[numMusee].adresse, data);
 
 	// ----------------------------------------------------------------------
 	data[255] = '\0';
-	printf("Quelles sont les périodes de fermeture annuelles? : \n");
+	printf("Quelles sont les p%lcriodes de fermeture annuelles? : \n", 130);
 	gets(data);
 
 	strcpy(tabMusee[numMusee].fermetureannuelle, data);
 
 	// ----------------------------------------------------------------------
 	data[255] = '\0';
-	printf("Quelles sont les périodes d'ouverture? : \n");
+	printf("Quelles sont les p%lcriodes d'ouverture? : \n", 130);
 	gets(data);
 
 	strcpy(tabMusee[numMusee].periodeouverture, data);
 
 	// ----------------------------------------------------------------------
 	data[255] = '\0';
-	printf("Entrer le nom du département ou il se situe : \n");
+	printf("Entrer le nom du d%lcpartement ou il se situe : \n", 130);
 	gets(data);
 
 	tabDepartement = realloc(tabDepartement, (numDep + 1) * sizeof(Departement)); // On rajoute une place en memoire
@@ -135,7 +135,7 @@ void AjouterMusee(Region * tabRegion, Departement* tabDepartement, Ville* tabVil
 
 	// ----------------------------------------------------------------------
 	data[255] = '\0';
-	printf("Entrer le nom de la région ou il se situe : \n");
+	printf("Entrer le nom de la r%lcgion ou il se situe : \n", 130);
 	gets(data);
 
 	tabRegion = realloc(tabRegion, (numRegion + 1) * sizeof(Region)); // On rajoute une place en memoire

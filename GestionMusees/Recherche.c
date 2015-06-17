@@ -64,7 +64,7 @@ void Rechercher(Region * tabRegion, Departement* tabDepartement, Ville* tabVille
 
 
 
-	printf("\nChoisissez le numero du departement dans la lequel se trouve le musee que vous cherchez\n");
+	printf("\nChoisissez le num%lcro du d%lcpartement dans la lequel se trouve le mus%lce que vous cherchez\n", 130, 130, 130);
 	scanf("%d", &choix);
 	system("cls");
 	printf("\n\n");
@@ -94,7 +94,7 @@ void Rechercher(Region * tabRegion, Departement* tabDepartement, Ville* tabVille
 		}
 	}
 
-	printf("\nChoisissez le numero de la ville quel se trouve le musee que vous cherchez\n");
+	printf("\nChoisissez le num%lcro de la ville quel se trouve le mus%lce que vous cherchez\n", 130, 130);
 	scanf("%d", &choix);
 	system("cls");
 	printf("\n\n");

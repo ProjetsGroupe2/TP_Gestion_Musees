@@ -47,7 +47,7 @@ void Modifier(Region * tabRegion, Departement* tabDepartement, Ville* tabVille, 
 	//Fonction d'affichage du tableau de Musées
 	//AfficherMusee(tabMusee, &nbMusee);
 
-	printf("Entrer le numéro du musée choisi : \n");
+	printf("Entrer le num%lcro du musée choisi : \n", 130);
 	scanf("%d", &idMus);
 	system("cls");
 	idVil = tabMusee[idMus].idVille;
@@ -60,7 +60,7 @@ void Modifier(Region * tabRegion, Departement* tabDepartement, Ville* tabVille, 
 	system("pause");
 
 	//************************************************************
-	printf("Saisissez la nouveau Musee :\n");
+	printf("Saisissez la nouveau Mus%lce :\n", 130);
 	scanf("%s",musee);
 	strcpy(tabMusee[idMus].nom, musee);
 
@@ -70,7 +70,7 @@ void Modifier(Region * tabRegion, Departement* tabDepartement, Ville* tabVille, 
 	strcpy(tabMusee[idMus].adresse, adresse);
 
 	//************************************************************
-	printf("Saisissez le nouceau Code Postal :\n");
+	printf("Saisissez le nouveau Code Postal :\n");
 	scanf("%s", cp);
 	strcpy(tabMusee[idMus].cp, cp);
 
@@ -80,12 +80,12 @@ void Modifier(Region * tabRegion, Departement* tabDepartement, Ville* tabVille, 
 	strcpy(tabVille[idVil].nom, ville);
 
 	//************************************************************
-	printf("Saisissez le departement :\n");
+	printf("Saisissez le d%lcpartement :\n", 130);
 	scanf("%s", dep);
 	strcpy(tabDepartement[idDep].nom, dep);
 
 	//************************************************************
-	printf("Saisissez la Region :\n");
+	printf("Saisissez la R%lcgion :\n", 130);
 	scanf("%s", region);
 	strcpy(tabRegion[idReg].nom, region);
 
@@ -95,29 +95,29 @@ void Modifier(Region * tabRegion, Departement* tabDepartement, Ville* tabVille, 
 	strcpy(tabMusee[idMus].siteweb, siteweb);
 
 	//************************************************************
-	printf("Saisissez son annee d'ouverture :\n");
+	printf("Saisissez son ann%lce d'ouverture :\n", 130);
 	scanf("%s", anneereouv);
 	strcpy(tabMusee[idMus].anneereouv, anneereouv);
 
 	//************************************************************
-	printf("Saisissez s'il il est ferme (OUI = Ferme / NON = Ouvert) :\n");
+	printf("Saisissez s'il est ferm%lc (OUI = Ferme / NON = Ouvert) :\n", 130);
 	scanf("%s", ferme);
 	strcpy(ferme, tabMusee[idMus].ferme, ferme);
 	
 	//************************************************************
-	printf("Saisissez la Période de fermeture annuelle :\n");
+	printf("Saisissez la P%lcriode de fermeture annuelle :\n", 130);
 	scanf("%s", fermetureannuelle);
 	strcpy(tabMusee[idMus].fermetureannuelle, fermetureannuelle);
 
 	//************************************************************
-	printf("Saisissez la Periode d'ou ouverture :\n");
+	printf("Saisissez la P%lcriode d'ou ouverture :\n", 130);
 	scanf("%s", periodeouverture);
 	strcpy(tabMusee[idMus].periodeouverture, periodeouverture);
 
 	system("pause");
-	printf("Voici le nouveau musee :\n");
+	printf("Voici le nouveau mus%lce :\n", 130);
 	printf("************************\n");
-	printf("\n%s \n\nAdresse : %s \n\nCP : %s\n\nVille :  %s\n\nDepartement : %s\n\nRegion : %s\n", tabMusee[idMus].nom, tabMusee[idMus].adresse, tabMusee[idMus].cp, tabVille[idVil].nom, tabDepartement[idDep].nom, tabRegion[idReg].nom);
+	printf("\n%s \n\nAdresse : %s \n\nCP : %s\n\nVille :  %s\n\nD%lcpartement : %s\n\nR%lcgion : %s\n", 130 , 130, tabMusee[idMus].nom, tabMusee[idMus].adresse, tabMusee[idMus].cp, tabVille[idVil].nom, tabDepartement[idDep].nom, tabRegion[idReg].nom);
 	system("pause");
 	system("pause");
 }
