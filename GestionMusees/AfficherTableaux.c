@@ -40,15 +40,15 @@ void AfficherDepartement(Departement* tabDepartement, int* numDep)
 
 	for (j = 0; j < nbDep; j++)																// Boucle d'affichage par 20
 	{
-			for (j = j; j < nbTours; j++)
-			{
-				printf("%d - %s\n", tabDepartement[j + 1].id, tabDepartement[j + 1].nom);
-			}
+		for (j = j; j < nbTours; j++)
+		{
+			printf("%d - %s\n", tabDepartement[j + 1].id, tabDepartement[j + 1].nom);
+		}
 
-			printf("\n");
-			system("pause");
-			printf("\n");
-			nbTours += 20;	
+		printf("\n");
+		system("pause");
+		printf("\n");
+		nbTours += 20;	
 	}
 	printf("FIN DES DEPARTEMENTS\n");
 	system("pause");
@@ -88,23 +88,35 @@ void AfficherMusee(Musee* tabMusee, int* numMusee)
 	int i = 0;
 	int j = 0;
 	int nbTours = 10;
+	int count = 0;
+	int reste = 0;
 
 	int nbMusee = 0;
 	nbMusee = *numMusee;
 
-	for (j = 0; j < nbMusee; j++)
+	for (j = 0; j < (nbMusee - 10); j++)
 	{
 		for (j = j; j < nbTours; j++)
 		{
 			printf("%d - %s\n", tabMusee[j + 1].id, tabMusee[j + 1].nom, tabMusee[j + 1].adresse, tabMusee[j + 1].cp);
+			count++;
 		}
-
+		count++;
 		printf("\n");
 		system("pause");
 		printf("\n");
 		nbTours += 10;
-
 	}
+
+	reste = (nbMusee - count);
+
+
+	for (i = -1; i < reste; i++)
+	{
+		printf("%d - %s\n", tabMusee[j].id, tabMusee[j].nom, tabMusee[j].adresse, tabMusee[j].cp);
+		j++;
+	}
+
 	printf("\n");
 	printf("FIN DES MUSEE\n");
 	system("pause");

@@ -12,8 +12,8 @@ struct Musee
 	int idVille;
 	char adresse[255];
 	char cp[10];
-	/*int*/char anneereouv[4]; // a traiter ou pas ???
-	/*int*/char ferme[4];	   // a traiter ou pas ???
+	char anneereouv[255]; 
+	char ferme[255];	   
 	char siteweb[255];
 	char fermetureannuelle[255];
 	char periodeouverture[255];

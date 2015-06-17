@@ -13,7 +13,7 @@
 
 int CreationFichier(Region * tabRegion, Departement * tabDepartement, Ville * tabVille, Musee * tabMusee, int * numMus)
 {
-
+	system("cls");
 	int nbMus = *numMus;
 
 	FILE* fichier = NULL;
@@ -46,7 +46,7 @@ int CreationFichier(Region * tabRegion, Departement * tabDepartement, Ville * ta
 			fprintf(fichier, "%s;", tabMusee[i].fermetureannuelle);
 			fprintf(fichier, "%s\n", tabMusee[i].periodeouverture);
 		}
-	
+		fprintf(fichier, "")
 		fclose(fichier);
 
 		return 1; // Pour afficher à l'aide d'un booléen le succès de la sauvegarde

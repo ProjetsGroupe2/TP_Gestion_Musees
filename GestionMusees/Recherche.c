@@ -83,7 +83,7 @@ void Rechercher(Region * tabRegion, Departement* tabDepartement, Ville* tabVille
 
 	for (int i = 1; i < numVil; i++)				// Boucle pour Afficher
 	{
-		if (idDep == tabVille[idVil].idDepartement)
+		if (idDep == tabVille[idVil].idDepartement) 
 		{
 			printf("%d - %s\n", tabVille[idVil].id, tabVille[idVil].nom);
 			idVil++;
@@ -123,4 +123,5 @@ void Rechercher(Region * tabRegion, Departement* tabDepartement, Ville* tabVille
 			break;
 		}
 	}
+	system("pause");
 }

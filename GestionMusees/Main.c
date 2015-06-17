@@ -47,6 +47,10 @@ void main()
 	// Fonction d'ouverture du fichier biblio.csv et remplissage des tableaux de structures
 	ouvertureFichier(tabRegions, tabDepartements, tabVilles, tabMusees);
 
+	//===============================================================================================================
+	//										Fonctions pour test sans affichage									   ==
+	//===============================================================================================================
+
 	//// Fonction pour ajouter un musée dans les tableau de structures
 	//AjouterMusee(tabRegions, tabDepartements, tabVilles, tabMusees, &nbRegion, &nbDepartement, &nbVille, &nbMusee);
 
@@ -64,11 +68,11 @@ void main()
 
 	//// Fonction d'affichage du tableau de Villes
 	//AfficherVille(tabVilles, &nbVille);
-	//
+	
 	////Fonction d'affichage du tableau de Musées
 	//AfficherMusee(tabMusees, &nbMusee);
 
-	// Fontion de suppression 
+	////Fontion de suppression 
 	//Supprimer(tabRegions, tabDepartements, tabVilles, tabMusees, &nbRegion, &nbDepartement, &nbVille, &nbMusee);
 	
 
@@ -80,24 +84,28 @@ void main()
 		switch (choix)
 		{
 		case 1:
+			// fonction de gestin de musée -------------------------------------------------
 			system("cls");
 			MenuGererMusees(tabRegions, tabDepartements, tabVilles, tabMusees, &nbRegion, &nbDepartement, &nbVille, &nbMusee);
 			break;
+
 		case 2:
+			// fonction de recherche -------------------------------------------------------
 			system("cls");
 			Rechercher(tabRegions, tabDepartements, tabVilles, tabMusees, &nbRegion, &nbDepartement, &nbVille, &nbMusee);
 			break;
 		case 3:
-			system("cls");
-			// fonction de sauvegarde ------------------------------------------------------- OK
+			// fonction de sauvegarde ------------------------------------------------------
 			CreationFichier(tabRegions, tabDepartements, tabVilles, tabMusees, &nbMusee);
 			if (CreationFichier(tabRegions, tabDepartements, tabVilles, tabMusees, &nbMusee))
 			{
-				printf("Enregistrement du fichier effectu%lc avec succ%lcs!", 130, 138);
+				printf("Enregistrement du fichier effectu%lc avec succ%lcs!\n\n", 130, 138);
+				system("pause");
 			}
 			else
 			{
-				printf("Erreur lors de l'enregistrement du fichier");
+				printf("Erreur lors de l'enregistrement du fichier_\n\n");
+				system("pause");
 			}
 			break;
 		}
