@@ -67,7 +67,8 @@ void main()
 	////Fonction d'affichage du tableau de Musées
 	//AfficherMusee(tabMusees, &nbMusee);
 
-	
+	// Fontion de suppression 
+	Supprimer(tabRegions, tabDepartements, tabVilles, tabMusees, &nbRegion, &nbDepartement, &nbVille, &nbMusee);
 	
 
 	int choix = -1;
