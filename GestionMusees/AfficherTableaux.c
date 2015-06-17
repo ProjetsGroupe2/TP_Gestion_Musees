@@ -9,7 +9,7 @@
 #include "AfficherTableaux.h"
 
 
-
+// /!\ Fonction incomplète dépassement des structures /!\
 
 void AfficherRegion(Region* tabRegion, int* numRegion)
 {

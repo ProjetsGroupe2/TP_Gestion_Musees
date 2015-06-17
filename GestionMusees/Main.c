@@ -53,7 +53,7 @@ void main()
 	//Modifier(tabRegions, tabDepartements, tabVilles, tabMusees, &nbRegion, &nbDepartement, &nbVille, &nbMusee);
 
 	// Fonction de recherche de regions
-	Rechercher(tabRegions, tabDepartements, tabVilles, tabMusees, &nbRegion, &nbDepartement, &nbVille, &nbMusee);
+	//Rechercher(tabRegions, tabDepartements, tabVilles, tabMusees, &nbRegion, &nbDepartement, &nbVille, &nbMusee);
 
 	//// Fonction d'affichage du tableau de Régions
 	//AfficherRegion(tabRegions,&nbRegion);
@@ -67,7 +67,8 @@ void main()
 	////Fonction d'affichage du tableau de Musées
 	//AfficherMusee(tabMusees, &nbMusee);
 
-	
+	// Fontion de suppression 
+	Supprimer(tabRegions, tabDepartements, tabVilles, tabMusees, &nbRegion, &nbDepartement, &nbVille, &nbMusee);
 	
 
 	int choix = -1;
