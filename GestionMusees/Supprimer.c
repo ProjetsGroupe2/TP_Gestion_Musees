@@ -39,20 +39,119 @@ void Supprimer(Region* tabRegion, Departement* tabDepartement, Ville* tabVille, 
 	idReg = tabDepartement[idDep].idRegion;
 
 
-	strcpy(tabMusee[idVil].adresse, "");
-	strcpy(tabMusee[idVil].anneereouv, "");
-	strcpy(tabMusee[idVil].cp, "");
-	strcpy(tabMusee[idVil].ferme, "");
-	strcpy(tabMusee[idVil].fermetureannuelle, "");
-	strcpy(tabMusee[idVil].nom, "");
-	strcpy(tabMusee[idVil].periodeouverture, "");
-	strcpy(tabMusee[idVil].siteweb, "");
+	// **************************************************
+	if (strcpy(tabMusee[idVil].adresse, ""))
+	{
+		printf("Adresse vide");
 
+	}
+	else
+	{
+		printf("Erreur, adresse non vide");
+	}
 
-	strcpy(tabVille[idDep].nom, "");
-	strcpy(tabDepartement[idReg].nom, "");
-	strcpy(tabRegion[tabRegion[idReg].id].nom, "");
+	// **************************************************
+	if (strcpy(tabMusee[idVil].anneereouv, ""))
+	{
+		printf("Adresse vide");
+	}
+	else
+	{
+		printf("Erreur, adresse non vide");
+	}
 
-	printf("\n%s %s %s %s %s %s %s %s %s %s %s", tabMusee[idVil].adresse, tabMusee[idVil].anneereouv, tabMusee[idVil].cp, tabMusee[idVil].ferme, tabMusee[idVil].fermetureannuelle, tabMusee[idVil].nom, tabMusee[idVil].periodeouverture, tabMusee[idVil].siteweb, tabVille[idDep].nom, tabDepartement[idReg].nom, tabRegion[idReg].nom);
+	// **************************************************
+	if (strcpy(tabMusee[idVil].cp, ""))
+	{
+		printf("Adresse vide");
+	}
+	else
+	{
+		printf("Erreur, adresse non vide");
+	}
+
+	// **************************************************
+	if (strcpy(tabMusee[idVil].ferme, ""))
+	{
+		printf("Adresse vide");
+	}
+	else
+	{
+		printf("Erreur, adresse non vide");
+	}
+	
+	// **************************************************
+	if (strcpy(tabMusee[idVil].fermetureannuelle, ""))
+	{
+		printf("Adresse vide");
+	}
+	else
+	{
+		printf("Erreur, adresse non vide");
+	}
+
+	// **************************************************
+	if (strcpy(tabMusee[idVil].nom, ""))
+	{
+		printf("Adresse vide");
+	}
+	else
+	{
+		printf("Erreur, adresse non vide");
+	}
+	
+	// **************************************************
+	if (strcpy(tabMusee[idVil].periodeouverture, ""))
+	{
+		printf("Adresse vide");
+	}
+	else
+	{
+		printf("Erreur, adresse non vide");
+	}
+	
+	// **************************************************
+	if (strcpy(tabMusee[idVil].siteweb, ""))
+	{
+		printf("Adresse vide");
+	}
+	else
+	{
+		printf("Erreur, adresse non vide");
+	}
+
+	// **************************************************
+	if (strcpy(tabVille[idDep].nom, ""))
+	{
+		printf("Adresse vide");
+	}
+	else
+	{
+		printf("Erreur, adresse non vide");
+	}
+	
+	// **************************************************
+	if (strcpy(tabDepartement[idReg].nom, ""))
+	{
+		printf("Adresse vide");
+	}
+	else
+	{
+		printf("Erreur, adresse non vide");
+	}
+	
+	// **************************************************
+	if (strcpy(tabRegion[tabRegion[idReg].id].nom, ""))
+	{
+		printf("Adresse vide");
+	}
+	else
+	{
+		printf("Erreur, adresse non vide");
+	}
+
+	// **************************************************
+
+	//printf("\n%s %s %s %s %s %s %s %s %s %s %s", tabMusee[idVil].adresse, tabMusee[idVil].anneereouv, tabMusee[idVil].cp, tabMusee[idVil].ferme, tabMusee[idVil].fermetureannuelle, tabMusee[idVil].nom, tabMusee[idVil].periodeouverture, tabMusee[idVil].siteweb, tabVille[idDep].nom, tabDepartement[idReg].nom, tabRegion[idReg].nom);
 	system("pause");
 }

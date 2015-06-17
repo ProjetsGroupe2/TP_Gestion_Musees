@@ -94,27 +94,16 @@ void AfficherMusee(Musee* tabMusee, int* numMusee)
 
 	for (j = 0; j < nbMusee; j++)
 	{
-		if (nbMusee - 10)
+		for (j = j; j < nbTours; j++)
 		{
-			for (j = j; j < nbTours; j++)
-			{
-				printf("%d - %s\n", tabMusee[j + 1].id, tabMusee[j + 1].nom, tabMusee[j + 1].adresse, tabMusee[j + 1].cp);
-			}
-
-			printf("\n");
-			system("pause");
-			printf("\n");
-			nbTours += 10;
+			printf("%d - %s\n", tabMusee[j + 1].id, tabMusee[j + 1].nom, tabMusee[j + 1].adresse, tabMusee[j + 1].cp);
 		}
-		else
-		{
-			for (j = j; j < nbTours; j++)
-			{
-				printf("%d - %s\n", tabMusee[j + 1].id, tabMusee[j + 1].nom, tabMusee[j + 1].adresse, tabMusee[j + 1].cp);
-			}
 
-			nbTours++;
-		}
+		printf("\n");
+		system("pause");
+		printf("\n");
+		nbTours += 10;
+
 	}
 	printf("\n");
 	printf("FIN DES MUSEE\n");

@@ -1,5 +1,4 @@
-NOMREG;NOMDEP;VILLE;NOM DU MUSEE;ADR;CP;ANNREOUV;FERME;SITWEB;FERMETURE ANNUELLE;PERIODE OUVERTURE
-ALSACE;BAS-RHIN;BARR;Musee de la Folie Marco;30, Rue du Dr Sultzer;67140;;NON;www.barr.fr;;
+NOMREG;NOMDEP;VILLE;NOM DU MUSEE;ADR;CP;ANNREOUV;FERME;SITWEB;FERMETURE ANNUELLE;PERIODE OUVERTURE;;;;;;;;;;
 ALSACE;BAS-RHIN;BETSCHDORF;Musee de la Poterie;2, rue de Kuhlendorf;67660;;NON;www.betschdorf.fr/tourisme/visiter_betschdrof/musee_poterie.php;11/11,01/12-01/04;
 ALSACE;BAS-RHIN;BOUXWILLER;Musee de Bouxwiller et du Pays de Hanau;2, Place du Château Halle aux Bles;67330;2016OUI;OUI;www.musee-pays-hanau.webmuseo.com;11/11,01/12-01/04;
 ALSACE;BAS-RHIN;HAGUENAU;Musee Alsacien;1, place Joseph Thierry;67500;;NON;www.ville-haguenau.fr/pages/culture/musee.htm;;
@@ -1233,5 +1232,3 @@ RHONE-ALPES;SAVOIE;AIME-EN-TARENTAISE Cedex;Musee archeologique et mineralogique
 RHONE-ALPES;SAVOIE;AIX-LES-BAINS;Musee Lapidaire;Place Maurice Mollard;73100;;OUI;;11/11,01/12-01/04;
 RHONE-ALPES;SAVOIE;AIX-LES-BAINS;Musee du docteur Faure;"Villa ""Les Chimeres"" 10, Boulevard des COtes";73100;;NON;Site de la ville - www.aixlesbains.fr;24/12,25/12,11/11;
 RHONE-ALPES;SAVOIE;ALBERTVILLE;Musee Municipal d'Albertville-Conflans;Maison Rouge Grande Place de Conflans;73200;;NON;www.albertville.com;;
-RHONE-ALPES;SAVOIE;BOURG-SAINT-MAURICE;Musee du Costume;Hauteville-Gondon;73700;;OUI;;24/12,25/12;
-RHONE-ALPES;SAVOIE;CHAMBERY;Musee Savoisien;Square de Lannoy de Bissy;73000;;NON;Site du conseil general ou www.musee-savoisien.fr;;
