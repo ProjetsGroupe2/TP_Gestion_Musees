@@ -74,12 +74,12 @@ void Comptage(int *nbRegions, int * nbDep, int * nbVilles, int * nbMusees)
 				{
 
 				case 0: // Regions--------------------------------------------------------------------------------
-					data[nbChar] = '\0';
+					data[nbChar] = '\0';	
 					strcpy(nomRegion, data);
-					if (strcmp(nomRegion, previousRegion) != 0) 
+					if (strcmp(nomRegion, previousRegion) != 0) // Compare l'ancienne région avec la nouvelle
 					{
-						strcpy(previousRegion, nomRegion); 
-						nbR++;
+						strcpy(previousRegion, nomRegion);		// copie l'ancienne dans la nouvelle
+						nbR++;									// Ajoute une region
 					}
 					nbChar = 0;
 					break;

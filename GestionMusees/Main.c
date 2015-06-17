@@ -16,7 +16,12 @@
 #include "Modifier.h"
 #include "Recherche.h"
 
-
+//  +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+//  +																		  +
+//  +		ATTENTION NE PAS OUBLIER DE FAIRE UNE COPIE DE BILIO.CSV		  +
+//  +				CAR IL A ETE ADAPTE POUR LE PROGRAMME !			          +
+//  +																		  +
+//  +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 void main()
 

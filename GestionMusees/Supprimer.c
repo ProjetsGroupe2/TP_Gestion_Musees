@@ -31,7 +31,9 @@ void Supprimer(Region* tabRegion, Departement* tabDepartement, Ville* tabVille, 
 
 	system("cls");
 	printf("\n");
-	printf(" /!\\ Chercher l'index du mus%lce %lc supprimer /!\\ \n\n", 130, 133);
+	printf("=====================================================");
+	printf(" /!\\ Chercher l'index du mus%lce %lc supprimer /!\\ ", 130, 133);
+	printf("===================================================== \n\n");
 	AfficherMusee(tabMusee, nbMusees);
 	printf("Saisissez l'index du mus%lce %lc supprimer : \n", 130, 133);
 	scanf("%d", &idMus);
@@ -43,8 +45,8 @@ void Supprimer(Region* tabRegion, Departement* tabDepartement, Ville* tabVille, 
 
 
 	// **************************************************
-	if (strcpy(tabMusee[idVil].adresse, ""))
-	{
+	if (strcpy(tabMusee[idVil].adresse, ""))				// copie "vide"
+	{														
 
 		printf("Adresse vide\n");
 

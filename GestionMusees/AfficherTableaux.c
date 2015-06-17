@@ -19,9 +19,9 @@ void AfficherRegion(Region* tabRegion, int* numRegion)
 	nbRegion = *numRegion;
 
 
-	for (i = 0; i < nbRegion; i++)
+	for (i = 1; i < nbRegion; i++)
 	{
-		printf("%d - %s\n", tabRegion[i + 1].id, tabRegion[i + 1].nom);
+		printf("%d - %s\n", tabRegion[i].id, tabRegion[i].nom);  
 	}
 	
 	printf("\nFIN DES REGIONS\n");
@@ -37,18 +37,19 @@ void AfficherDepartement(Departement* tabDepartement, int* numDep)
 	int nbDep = 0;
 	nbDep = *numDep;
 
+	// Boucle d'affichage par 20 *********************************************************
 
-	for (j = 0; j < nbDep; j++)																// Boucle d'affichage par 20
+	for (j = 0; j < nbDep; j++)															
 	{
 		for (j = j; j < nbTours; j++)
 		{
-			printf("%d - %s\n", tabDepartement[j + 1].id, tabDepartement[j + 1].nom);
+			printf("%d - %s\n", tabDepartement[j + 1].id, tabDepartement[j + 1].nom); // +1 pour commencer l'id à 1 vu que j est déjà utilisé
 		}
 
 		printf("\n");
 		system("pause");
 		printf("\n");
-		nbTours += 20;	
+		nbTours += 20;	// 20 tours par 20
 	}
 	printf("FIN DES DEPARTEMENTS\n");
 	system("pause");
@@ -75,7 +76,7 @@ void AfficherVille(Ville* tabVille, int* numVille)
 		printf("\n");
 		system("pause");
 		printf("\n");
-		nbTours += 20;
+		nbTours += 20;  
 	}
 	printf("FIN DES VILLES\n");
 	system("pause");
@@ -94,26 +95,27 @@ void AfficherMusee(Musee* tabMusee, int* numMusee)
 	int nbMusee = 0;
 	nbMusee = *numMusee;
 
-	for (j = 0; j < (nbMusee - 10); j++)
+	// Boucle d'affichage spéciale *********************************************************
+	for (j = 0; j < (nbMusee - 10); j++)  // Musees - 10 pour calculer le count et le reste
 	{
-		for (j = j; j < nbTours; j++)
+		for (j = j; j < nbTours; j++)     // j = j pour ne pas perdre l'index
 		{
-			printf("%d - %s\n", tabMusee[j + 1].id, tabMusee[j + 1].nom, tabMusee[j + 1].adresse, tabMusee[j + 1].cp);
-			count++;
+			printf("%d - %s \n", tabMusee[j + 1].id, tabMusee[j + 1].nom); // 
+			count++; // Pour tout compter
 		}
-		count++;
+		count++; // Pour tout compter
 		printf("\n");
 		system("pause");
 		printf("\n");
 		nbTours += 10;
 	}
 
-	reste = (nbMusee - count);
+	reste = (nbMusee - count); // Cherche le reste pour ne pas dépasser la mémoire avec la boucle
 
 
-	for (i = -1; i < reste; i++)
+	for (i = -1; i < reste; i++) // Ajoute juste les musées qui reste
 	{
-		printf("%d - %s\n", tabMusee[j].id, tabMusee[j].nom, tabMusee[j].adresse, tabMusee[j].cp);
+		printf("%d - %s\n", tabMusee[j].id, tabMusee[j].nom);
 		j++;
 	}
 

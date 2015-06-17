@@ -156,9 +156,9 @@ void AjouterMusee(Region * tabRegion, Departement* tabDepartement, Ville* tabVil
 
 
 
-
-
-// -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//	 -------------------------------------------------------------
+//	 - Autre solution qui enregistre directement dans le fichier -
+//	 -------------------------------------------------------------
 // //Chaine de caractère pour récupérer la ligne en entier
 //char line[500] = " ";
 
