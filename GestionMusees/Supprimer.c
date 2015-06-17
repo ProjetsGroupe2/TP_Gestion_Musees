@@ -25,31 +25,32 @@ int Supprimer(Region* tabRegion, Departement* tabDepartement, Ville* tabVille, M
 	int idDep = 0;
 
 	int choix = 0;
-	char blanc = "";
+	char blanc[255] = "";
 
 	printf(" /!\\ Chercher l'index du musee a supprimer /!\\ \n");
-	//AfficherMusee(tabMusee, &nbMusees);
+	AfficherMusee(tabMusee, nbMusees);
 	printf("Saisissez l'index du musee a supprimer : ");
 	scanf("%d", &idMus);
 
 	idVil = tabMusee[idMus].idVille;
 	idDep = tabVille[idVil].idDepartement;
 	idReg = tabDepartement[idDep].idRegion;
-	tabRegion[idReg].id;
 
-	strcpy(blanc, tabMusee[idVil].adresse);
-	strcpy(blanc, tabMusee[idVil].anneereouv);
-	strcpy(blanc, tabMusee[idVil].cp);
-	strcpy(blanc, tabMusee[idVil].ferme);
-	strcpy(blanc, tabMusee[idVil].fermetureannuelle);
-	strcpy(blanc, tabMusee[idVil].nom);
-	strcpy(blanc, tabMusee[idVil].periodeouverture);
-	strcpy(blanc, tabMusee[idVil].siteweb);
 
-	strcpy(blanc, tabVille[idDep].nom);
-	strcpy(blanc, tabDepartement[idReg].nom);
-	strcpy(blanc, tabRegion[tabRegion[idReg].id].nom);
+	strcpy(tabMusee[idVil].adresse, "");
+	strcpy(tabMusee[idVil].anneereouv, "");
+	strcpy(tabMusee[idVil].cp, "");
+	strcpy(tabMusee[idVil].ferme, "");
+	strcpy(tabMusee[idVil].fermetureannuelle, "");
+	strcpy(tabMusee[idVil].nom, "");
+	strcpy(tabMusee[idVil].periodeouverture, "");
+	strcpy(tabMusee[idVil].siteweb, "");
 
-	printf("\n%s %s %s %s %s %s %s %s %s %s", tabMusee[idVil].adresse, tabMusee[idVil].anneereouv, tabMusee[idVil].cp, tabMusee[idVil].ferme, tabMusee[idVil].fermetureannuelle, tabMusee[idVil].nom, tabMusee[idVil].periodeouverture, tabMusee[idVil].siteweb, tabVille[idDep].nom, tabDepartement[idReg].nom, tabRegion[tabRegion[idReg].id].nom);
+
+	strcpy(tabVille[idDep].nom, "");
+	strcpy(tabDepartement[idReg].nom, "");
+	strcpy(tabRegion[tabRegion[idReg].id].nom, "");
+
+	printf("\n%s %s %s %s %s %s %s %s %s %s %s", tabMusee[idVil].adresse, tabMusee[idVil].anneereouv, tabMusee[idVil].cp, tabMusee[idVil].ferme, tabMusee[idVil].fermetureannuelle, tabMusee[idVil].nom, tabMusee[idVil].periodeouverture, tabMusee[idVil].siteweb, tabVille[idDep].nom, tabDepartement[idReg].nom, tabRegion[idReg].nom);
 	system("pause");
 }
